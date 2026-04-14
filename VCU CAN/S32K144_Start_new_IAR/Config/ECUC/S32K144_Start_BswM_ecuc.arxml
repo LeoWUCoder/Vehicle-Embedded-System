@@ -114,71 +114,6 @@
                     <SDGS>
                       <SDG GID="DV:BswM">
                         <SDG GID="DV:Statemachines">
-                          <SDG GID="DV:ESH">
-                            <SD GID="DV:Version">14.01.01.1</SD>
-                            <SDG GID="DV:Feature:ECU_State_Machine">
-                              <SD GID="DV:Name">ECU State Machine</SD>
-                              <SD GID="DV:Value">TRUE</SD>
-                              <SDG GID="DV:Param:Self_Run_Request_Timeout">
-                                <SD GID="DV:Name">Self Run Request Timeout</SD>
-                                <SD GID="DV:Default">0.1</SD>
-                                <SD GID="DV:Value">0.1</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:Run_User">
-                                <SD GID="DV:Name">Number of Run Request User</SD>
-                                <SD GID="DV:Default">0</SD>
-                                <SD GID="DV:Value">2</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:PostRun_User">
-                                <SD GID="DV:Name">Number of PostRun Request User</SD>
-                                <SD GID="DV:Default">0</SD>
-                                <SD GID="DV:Value">2</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:Kill_All_Run_Request_Port">
-                                <SD GID="DV:Name">Kill All Run Request Port</SD>
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:Dem_Handling">
-                                <SD GID="DV:Name">Dem Handling</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:Support_ComM">
-                                <SD GID="DV:Name">Support ComM</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                                <SDG GID="DV:Feature:CN_CAN00_5e566ad9">
-                                  <SD GID="DV:Name">CN_CAN00_5e566ad9</SD>
-                                  <SD GID="DV:Value">TRUE</SD>
-                                </SDG>
-                              </SDG>
-                              <SDG GID="DV:Feature:NvM_Handling">
-                                <SD GID="DV:Name">NvM Handling</SD>
-                                <SD GID="DV:Value">FALSE</SD>
-                                <SDG GID="DV:Param:NvM_Write_All_Timeout">
-                                  <SD GID="DV:Name">NvM Write All Timeout</SD>
-                                  <SD GID="DV:Default">60</SD>
-                                  <SD GID="DV:Value">60</SD>
-                                </SDG>
-                                <SDG GID="DV:Param:NvM_Cancel_Write_All_Timeout">
-                                  <SD GID="DV:Name">NvM Cancel Write All Timeout</SD>
-                                  <SD GID="DV:Default">60</SD>
-                                  <SD GID="DV:Value">60</SD>
-                                </SDG>
-                              </SDG>
-                              <SDG GID="DV:Feature:Rte_Mode_Synchronization">
-                                <SD GID="DV:Name">Rte Mode Synchronization</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:Enable_Callouts">
-                                <SD GID="DV:Name">Enable Callouts</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:EcuM_Mode_Handling">
-                                <SD GID="DV:Name">EcuM Mode Handling</SD>
-                                <SD GID="DV:Value">FALSE</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
                           <SDG GID="DV:Communication">
                             <SD GID="DV:Version">14.01.01.1</SD>
                             <SDG GID="DV:Feature:CN_CAN00_5e566ad9">
@@ -261,6 +196,71 @@
                               <SDG GID="DV:Feature:CC_MyECU_oCAN00_Rx_4cbf71f7_MyECU_oCAN00_Rx_4cbf71f7">
                                 <SD GID="DV:Name">Group: MyECU_oCAN00_Rx_4cbf71f7</SD>
                                 <SD GID="DV:Value">TRUE</SD>
+                              </SDG>
+                            </SDG>
+                          </SDG>
+                          <SDG GID="DV:ESH">
+                            <SD GID="DV:Version">14.01.01.1</SD>
+                            <SDG GID="DV:Feature:ECU_State_Machine">
+                              <SD GID="DV:Name">ECU State Machine</SD>
+                              <SD GID="DV:Value">TRUE</SD>
+                              <SDG GID="DV:Param:Self_Run_Request_Timeout">
+                                <SD GID="DV:Name">Self Run Request Timeout</SD>
+                                <SD GID="DV:Default">0.1</SD>
+                                <SD GID="DV:Value">0.1</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:Run_User">
+                                <SD GID="DV:Name">Number of Run Request User</SD>
+                                <SD GID="DV:Default">0</SD>
+                                <SD GID="DV:Value">2</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:PostRun_User">
+                                <SD GID="DV:Name">Number of PostRun Request User</SD>
+                                <SD GID="DV:Default">0</SD>
+                                <SD GID="DV:Value">2</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:Kill_All_Run_Request_Port">
+                                <SD GID="DV:Name">Kill All Run Request Port</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:Dem_Handling">
+                                <SD GID="DV:Name">Dem Handling</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:Support_ComM">
+                                <SD GID="DV:Name">Support ComM</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                                <SDG GID="DV:Feature:CN_CAN00_5e566ad9">
+                                  <SD GID="DV:Name">CN_CAN00_5e566ad9</SD>
+                                  <SD GID="DV:Value">TRUE</SD>
+                                </SDG>
+                              </SDG>
+                              <SDG GID="DV:Feature:NvM_Handling">
+                                <SD GID="DV:Name">NvM Handling</SD>
+                                <SD GID="DV:Value">FALSE</SD>
+                                <SDG GID="DV:Param:NvM_Write_All_Timeout">
+                                  <SD GID="DV:Name">NvM Write All Timeout</SD>
+                                  <SD GID="DV:Default">60</SD>
+                                  <SD GID="DV:Value">60</SD>
+                                </SDG>
+                                <SDG GID="DV:Param:NvM_Cancel_Write_All_Timeout">
+                                  <SD GID="DV:Name">NvM Cancel Write All Timeout</SD>
+                                  <SD GID="DV:Default">60</SD>
+                                  <SD GID="DV:Value">60</SD>
+                                </SDG>
+                              </SDG>
+                              <SDG GID="DV:Feature:Rte_Mode_Synchronization">
+                                <SD GID="DV:Name">Rte Mode Synchronization</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:Enable_Callouts">
+                                <SD GID="DV:Name">Enable Callouts</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:EcuM_Mode_Handling">
+                                <SD GID="DV:Name">EcuM Mode Handling</SD>
+                                <SD GID="DV:Value">FALSE</SD>
                               </SDG>
                             </SDG>
                           </SDG>
@@ -351,6 +351,24 @@
                                     <SD GID="DV:Name">Port_Init Header</SD>
                                     <SD GID="DV:Default">Port.h</SD>
                                     <SD GID="DV:Value">Port.h</SD>
+                                  </SDG>
+                                </SDG>
+                              </SDG>
+                              <SDG GID="DV:Feature:INIT_ONE">
+                                <SD GID="DV:Name">InitPhase: INIT_ONE</SD>
+                                <SD GID="DV:Value">FALSE</SD>
+                                <SDG GID="DV:Feature:Spi_Init">
+                                  <SD GID="DV:Name">Spi_Init</SD>
+                                  <SD GID="DV:Value">FALSE</SD>
+                                  <SDG GID="DV:Param:Spi_Init_Function">
+                                    <SD GID="DV:Name">Spi_Init Function</SD>
+                                    <SD GID="DV:Default">Spi_Init(NULL_PTR)</SD>
+                                    <SD GID="DV:Value">Spi_Init(NULL_PTR)</SD>
+                                  </SDG>
+                                  <SDG GID="DV:Param:Spi_Init_Header">
+                                    <SD GID="DV:Name">Spi_Init Header</SD>
+                                    <SD GID="DV:Default">Spi.h</SD>
+                                    <SD GID="DV:Value">Spi.h</SD>
                                   </SDG>
                                 </SDG>
                               </SDG>
@@ -8351,7 +8369,7 @@ else&#13;
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="6fcf5d26-fbf5-4fcd-b2bc-dcc0199c3005">
+                    <ECUC-CONTAINER-VALUE UUID="62a348e9-88f0-41e9-b2b2-17cd073fd1c7">
                       <SHORT-NAME>STARTUP</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -8372,7 +8390,7 @@ else&#13;
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="53e30830-6485-4703-ba7f-328a96c0f076">
+                    <ECUC-CONTAINER-VALUE UUID="dd3ad2e7-d549-4fef-9c33-a79fd3fab95d">
                       <SHORT-NAME>RUN</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -8393,7 +8411,7 @@ else&#13;
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="d07c71cb-b44e-4e64-bc03-8bc31e1f1085">
+                    <ECUC-CONTAINER-VALUE UUID="38a85a4a-f32d-4809-99a5-2dcc2c6b992c">
                       <SHORT-NAME>POSTRUN</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -8414,7 +8432,7 @@ else&#13;
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="ff30e85d-fb5c-43b1-a47d-f1a7aecd59a8">
+                    <ECUC-CONTAINER-VALUE UUID="c0a2bdf5-567e-43b8-9924-9961f36fd54a">
                       <SHORT-NAME>WAKEUP</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -8435,7 +8453,7 @@ else&#13;
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="f2ad2071-6d8a-4f7a-9a26-79e98bd9a661">
+                    <ECUC-CONTAINER-VALUE UUID="a647f063-06a6-4302-8db2-53d740072ce1">
                       <SHORT-NAME>SHUTDOWN</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -8479,7 +8497,7 @@ else&#13;
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="3eba5010-14ae-4e7c-94bc-4d9d496460e2">
+                    <ECUC-CONTAINER-VALUE UUID="4e7f7983-192d-4b7a-829a-76a897fbd6f9">
                       <SHORT-NAME>RELEASED</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -8500,7 +8518,7 @@ else&#13;
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="001dda77-79e6-4319-9ccb-b0885d0bb453">
+                    <ECUC-CONTAINER-VALUE UUID="0636ad74-1593-4a01-97a5-b917638f4cb8">
                       <SHORT-NAME>REQUESTED</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>

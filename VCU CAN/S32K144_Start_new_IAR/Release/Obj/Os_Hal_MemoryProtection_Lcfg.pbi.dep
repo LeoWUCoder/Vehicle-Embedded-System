@@ -1,0 +1,4 @@
+Os_Hal_MemoryProtection_Lcfg.pbi: \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData\Os_Hal_MemoryProtection_Lcfg.c \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Os_Hal_MemoryProtection_Cfg.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Os_Hal_MemoryProtection_Lcfg.h
