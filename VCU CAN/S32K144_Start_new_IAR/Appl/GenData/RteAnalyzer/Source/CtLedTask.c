@@ -81,6 +81,7 @@ static void CtLedTask_TestDefines(void);
  *
  * Primitive Types:
  * ================
+ * uint16: Integer in interval [0...65535] (standard type)
  * uint8: Integer in interval [0...255] (standard type)
  *
  * Enumeration Types:
@@ -240,6 +241,15 @@ FUNC(void, CtLedTask_CODE) CtLedTask_InitRunnable(void) /* PRQA S 0850 */ /* MD_
  * Executed if at least one of the following trigger conditions occurred:
  *   - triggered on TimingEvent every 300ms
  *
+ **********************************************************************************************************************
+ *
+ * Output Interfaces:
+ * ==================
+ *   Explicit S/R API:
+ *   -----------------
+ *   Std_ReturnType Rte_Write_Brake_Signal_u8Sig(uint8 data)
+ *   Std_ReturnType Rte_Write_Drive_Standy_u8Sig(uint16 data)
+ *
  *********************************************************************************************************************/
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
@@ -257,6 +267,29 @@ FUNC(void, CtLedTask_CODE) LedRunnable(void) /* PRQA S 0850 */ /* MD_MSR_19.8 */
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: LedRunnable
  *********************************************************************************************************************/
+
+  Std_ReturnType fct_status;
+  boolean fct_error = 0;
+
+  /*************************************************
+  * Direct Function Accesses
+  *************************************************/
+
+  fct_status = TSC_CtLedTask_Rte_Write_Brake_Signal_u8Sig(Rte_InitValue_Brake_Signal_u8Sig);
+  switch (fct_status)
+  {
+    case RTE_E_OK:
+      fct_error = 0;
+      break;
+  }
+
+  fct_status = TSC_CtLedTask_Rte_Write_Drive_Standy_u8Sig(Rte_InitValue_Drive_Standy_u8Sig);
+  switch (fct_status)
+  {
+    case RTE_E_OK:
+      fct_error = 0;
+      break;
+  }
 
 
 /**********************************************************************************************************************

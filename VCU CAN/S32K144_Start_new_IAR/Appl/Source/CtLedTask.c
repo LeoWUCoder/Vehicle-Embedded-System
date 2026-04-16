@@ -2,9 +2,9 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *          File:  CtLedTask.c
- *        Config:  C:/Vector/CBD1800257_D01_S32K1xx/Applications/S32K144_Start_new/S32K144_Start.dpa
+ *        Config:  D:\AUTOSAR_TOOLs\AUTOSAR_TOOLs.part1\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\DaVinciConfigurator\Core/"D:/Vehicle-Embedded-System/VCU CAN/S32K144_Start_new_IAR/S32K144_Start.dpa"
  *     SW-C Type:  CtLedTask
- *  Generated at:  Mon Jun  7 11:19:43 2021
+ *  Generated at:  Wed Apr 15 21:43:57 2026
  *
  *     Generator:  MICROSAR RTE Generator Version 4.19.0
  *                 RTE Core Version 1.19.0
@@ -44,7 +44,7 @@
 
 #include "Rte_CtLedTask.h" /* PRQA S 0857 */ /* MD_MSR_1.1_857 */
 
-
+#include "Com_Cfg.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -63,6 +63,7 @@
  *
  * Primitive Types:
  * ================
+ * uint16: Integer in interval [0...65535] (standard type)
  * uint8: Integer in interval [0...255] (standard type)
  *
  * Enumeration Types:
@@ -136,7 +137,16 @@ Rte_Call_UR_CN_CAN00_06ecbb07_RequestComMode(COMM_FULL_COMMUNICATION);
  *---------------------------------------------------------------------------------------------------------------------
  *
  * Executed if at least one of the following trigger conditions occurred:
- *   - triggered on TimingEvent every 500ms
+ *   - triggered on TimingEvent every 300ms
+ *
+ **********************************************************************************************************************
+ *
+ * Output Interfaces:
+ * ==================
+ *   Explicit S/R API:
+ *   -----------------
+ *   Std_ReturnType Rte_Write_Brake_Signal_u8Sig(uint8 data)
+ *   Std_ReturnType Rte_Write_Drive_Standy_u8Sig(uint16 data)
  *
  *********************************************************************************************************************/
 /**********************************************************************************************************************
@@ -158,13 +168,16 @@ FUNC(void, CtLedTask_CODE) LedRunnable(void) /* PRQA S 0850 */ /* MD_MSR_19.8 */
 
 static unsigned char  LedState=0;
 static int  LedCnt=0;
+static unsigned char  Brake=10;
+static unsigned char  Drive=10;
 
 LedCnt++;
 
 LedState ^= 0x01;
-
-
-
+//  Rte_Write_CtLedTask_Brake_Signal_u8Sig(1);
+//  Rte_Write_CtLedTask_Drive_Standy_u8Sig(4);
+ Com_SendSignal( ComConf_ComSignal_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, (&Brake)); 
+ Com_SendSignal(ComConf_ComSignal_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx, (&Drive)); 
  Dio_WriteChannel(112,LedState);
 
 /**********************************************************************************************************************

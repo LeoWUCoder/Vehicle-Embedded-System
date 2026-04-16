@@ -9,9 +9,9 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *          File:  Rte_CtLedTask.h
- *        Config:  C:/Vector/CBD1800257_D01_S32K1xx/Applications/S32K144_Start_new/S32K144_Start.dpa
+ *        Config:  D:\AUTOSAR_TOOLs\AUTOSAR_TOOLs.part1\AUTOSAR_TOOLs\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\DaVinciConfigurator\Core/"D:/Vehicle-Embedded-System/VCU CAN/S32K144_Start_new_IAR/S32K144_Start.dpa"
  *     SW-C Type:  CtLedTask
- *  Generated at:  Mon Jun  7 11:19:40 2021
+ *  Generated at:  Wed Apr 15 21:43:56 2026
  *
  *     Generator:  MICROSAR RTE Generator Version 4.19.0
  *                 RTE Core Version 1.19.0
@@ -64,12 +64,22 @@ extern CONSTP2CONST(struct Rte_CDS_CtLedTask, RTE_CONST, RTE_CONST) Rte_Inst_CtL
 typedef P2CONST(struct Rte_CDS_CtLedTask, TYPEDEF, RTE_CONST) Rte_Instance;
 
 
+/**********************************************************************************************************************
+ * Init Values for unqueued S/R communication (primitive types only)
+ *********************************************************************************************************************/
+
+# define Rte_InitValue_Brake_Signal_u8Sig (0U)
+# define Rte_InitValue_Drive_Standy_u8Sig (0U)
+
+
 # define RTE_START_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
 
 /**********************************************************************************************************************
  * API prototypes
  *********************************************************************************************************************/
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtLedTask_Brake_Signal_u8Sig(uint8 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtLedTask_Drive_Standy_u8Sig(uint16 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_CtLedTask_UR_CN_CAN00_06ecbb07_GetCurrentComMode(P2VAR(ComM_ModeType, AUTOMATIC, RTE_CTLEDTASK_APPL_VAR) ComMode); /* PRQA S 0850 */ /* MD_MSR_19.8 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_CtLedTask_UR_CN_CAN00_06ecbb07_GetMaxComMode(P2VAR(ComM_ModeType, AUTOMATIC, RTE_CTLEDTASK_APPL_VAR) ComMode); /* PRQA S 0850 */ /* MD_MSR_19.8 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_CtLedTask_UR_CN_CAN00_06ecbb07_GetRequestedComMode(P2VAR(ComM_ModeType, AUTOMATIC, RTE_CTLEDTASK_APPL_VAR) ComMode); /* PRQA S 0850 */ /* MD_MSR_19.8 */
@@ -78,6 +88,13 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_CtLedTask_UR_CN_CAN00_06ecbb07_RequestCo
 # define RTE_STOP_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
 
+
+
+/**********************************************************************************************************************
+ * Rte_Write_<p>_<d> (explicit S/R communication with isQueued = false)
+ *********************************************************************************************************************/
+# define Rte_Write_Brake_Signal_u8Sig Rte_Write_CtLedTask_Brake_Signal_u8Sig
+# define Rte_Write_Drive_Standy_u8Sig Rte_Write_CtLedTask_Drive_Standy_u8Sig
 
 
 /**********************************************************************************************************************
@@ -134,7 +151,16 @@ FUNC(void, CtLedTask_CODE) CtLedTask_InitRunnable(void); /* PRQA S 0850 */ /* MD
  *---------------------------------------------------------------------------------------------------------------------
  *
  * Executed if at least one of the following trigger conditions occurred:
- *   - triggered on TimingEvent every 500ms
+ *   - triggered on TimingEvent every 300ms
+ *
+ **********************************************************************************************************************
+ *
+ * Output Interfaces:
+ * ==================
+ *   Explicit S/R API:
+ *   -----------------
+ *   Std_ReturnType Rte_Write_Brake_Signal_u8Sig(uint8 data)
+ *   Std_ReturnType Rte_Write_Drive_Standy_u8Sig(uint16 data)
  *
  *********************************************************************************************************************/
 

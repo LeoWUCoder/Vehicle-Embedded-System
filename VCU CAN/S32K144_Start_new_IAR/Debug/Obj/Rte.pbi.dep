@@ -98,4 +98,18 @@ Rte.pbi: \
   D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/SchM_Spi.h \
   D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/SchM_Spi_Type.h \
   D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Rte_Hook.h \
-  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Rte_Cfg.h
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Rte_Cfg.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\BSW\Com\Com.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData\Com_Cfg.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Com_Types.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Com_PBcfg.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Com_Cbk.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Com_Cot.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/PduR_Cfg.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/PduR_Types.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\BSW\Det\Det.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData\Det_Cfg.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\BSW\VStdLib\vstdlib.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\Include\VStdLib_Cfg.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData\PduR_Com.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Rte_Cbk.h

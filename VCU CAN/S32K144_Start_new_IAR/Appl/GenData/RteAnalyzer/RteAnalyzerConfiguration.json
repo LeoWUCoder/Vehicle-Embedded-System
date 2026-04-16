@@ -262,6 +262,62 @@
       {
          "ExecutedOnTaskLevel" : "1",
          "NamePattern" : "Rte_NvMNotifyInitBlock.*"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbk_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTAck_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTErr_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTxTOut_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTOut_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkRxTOut_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkInv_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbk_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTAck_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTErr_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTxTOut_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTOut_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkRxTOut_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkInv_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx"
       }
    ],
    "InitFunctionNamePatternList" : [

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.c
- *   Generation Time: 2026-04-14 16:04:44
+ *   Generation Time: 2026-04-16 15:19:23
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -332,6 +332,9 @@ CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[4] = {  /* PRQA S 1514, 1533
   \brief  Contains all relevant information for transmission mode true.
   \details
   Element       Description
+  Periodic      TRUE if transmission mode contains a cyclic part.
+  RepCnt        Repetition count for replication of transmission requests plus one initial transmit.
+  RepPeriod     Repetition period factor for replication of transmission requests.
   TimePeriod    Cycle time factor.
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
@@ -339,9 +342,9 @@ CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[4] = {  /* PRQA S 1514, 1533
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    TimePeriod        Referable Keys */
-  { /*     0 */         0u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
-  { /*     1 */        10u }   /* [/ActiveEcuC/Com/ComConfig/VCU_Com_Pdu, /ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx, /ActiveEcuC/Com/ComConfig/msg_Transmit_oCAN00_0723e95e_Tx] */
+    /* Index    Periodic  RepCnt  RepPeriod  TimePeriod        Referable Keys */
+  { /*     0 */     TRUE,     5u,       10u,        50u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Start_oCAN00_e045137b_Tx] */
+  { /*     1 */     TRUE,     0u,        0u,        10u }   /* [/ActiveEcuC/Com/ComConfig/VCU_Com_Pdu, /ActiveEcuC/Com/ComConfig/msg_MyECU_Lamp_oCAN00_818e1651_Tx, /ActiveEcuC/Com/ComConfig/msg_Transmit_oCAN00_0723e95e_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
