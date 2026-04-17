@@ -27,6 +27,7 @@ Com_Lcfg.pbi: \
   D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData\PduR_Com.h \
   D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Com_Lcfg.h \
   D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Com_Cfg.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Appl_Cbk.h \
   D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/SchM_Com.h \
   D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/SchM_Com_Type.h \
   D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData/Rte_Type.h \

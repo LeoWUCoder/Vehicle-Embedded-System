@@ -176,16 +176,22 @@ LedCnt++;
 LedState ^= 0x01;
 //  Rte_Write_CtLedTask_Brake_Signal_u8Sig(1);
 //  Rte_Write_CtLedTask_Drive_Standy_u8Sig(4);
- Com_SendSignal( ComConf_ComSignal_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, (&Brake)); 
- Com_SendSignal(ComConf_ComSignal_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx, (&Drive)); 
+//  Com_SendSignal( ComConf_ComSignal_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, (&Brake)); 
+//  Com_SendSignal(ComConf_ComSignal_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx, (&Drive)); 
  Dio_WriteChannel(112,LedState);
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 }
-
-
+FUNC(void, COM_APPL_CODE) Crash_Success(void)
+{
+    Rte_Write_CtLedTask_Drive_Standy_u8Sig(10);
+}
+FUNC(void, COM_APPL_CODE) Crash_fault(void)
+{
+    Rte_Write_CtLedTask_Drive_Standy_u8Sig(40);
+}
 #define CtLedTask_STOP_SEC_CODE
 #include "CtLedTask_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
 

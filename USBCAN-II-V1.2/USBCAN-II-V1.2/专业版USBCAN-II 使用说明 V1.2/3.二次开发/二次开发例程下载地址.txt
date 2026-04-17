@@ -1,0 +1,22 @@
+下载地址：
+https://manual.zlg.cn/web/#/153?page_id=5346
+
+二次开发例程
+库函数
+　　下载链接：ControlCAN二次开发库
+
+　　库依赖以下运行库，电脑需要安装有：
+
+Microsoft Visual C++ 2005 （x86,x64）
+Microsoft Visual C++ 2008 （x86,x64）
+Microsoft Visual C++ 2010 （x86,x64）
+　　微软运行库下载：vs运行库
+
+例程
+ControlCAN例程包含语言：C++,C#,Labview
+
+注意：例程里面的函数库不一定是最新的,如果需要二次开发，请务必使用二次开发接口函数库中最新的函数库。
+
+C++例程：c++例子(vs2013).zip
+C#例程：c#例子(vs2005).zip
+LabVIEW例程：ControlCAN_labview.zip
