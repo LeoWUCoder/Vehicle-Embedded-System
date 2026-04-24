@@ -1,0 +1,4 @@
+BswM_PBcfg.pbi: \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData\BswM_Cfg.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData\BswM_Private_Cfg.h \
+  D:\Vehicle-Embedded-System\VCU\ CAN\S32K144_Start_new_IAR\Appl\GenData\BswM_PBcfg.c

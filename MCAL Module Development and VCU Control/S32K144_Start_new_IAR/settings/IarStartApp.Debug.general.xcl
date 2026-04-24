@@ -1,0 +1,15 @@
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armproc.dll" 
+
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armjlink2.dll" 
+
+"D:\Vehicle-Embedded-System\VCU CAN\S32K144_Start_new_IAR\Debug\Exe\IarStartApp.out" 
+
+--plugin="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armbat.dll" 
+
+--device_macro="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\config\debugger\NXP\KE1xF.dmac" 
+
+--device_macro="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\config\debugger\NXP\S32K148_trace.dmac" 
+
+
+
+
