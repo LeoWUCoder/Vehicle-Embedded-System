@@ -6,5 +6,8 @@
     <project>
         <path>$WS_DIR$\IarStartApp.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\..\..\..\STM32\Project1\Project1.ewp</path>
+    </project>
     <batchBuild />
 </workspace>

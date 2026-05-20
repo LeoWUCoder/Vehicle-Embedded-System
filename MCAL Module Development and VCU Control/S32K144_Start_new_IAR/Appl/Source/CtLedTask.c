@@ -170,15 +170,29 @@ static unsigned char  LedState=0;
 static int  LedCnt=0;
 static unsigned char  Brake=10;
 static unsigned char  Drive=10;
+static unsigned char  Keyflag=0;
+Keyflag=Dio_ReadChannel(DioConf_DioChannel_DioChannel_PTC12);
+if(Keyflag==1)
+{   
+   LedCnt++;     
+}
+if(LedCnt%2==0)
+{
+     Dio_WriteChannel(DioConf_DioChannel_DioChannel_PTD0,0);
+     Com_SendSignal( ComConf_ComSignal_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, (&Brake)); 
+}
+else{
+         Dio_WriteChannel(DioConf_DioChannel_DioChannel_PTD0,1);
+     Com_SendSignal( ComConf_ComSignal_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, (&Brake)); 
+}
 
-LedCnt++;
 
-LedState ^= 0x01;
+// LedState ^= 0x01;
 //  Rte_Write_CtLedTask_Brake_Signal_u8Sig(1);
 //  Rte_Write_CtLedTask_Drive_Standy_u8Sig(4);
 //  Com_SendSignal( ComConf_ComSignal_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, (&Brake)); 
 //  Com_SendSignal(ComConf_ComSignal_Drive_Standy_oVCU_Start_oCAN00_2617feb5_Tx, (&Drive)); 
- Dio_WriteChannel(112,LedState);
+//  Dio_WriteChannel(112,LedState);
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
