@@ -168,8 +168,8 @@ FUNC(void, CtLedTask_CODE) LedRunnable(void) /* PRQA S 0850 */ /* MD_MSR_19.8 */
 
 static unsigned char  LedState=0;
 static int  LedCnt=0;
-static unsigned char  Brake=10;
-static unsigned char  Drive=10;
+static unsigned char  Brake=1;
+static unsigned char  Drive=0;
 static unsigned char  Keyflag=0;
 Keyflag=Dio_ReadChannel(DioConf_DioChannel_DioChannel_PTC12);
 if(Keyflag==1)
@@ -179,11 +179,11 @@ if(Keyflag==1)
 if(LedCnt%2==0)
 {
      Dio_WriteChannel(DioConf_DioChannel_DioChannel_PTD0,0);
-     Com_SendSignal( ComConf_ComSignal_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, (&Brake)); 
+     Com_SendSignal( ComConf_ComSignal_VCU_Ingition_Mode_oVCU_Ingition_oCAN00_54fb8254_Tx, (&Brake)); 
 }
 else{
          Dio_WriteChannel(DioConf_DioChannel_DioChannel_PTD0,1);
-     Com_SendSignal( ComConf_ComSignal_Brake_Signal_oVCU_Start_oCAN00_df96e3b4_Tx, (&Brake)); 
+     Com_SendSignal( ComConf_ComSignal_VCU_Ingition_Mode_oVCU_Ingition_oCAN00_54fb8254_Tx, (&Drive)); 
 }
 
 

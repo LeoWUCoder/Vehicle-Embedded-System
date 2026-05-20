@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Lcfg.h
- *   Generation Time: 2026-04-14 16:04:43
+ *   Generation Time: 2026-05-20 13:00:54
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -779,14 +779,14 @@
 #define PduR_GetSizeOfLockRomOfPCConfig()                             1u  /**< the number of accomplishable value elements in PduR_LockRom */
 #define PduR_GetSizeOfMmRomIndOfPCConfig()                            4u  /**< the number of accomplishable value elements in PduR_MmRomInd */
 #define PduR_GetSizeOfMmRomOfPCConfig()                               4u  /**< the number of accomplishable value elements in PduR_MmRom */
-#define PduR_GetSizeOfRmDestRomOfPCConfig()                           9u  /**< the number of accomplishable value elements in PduR_RmDestRom */
-#define PduR_GetSizeOfRmGDestRomOfPCConfig()                          9u  /**< the number of accomplishable value elements in PduR_RmGDestRom */
-#define PduR_GetSizeOfRmSrcRomOfPCConfig()                            9u  /**< the number of accomplishable value elements in PduR_RmSrcRom */
+#define PduR_GetSizeOfRmDestRomOfPCConfig()                           10u  /**< the number of accomplishable value elements in PduR_RmDestRom */
+#define PduR_GetSizeOfRmGDestRomOfPCConfig()                          10u  /**< the number of accomplishable value elements in PduR_RmGDestRom */
+#define PduR_GetSizeOfRmSrcRomOfPCConfig()                            10u  /**< the number of accomplishable value elements in PduR_RmSrcRom */
 #define PduR_GetSizeOfRmTransmitFctPtrOfPCConfig()                    2u  /**< the number of accomplishable value elements in PduR_RmTransmitFctPtr */
 #define PduR_GetSizeOfRxIf2DestOfPCConfig()                           2u  /**< the number of accomplishable value elements in PduR_RxIf2Dest */
 #define PduR_GetSizeOfRxTp2DestOfPCConfig()                           2u  /**< the number of accomplishable value elements in PduR_RxTp2Dest */
-#define PduR_GetSizeOfTx2LoOfPCConfig()                               5u  /**< the number of accomplishable value elements in PduR_Tx2Lo */
-#define PduR_GetSizeOfTxIf2UpOfPCConfig()                             4u  /**< the number of accomplishable value elements in PduR_TxIf2Up */
+#define PduR_GetSizeOfTx2LoOfPCConfig()                               6u  /**< the number of accomplishable value elements in PduR_Tx2Lo */
+#define PduR_GetSizeOfTxIf2UpOfPCConfig()                             5u  /**< the number of accomplishable value elements in PduR_TxIf2Up */
 #define PduR_GetSizeOfTxTp2SrcOfPCConfig()                            1u  /**< the number of accomplishable value elements in PduR_TxTp2Src */
 #define PduR_GetTx2LoOfPCConfig()                                     PduR_Tx2Lo  /**< the pointer to PduR_Tx2Lo */
 #define PduR_GetTxIf2UpOfPCConfig()                                   PduR_TxIf2Up  /**< the pointer to PduR_TxIf2Up */
@@ -877,7 +877,7 @@
 #define PduR_GetRmSrcRomIdxOfTx2Lo(Index)                             ((PduR_RmSrcRomIdxOfTx2LoType)((((PduR_RmSrcRomIdxOfTx2LoType)(Index)) + 4u)))  /**< the index of the 0:1 relation pointing to PduR_RmSrcRom */
 #define PduR_IsRmSrcRomUsedOfTx2Lo(Index)                             (((boolean)(PduR_GetRmSrcRomIdxOfTx2Lo(Index) != PDUR_NO_RMSRCROMIDXOFTX2LO)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to PduR_RmSrcRom */
 #define PduR_GetRmGDestRomIdxOfTxIf2Up(Index)                         ((PduR_RmGDestRomIdxOfTxIf2UpType)((Index)))  /**< the index of the 1:1 relation pointing to PduR_RmGDestRom */
-#define PduR_GetRmGDestRomIdxOfTxTp2Src(Index)                        ((PduR_RmGDestRomIdxOfTxTp2SrcType)((((PduR_RmGDestRomIdxOfTxTp2SrcType)(Index)) + 4u)))  /**< the index of the 1:1 relation pointing to PduR_RmGDestRom */
+#define PduR_GetRmGDestRomIdxOfTxTp2Src(Index)                        ((PduR_RmGDestRomIdxOfTxTp2SrcType)((((PduR_RmGDestRomIdxOfTxTp2SrcType)(Index)) + 5u)))  /**< the index of the 1:1 relation pointing to PduR_RmGDestRom */
 /** 
   \}
 */ 
@@ -1668,7 +1668,7 @@ extern CONST(PduR_MmRomType, PDUR_CONST) PduR_MmRom[4];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[9];
+extern CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[10];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1692,7 +1692,7 @@ extern CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[9];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[9];
+extern CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[10];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1715,7 +1715,7 @@ extern CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[9];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_RmSrcRomType, PDUR_CONST) PduR_RmSrcRom[9];
+extern CONST(PduR_RmSrcRomType, PDUR_CONST) PduR_RmSrcRom[10];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1752,7 +1752,7 @@ extern CONST(PduR_RmTransmitFctPtrType, PDUR_CONST) PduR_RmTransmitFctPtr[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_Tx2LoType, PDUR_CONST) PduR_Tx2Lo[5];
+extern CONST(PduR_Tx2LoType, PDUR_CONST) PduR_Tx2Lo[6];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1772,7 +1772,7 @@ extern CONST(PduR_Tx2LoType, PDUR_CONST) PduR_Tx2Lo[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_TxIf2UpType, PDUR_CONST) PduR_TxIf2Up[4];
+extern CONST(PduR_TxIf2UpType, PDUR_CONST) PduR_TxIf2Up[5];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2026-04-14 16:04:42
+ *   Generation Time: 2026-05-20 13:00:53
  *           Project: S32K144_Start - Version 1.0
  *          Delivery: CBD1800257_D01
  *      Tool Version: DaVinci Configurator  5.18.37 SP1
@@ -153,10 +153,11 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRSrcPdu_PduRSrcPdu                                0u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_8e8b997f                       2u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_087fd70d                       3u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_876dec5b                       1u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_f4835c60                       4u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_8e8b997f                       3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_087fd70d                       4u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_876dec5b                       2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_a78d8113                       1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_f4835c60                       5u
 /**\} */
 
 /**
@@ -168,9 +169,10 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRDestPdu_PduRDestPdu                              0u
-#define PduRConf_PduRDestPdu_VCU_Start_oCAN00_044341a6_Tx             1u
-#define PduRConf_PduRDestPdu_msg_MyECU_Lamp_oCAN00_26f3473b_Tx        2u
-#define PduRConf_PduRDestPdu_msg_Transmit_oCAN00_9631a86b_Tx          3u
+#define PduRConf_PduRDestPdu_VCU_Ingition_oCAN00_96781807_Tx          1u
+#define PduRConf_PduRDestPdu_VCU_Start_oCAN00_044341a6_Tx             2u
+#define PduRConf_PduRDestPdu_msg_MyECU_Lamp_oCAN00_26f3473b_Tx        3u
+#define PduRConf_PduRDestPdu_msg_Transmit_oCAN00_9631a86b_Tx          4u
 /**\} */
 
 /**
