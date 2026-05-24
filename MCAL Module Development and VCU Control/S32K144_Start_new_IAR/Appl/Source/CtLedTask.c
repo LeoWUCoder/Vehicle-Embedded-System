@@ -185,7 +185,12 @@ else{
          Dio_WriteChannel(DioConf_DioChannel_DioChannel_PTD0,1);
      Com_SendSignal( ComConf_ComSignal_VCU_Ingition_Mode_oVCU_Ingition_oCAN00_54fb8254_Tx, (&Drive)); 
 }
-
+static uint16 ADC_Slope;
+static uint16 ADC_Value;
+Adc_StartGroupConversion(0);
+ADC_Value=Adc_ReadGroup(0,&ADC_Slope);
+ADC_Slope=ADC_Slope/40.96;
+Com_SendSignal(ComConf_ComSignal_VCU_Accelerator_Pedal_Position_oVCU_Start_oCAN00_a7808b9c_Tx , (&ADC_Slope));
 
 // LedState ^= 0x01;
 //  Rte_Write_CtLedTask_Brake_Signal_u8Sig(1);

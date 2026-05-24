@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Vehicle-Embedded-System\VCU CAN\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.general.xcl" --backend -f "D:\Vehicle-Embedded-System\VCU CAN\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.driver.xcl" 
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Vehicle-Embedded-System\MCAL Module Development and VCU Control\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.general.xcl" --backend -f "D:\Vehicle-Embedded-System\MCAL Module Development and VCU Control\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Vehicle-Embedded-System\VCU CAN\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Vehicle-Embedded-System\VCU CAN\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.driver.xcl" 
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Vehicle-Embedded-System\MCAL Module Development and VCU Control\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Vehicle-Embedded-System\MCAL Module Development and VCU Control\S32K144_Start_new_IAR\settings\ASR_S32K144_Start.Debug.driver.xcl" 
 
 @echo off 
 :end

@@ -4,10 +4,10 @@
         <path>$WS_DIR$\ASR_S32K144_Start.ewp</path>
     </project>
     <project>
-        <path>$WS_DIR$\IarStartApp.ewp</path>
+        <path>$WS_DIR$\..\..\MCAL Module Development and VCU Control\S32K144_Start_new_IAR\ASR_S32K144_Start.ewp</path>
     </project>
     <project>
-        <path>$WS_DIR$\..\..\..\STM32\Project1\Project1.ewp</path>
+        <path>$WS_DIR$\IarStartApp.ewp</path>
     </project>
     <batchBuild />
 </workspace>
