@@ -764,3 +764,167 @@ Init
 **5：上电过程中，突然自检信号不为1**
 
 ![image-20260710201506421](./assets/image-20260710201506421.png)
+
+#### 4.1.5 动力激活档上电控制策略需求
+
+就是前面是完成了主负接触器和DCDC控制，这里需要完成主正接触器，主预充接触器控制。
+
+1. **高压母线连接需求**：电机控制器直流高压母线需连接在整车高压母线上，确保高压电能的传输。
+2. **主预充接触器功能需求**：在接通主正接触器之前，主预充接触器应先闭合，使主正接触器两端电压达到与母线电压一致，防止反向电压冲击电机控制器及瞬间电流过大冲击，其回路需带有电阻及二极管。
+3. **接触器动作顺序需求**：主预充接触器闭合后，当主正接触器两端电压与母线电压一致时，闭合主正接触器，随后断开主预充接触器。
+
+
+
+1. **动力激活档上高压前置条件需求1**
+
+   1. 车辆必须已完成行车就绪挡上高压，标志是：DCDC已经使能(write_Dcdc_Enable)。
+   2. 车辆处于未连接充电枪状态，即快充(read_FastChargePlug_Status)及慢充（read_SlowChargePlug_Status）充电连接信号均为0。
+
+2. **动力激活档上高压前置条件需求2**
+
+   1. 加速踏板开度值信号无效。（read_AcceleratorPedal_Opening）
+   2. 制动信号有效。（read_BrakePedal_Status）
+   3. 档位为空挡。（read_ActualGear_Status）
+   4. 车辆静止状态（车速小于3km/h）。（read_VehicleSpeed_Kph）
+   5. 动力激活档信号有效。（read_KeyStartSwitch_Signal=1）
+
+   ### 动力激活档上高压条件需求解读表
+
+   | 序号 | 条件原文（信号）             | 信号名称                         | 条件含义                                                     | 核心安全目的                                                 |
+   | :--- | :--------------------------- | :------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+   | 1    | 加速踏板开度值信号无效       | `read_AcceleratorPedal_Opening`  | 系统确认加速踏板未被踩下，且踏板位置传感器信号无故障（有效值为0或无效状态）。 | **防止启动时意外加速**：确保高压上电瞬间动力系统无扭矩输出请求，**杜绝车辆突然前冲。** |
+   | 2    | 制动信号有效                 | `read_BrakePedal_Status`         | 系统检测到制动踏板已被驾驶员踩下（通常为有效高电平或开关信号）。 | **强制驾驶员参与**：要求驾驶员**主动踩刹车，表明其处于控制状态**，是启动的标准安全操作。 |
+   | 3    | 档位为空挡                   | `read_ActualGear_Status`         | 变速箱实际处于N挡（空挡），而非D、R或P挡（部分系统允许P挡，但此逻辑严格限定N挡）。 | **切断动力传递路径**：**即使电机启动，动力也不会传到车轮，从机械上杜绝车辆移动。** |
+   | 4    | 车辆静止状态（车速＜3 km/h） | `read_VehicleSpeed_Kph`          | 车速实测值小于3 km/h，视为完全静止。                         | **防止行驶中误上电**：避免在滑行或低速行驶时接通高压，对传动系统和高压部件造成冲击损伤。 |
+   | 5    | 动力激活档信号有效           | `read_KeyStartSwitch_Signal = 1` | 驾驶员发出了**明确的启动指令（如一键启动按钮按下或钥匙拧至START位置）**。 | **触发整个流程**：作为上电流程的“总开关”，代表驾驶员的主动启动意图，激活安全检测逻辑。 |
+
+   ------
+
+   <img src="./assets/image-20260711160015683.png" alt="image-20260711160015683" style="zoom: 33%;" />
+
+3. **动力激活档上高压流程需求**
+
+   1. 主动放电为0（write_McuActiveDischarge_Instruction=0）——**主动放电**指在高压系统（如电动汽车）中，指在关闭或紧急情况下，通过放电电阻（主动放电电阻）快速泄放直流母线电容器中储存的高压电能的过程。
+
+      如果上电瞬间，MCU还处在“主动放电”模式（即放电电阻还接通着），此时您命令闭合预充接触器给电容充电，相当于**一边往水池蓄水，一边开闸放水**。这会导致：
+
+      1. **预充电阻过载烧毁**（大电流持续流过放电电阻）。
+      2. **预充电压永远达不到目标值**（因为电压被放电电阻拉低），导致系统判定预充失败，触发超时下电。
+
+   2. **主预充接触器控制需求**：完成前置条件后，主预充接触器控制指令（write_MainPrechargeRelay_Enable）先提前完成闭合，然后在3s内等待主预充接触器状态信号置1（read_PduMainPrechargeRelay_Status=1），如果**超过3s未等到，则断开主预充接触器。**
+
+   3. **主正接触器控制需求**：VCU接收到主预充接触器闭合状态后，先闭合主正接触器（write_MainRelay_Enable），发送主正接触器闭合指令（read_PduMainRelay_Status），PDU接收到指令后控制闭合主正接触器并反馈闭合状态，若**超过3s未闭合，则进入下电流程。**
+
+   4. **主预充接触器断开需求**：VCU接收到主正接触器闭合状态后，经过1s后主预充接触器断开（write_MainPrechargeRelay_Enable）。
+
+   5. **Ready信号发送需求**：上高压完成，电驱动高压供电接通，车辆具备行车条件时，主预接触器断开后延时1s，VCU发送Ready信号（write_VehicleReady_Status ），仪表显示Ready状态。
+
+   6. **上电过程中出现前置条件检查出现~=1,也及时下电。**
+
+      <img src="./assets/image-20260711162638700.png" alt="image-20260711162638700" style="zoom:50%;" />
+
+4. **不满足动力激活档上高压前置条件下高压流程需求**
+
+   1. **Ready信号处理需求**：车辆处于Ready状态时，若检测到行车就绪档挡信号丢失、充电插枪信号有效、整车故障等级大于等于3等情况，停止发送Ready信号。
+
+   2. **接触器控制需求**：发送主正接触器断开指令，主预充接触器指令保持断开状态，PDU接收到主正接触器断开指令后控制断开主正接触器。
+
+   3. **主动放电需求**：VCU检测到主正接触器及主预充接触器处于断开状态后，发送主动放电指令（read_McuWorking_Status=2），MCU接收到指令后进行主动放电（write_McuActiveDischarge_Instruction=1），MCU母线电压快速下降至安全电压下，主动放电完成后反馈主动放电完成状态；若超过2s未接收到主动放电完成状态，进入行车就绪挡上高压状态。
+
+      | 状态值（示例） | 状态名称                            | 含义解读                                                     |
+      | :------------- | :---------------------------------- | :----------------------------------------------------------- |
+      | 0x00           | **待机/空闲 (Standby)**             | MCU高压母线已上电完成，驱动IGBT未开放，无扭矩输出，准备就绪。 |
+      | 0x01           | **运行/使能 (Running)**             | MCU处于驱动模式，正在输出三相交流电驱动电机（行车状态）。    |
+      | 0x02           | **主动放电中 (Active Discharging)** | MCU内部正在执行主动放电（接通放电电阻泄放母线电容电压）。    |
+      | 0x03           | **故障 (Fault)**                    | MCU检测到内部过流、过温、IGBT短路等严重故障，进入安全保护态。 |
+      | 0x04           | **下电/休眠 (Sleep)**               | 高压已完全切断，MCU处于低压待机休眠状态。                    |
+
+<img src="./assets/image-20260711165722657.png" alt="image-20260711165722657" style="zoom:50%;" />
+
+下电的故障信号没有处理！后续重点
+
+## 五、软件逻辑构建&&模型规范性检查
+
+### 5.1 **整理框架**
+
+输入量→逻辑判断→输出量
+
+Bus模块与Goto模块构建逻辑输入量，如下图
+
+<img src="./assets/image-20260711175017258.png" alt="image-20260711175017258" style="zoom:50%;" />
+
+不同模块不同颜色：
+
+- **输入端口（Inport）** → 绿色
+- **输出端口（Outport）** → 红色
+- **常量模块（Constant）** → 橙色
+- **增益模块（Gain）** → 青色
+- **Goto模块** → 浅蓝色
+- **From模块** → 浅蓝色
+
+可使用matlab脚本实现：
+```matlab
+%% Inport block use Green
+function UpdateBlockColor
+    temp = find_system(bdroot,'BlockType','Inport');
+    for i = 1 : length(temp)
+    set_param(temp{i},'BackgroundColor','Green')
+    end
+    %% Outport block use Red
+    temp = find_system(bdroot,'BlockType','Outport');
+    for i = 1 : length(temp)
+    set_param(temp{i},'BackgroundColor','Red')
+    end
+    clear temp;
+    %% Constant block use Orange
+    temp = find_system(bdroot,'FindAll','On','BlockType','Constant');
+    for i = 1 : length(temp)
+        pname = get_param(temp(i),'value');
+        set_param(temp(i),'BackgroundColor','Orange');
+    end
+    clear temp;
+    %% Gain block use Cyan
+    temp = find_system(bdroot,'FindAll','On','BlockType','Gain');
+    for i = 1 : length(temp)
+        set_param(temp(i),'BackgroundColor','Cyan');
+    end
+   %% Goto block use Cyan
+    temp = find_system(bdroot,'FindAll','On','BlockType','Goto');
+    for i = 1 : length(temp)
+        set_param(temp(i),'BackgroundColor','LightBlue');
+    end
+    %% From block use Cyan
+    temp = find_system(bdroot,'FindAll','On','BlockType','From');
+    for i = 1 : length(temp)
+        set_param(temp(i),'BackgroundColor','LightBlue');
+    end
+end
+```
+
+### 5.2 利用Model Advisor做模型规范性检查
+
+需要检查的：
+
+1. 按产品选择以下：
+
+   <img src="./assets/image-20260711214340136.png" alt="image-20260711214340136" style="zoom:50%;" />
+
+2. 按任务选择以下：
+
+   <img src="./assets/image-20260711214422846.png" alt="image-20260711214422846" style="zoom:50%;" />
+
+还有ISO26262—忘记标注了
+
+
+
+
+
+
+
+
+
+## 九、后续优化思路
+
+1. ECU下电的故障信号没有处理！后续重点
+
+2. 有些信号没用到
