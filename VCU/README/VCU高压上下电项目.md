@@ -915,13 +915,271 @@ end
 
 还有ISO26262—忘记标注了
 
+## 六、Model测试
 
+在基于模型的设计 (Model-Based Design) 流程中，**Simulink 单独测试**和 MIL 测试是两个重要的验证阶段，它们的主要区别如下：
 
+1. 测试定义与范围
 
+- Simulink **单元测试**
+  - 对模型中的某个模块或**子系统进行孤立测试**
+  - 关注模块内部逻辑的正确性
+  - 通常由开发人员在模型构建阶段执行
+- MIL (Model-in-the-Loop) 测试
+  - 对**完整模型或系统级模型进行测试**
+  - 验证模型整体功能与需求的一致性
+  - 属于集成测试阶段，通常在系统集成环境中执行
 
+2. 测试环境
 
+- Simulink 单独测试
+  - 使用简化的测试环境，可能包含测试激励源和结果验证模块
+  - 不考虑与外部系统的交互
+- MIL 测试
+  - 需要构建接近真实系统的测试环境
+  - 可能包含输入信号模拟器、输出结果比较器等组件
+  - 可能需要与需求管理工具集成以验证需求覆盖率
 
+3. 测试目标
 
+- Simulink 单独测试
+  - 验证模块的功能逻辑是否正确
+  - 检查边界条件和异常情况处理
+  - 发现模块内部的设计错误
+- MIL 测试
+  - 验证整个模型是否满足系统需求
+  - 检查模块间的交互和数据流是否正确
+  - 评估系统级性能指标
+
+### 6.1 单元测试
+
+1. 首先需要确认模型编译没有错误。
+
+#### 6.1.1 模块一：自检模块
+
+<img src="./assets/image-20260712172340169.png" alt="image-20260712172340169" style="zoom:50%;" />
+
+| 信号名                                                       | 信号值 |
+| ------------------------------------------------------------ | ------ |
+| read_VehicleFaultLevel_uint8_t（车故障等级<=3就可以）        | 1      |
+| read_BmsBattery_SocValue_float（SOC>=10即可）                | 20     |
+| read_BmsRelayOff_Request_uint8_t（BMS 没有发出下电请求时（read_BmsRelayOff_Request==0）） | 0      |
+| read_KeyOnSwitch_Signal_bool（行车就绪档信号，打开CAN通信）  | 1      |
+
+<img src="./assets/image-20260712173710179.png" alt="image-20260712173710179" style="zoom:50%;" />
+
+第一次测试发现：
+
+<img src="./assets/image-20260712174021199.png" alt="image-20260712174021199" style="zoom:50%;" />
+
+从stateflow中一步步步进去看：
+
+<img src="./assets/image-20260712174155529.png" alt="image-20260712174155529" style="zoom:50%;" />
+
+<img src="./assets/image-20260712174307186.png" alt="image-20260712174307186" style="zoom:50%;" />
+
+<img src="./assets/image-20260712174458512.png" alt="image-20260712174458512" style="zoom:50%;" />
+
+最后发现是没接上线！
+
+<img src="./assets/image-20260712174743774.png" alt="image-20260712174743774" style="zoom:50%;" />
+
+#### 6.1.2 模块二：启动DCDC模块
+
+<img src="./assets/image-20260712175601806.png" alt="image-20260712175601806" style="zoom:50%;" />
+
+**==补充==输入信号：**
+
+| 信号名                                         | 信号值 |
+| ---------------------------------------------- | ------ |
+| read_BmsMainNegativeRelayClosed_Status_uint8_t | 1      |
+| read_BmsRelayOff_Request_uint8_t               | 0      |
+| read_DcdcWorking_Status_uint8_t                | 1      |
+
+**输出信号**
+
+| 信号名                         | 信号值 |
+| ------------------------------ | ------ |
+| write_VcuSleep_Status          | 0      |
+| write_MainNegativeRelay_Enable | 1      |
+| write_Dcdc_Enable              | 1      |
+| write_BmsFault_Status          | 0      |
+| write_DcdcFault_Status         | 0      |
+
+正常图像：
+
+VcuSleep一直都是0
+
+MainNegativeRelay从0过3s先到1
+
+DCDC_Enable是从0等上面MainNegative到1过3s到1
+
+BmsFault_Status和DcdcFault_Status一直是0
+
+<img src="./assets/image-20260712182136047.png" alt="image-20260712182136047" style="zoom:50%;" />
+
+#### 6.1.3 模块三：动力激活档上高压前置自检模块
+
+**==补充==输入信号**
+
+| 信号名                        | 信号值 |
+| ----------------------------- | ------ |
+| read_FastChargePlug_Status    | 0      |
+| read_SlowChargePlug_Status    | 0      |
+| read_AcceleratorPedal_Opening | 0      |
+| read_BrakePedal_Status        | 1      |
+| read_ActualGear_Status        | 0      |
+| read_VehicleSpeed_Kph         | 2      |
+| read_KeyStartSwitch_Signal    | 1      |
+
+**输出信号**
+
+| 信号名  | 信号值 |
+| ------- | ------ |
+| ElcSelf | 1      |
+
+<img src="./assets/image-20260712190920666.png" alt="image-20260712190920666" style="zoom:50%;" />
+
+正常输出应该是：
+
+<img src="./assets/image-20260712191700133.png" alt="image-20260712191700133" style="zoom: 25%;" />
+
+为什么状态切换时间不是整数？可能原因：
+
+1.如果测试输入已经把主负继电器闭合反馈设为 1，状态机仍然要等到下一个 100 ms 调度点才能读取反馈并迁移，因此这里通常增加约：
+
+\[ 0.1\text{ s} \]
+
+所以到达 `HV_ON2` 大约在：
+
+\[ 3.0/3.1+0.1\approx3.1/3.2\text{ s} \]
+
+2. 模型的 Runnable 是 `HVAct_100ms`，即每 0.1 s 执行一次；`debounce` 的接通延迟设为 5，因此延迟约为：
+
+\[ 5 \times 0.1\,\text{s}=0.5\,\text{s} \]
+
+所以，如果全部原始条件在约 6.3 s 首次同时成立，那么：
+
+\[ 6.3+0.5=6.8\,\text{s} \]
+
+#### 6.1.4 模块四：动力激活挡上电模块
+
+<img src="./assets/image-20260712194810598.png" alt="image-20260712194810598" style="zoom:50%;" />
+
+**==补充==输入信号**
+
+| 信号名                            | 信号值 |
+| --------------------------------- | ------ |
+| read_McuWorking_Status            | 0      |
+| read_PduMainPrechargeRelay_Status | 1      |
+| read_PduMainRelay_Status          | 1      |
+
+**输出信号**
+
+| 信号名                               | 信号值 |
+| ------------------------------------ | ------ |
+| write_MainPrechargeRelay_Enable      | 0      |
+| write_McuActiveDischarge_Instruction | 0      |
+| write_VehicleReady_Status            | 1      |
+| write_MainRelay_Enable               | 1      |
+
+<img src="./assets/image-20260712195754457.png" alt="image-20260712195754457" style="zoom:50%;" />
+
+可以通过打断点的方式来一步步调试：我们以观察write_MainPrechargeRelay_Enable切换的时间节点为例：
+
+<img src="./assets/image-20260712195940806.png" alt="image-20260712195940806" style="zoom:50%;" />
+
+<img src="./assets/image-20260712200058963.png" alt="image-20260712200058963" style="zoom: 25%;" />
+
+<img src="./assets/image-20260712200439356.png" alt="image-20260712200439356" style="zoom: 25%;" />
+
+<img src="./assets/image-20260712200845696.png" alt="image-20260712200845696" style="zoom:25%;" />
+
+<img src="./assets/image-20260712201001744.png" alt="image-20260712201001744" style="zoom: 33%;" />
+
+和8.1s切换时机对得上号！！！
+
+### 6.2 MIL测试
+
+1. 创建测试框架
+
+   <img src="./assets/image-20260712202809384.png" alt="image-20260712202809384" style="zoom: 33%;" />
+
+2. 打开测试管理器
+
+<img src="./assets/image-20260712203043176.png" alt="image-20260712203043176" style="zoom:50%;" />
+
+3. 创造测试
+
+   <img src="./assets/image-20260712203215065.png" alt="image-20260712203215065" style="zoom: 33%;" />
+
+<img src="./assets/image-20260712203641393.png" alt="image-20260712203641393" style="zoom: 33%;" />
+
+先别急着下一步！！！
+
+4. 记录所有输出信号，然后保存
+
+   <img src="./assets/image-20260712204306718.png" alt="image-20260712204306718" style="zoom:50%;" />
+
+5. 选择一个测试用例（生成一个excel表格）
+
+   <img src="./assets/image-20260712205034147.png" alt="image-20260712205034147" style="zoom:50%;" />
+
+6. 构建测试xlsx。
+
+   | 信号名                                         | 信号值 |
+   | ---------------------------------------------- | ------ |
+   | read_VehicleFaultLevel_uint8_t                 | 1      |
+   | read_BmsBattery_SocValue_float                 | 20     |
+   | read_BmsRelayOff_Request_uint8_t               | 0      |
+   | read_KeyOnSwitch_Signal_bool                   | 1      |
+   | read_BmsMainNegativeRelayClosed_Status_uint8_t | 1      |
+   | read_BmsRelayOff_Request_uint8_t               | 0      |
+   | read_DcdcWorking_Status_uint8_t                | 1      |
+   | read_FastChargePlug_Status                     | 0      |
+   | read_SlowChargePlug_Status                     | 0      |
+   | read_AcceleratorPedal_Opening                  | 0      |
+   | read_BrakePedal_Status                         | 1      |
+   | read_ActualGear_Status                         | 0      |
+   | read_VehicleSpeed_Kph                          | 2      |
+   | read_KeyStartSwitch_Signal                     | 1      |
+   | read_McuWorking_Status                         | 0      |
+   | read_PduMainPrechargeRelay_Status              | 1      |
+   | read_PduMainRelay_Status                       | 1      |
+
+| 信号名                          | 示波器图形                                                   | 时间点记录  |
+| ------------------------------- | ------------------------------------------------------------ | ----------- |
+| write_BmsFault_Status           | ![img](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWRiN2E5ZmRhOGRlYjM5MGQ5NWZiOWQzYjYxNDFjODVfWkN2dkhNeDNIdmlzTTlZcm5oeFYwRnQ3alVxN3VybWhfVG9rZW46VW51S2Jpd0VkbzdkQlZ4dVY1NWNOblRrblNDXzE3ODM4NjIxNTY6MTc4Mzg2NTc1Nl9WNA&add_watermark=true&scene_type=CCM) |             |
+| write_DcdcFault_Status          | ![img](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=MzNiODI3MTIxMDQ2Y2Y0YjMxMzUyMmQxZWY1YWJiNjNfMExKODk3ZUlSeG1DY2o5RWZrdUx2MUZtQnB0ekplcm9fVG9rZW46TVEwWmJLa1NRb3FGdzN4Wk93bWN3bmpybnNjXzE3ODM4NjIxNTY6MTc4Mzg2NTc1Nl9WNA&add_watermark=true&scene_type=CCM) |             |
+| write_Dcdc_Enable               | ![img](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=M2Q4N2E0YTBkZjE5ZjgyNDZmOGJmZTJkMGZlMTE1YTJfMUFnSDFYdGM3eEJvWkFGTnZ5RlZBVTlBeUhyeUI2b2tfVG9rZW46QVNFbWJZUzZvbzhpNXB4ZWNyUmN2SXhnbkhiXzE3ODM4NjIxNTY6MTc4Mzg2NTc1Nl9WNA&add_watermark=true&scene_type=CCM) | 6.3s变为1   |
+| write_MainNegativeRelay_Enable  | ![img](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=YmVjNjFhOWMwZmRmYzkzZWJhYTgwMzA3MmQ5NDY1NGRfM0kwNDRTSW1kRGczeU9qVlhjM0xUb0JWU1JnMEl6WVJfVG9rZW46SmM4UGJjNjNxb0xaUXJ4elNVV2NocDFubnlnXzE3ODM4NjIxNTY6MTc4Mzg2NTc1Nl9WNA&add_watermark=true&scene_type=CCM) | 3.1s变为1   |
+| write_MainPrechargeRelay_Enable | ![img](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=NzViYTA3MTU0ODY0YTMwNTcyYTM0ZjlmMWEzMzBhYjBfTzdpaWd4RmJnWmVOY0kyaEVFa2VZbmpZSEtINU9QbVVfVG9rZW46SXN3SWJvckpRb296ZTR4d0IzZ2NuUlNCbmJlXzE3ODM4NjIxNTY6MTc4Mzg2NTc1Nl9WNA&add_watermark=true&scene_type=CCM) | 6.8s到8s为1 |
+| write_MainRelay_Enable          | ![img](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjFhMmMxY2IzNWFlYzViMDEwYTQwNDAxNjQyYTUxOTFfOElyOGN5eEJMbnB5ZnZIdHRXOUk3alJjeU5CWklPWmVfVG9rZW46TzYwZmJhbml1b0Joc3h4SkF5WWNoblR5bkNnXzE3ODM4NjIxNTY6MTc4Mzg2NTc1Nl9WNA&add_watermark=true&scene_type=CCM) | 6.9s变为1   |
+| write_VehicleReady_Status       | ![img](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=OTYxMzIyOGVjZDdiMjNkOGZhYmQ2YTViODFiNzEzMjVfTkRBcE40RXQ5MlY4WTdybWozZXpLSW9aYXhmZ2hNcWhfVG9rZW46UFNhU2JIUTNNb1lXaHN4OGtFMGNQbWFXbldmXzE3ODM4NjIxNTY6MTc4Mzg2NTc1Nl9WNA&add_watermark=true&scene_type=CCM) | 9.2s变为1   |
+
+跑完测试发现有错误：
+
+<img src="./assets/image-20260712215458388.png" alt="image-20260712215458388" style="zoom:50%;" />
+
+发现是DCDC模块，去那边再看看，找问题：
+
+很奇怪，如果是DCDC模块出现问题，后面的MainPrechargeRelay这些不可能正常，所以模块本身没问题，其实是输出的问题：
+
+<img src="./assets/image-20260712222432472.png" alt="image-20260712222432472" style="zoom:50%;" />
+
+发现两者配置反了。
+
+也可以用codex链接simulink官方MCP找错误，效率更高：
+
+<img src="./assets/image-20260712222545877.png" alt="image-20260712222545877" style="zoom:33%;" />
+
+解决问题：
+
+<img src="./assets/image-20260712222725681.png" alt="image-20260712222725681" style="zoom:50%;" />
+
+生成报告：**选择所有测试！！**
+
+<img src="./assets/image-20260712222846867.png" alt="image-20260712222846867" style="zoom:50%;" />
 
 ## 九、后续优化思路
 
