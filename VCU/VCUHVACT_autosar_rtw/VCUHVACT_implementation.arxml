@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model VCUHVACT
+Model version                : 1.17
+Simulink Coder version       : Simulink Coder 24.2 (R2024b) 21-Jun-2024
+XML source code generated on : Mon Jul 13 12:48:30 2026
+Model Checksum               : 838557798 4265670849 1938803588 1388023815
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-1.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>ComponentTypes</SHORT-NAME>
+            <ELEMENTS>
+                <SWC-IMPLEMENTATION UUID="BF8BF2A6-87B4-4BA7-A642-9BCC3A591119">
+                    <SHORT-NAME>VCUHVACT_Implementation</SHORT-NAME>
+                    <CODE-DESCRIPTORS>
+                        <CODE>
+                            <SHORT-NAME>Code</SHORT-NAME>
+                            <ARTIFACT-DESCRIPTORS>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>VCUHVACT_c</SHORT-LABEL>
+                                    <CATEGORY>SWSRC</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>VCUHVACT_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>VCUHVACT_private_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>VCUHVACT_types_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                            </ARTIFACT-DESCRIPTORS>
+                        </CODE>
+                    </CODE-DESCRIPTORS>
+                    <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                    <SW-VERSION>1.17.1</SW-VERSION>
+                    <USED-CODE-GENERATOR>Embedded Coder 24.2 (R2024b) 21-Jun-2024</USED-CODE-GENERATOR>
+                    <VENDOR-ID>0</VENDOR-ID>
+                    <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/VCUHVACT/VCUHVACT_InternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+                <SWC-IMPLEMENTATION UUID="a00cfeb9-51eb-5e20-1d22-5f66b2b50281">
+                    <SHORT-NAME>VCUHVACT_imp</SHORT-NAME>
+                    <CODE-DESCRIPTORS>
+                        <CODE>
+                            <SHORT-NAME>Code</SHORT-NAME>
+                            <ARTIFACT-DESCRIPTORS>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>VCUHVACT_c</SHORT-LABEL>
+                                    <CATEGORY>SWSRC</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>VCUHVACT_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>VCUHVACT_private_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                                <AUTOSAR-ENGINEERING-OBJECT>
+                                    <SHORT-LABEL>VCUHVACT_types_h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </AUTOSAR-ENGINEERING-OBJECT>
+                            </ARTIFACT-DESCRIPTORS>
+                        </CODE>
+                    </CODE-DESCRIPTORS>
+                    <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                    <RESOURCE-CONSUMPTION>
+                        <SHORT-NAME>RsrcCons_VCUHVACT</SHORT-NAME>
+                    </RESOURCE-CONSUMPTION>
+                    <SW-VERSION>1.17.1</SW-VERSION>
+                    <USED-CODE-GENERATOR>Embedded Coder 24.2 (R2024b) 21-Jun-2024</USED-CODE-GENERATOR>
+                    <VENDOR-ID>0</VENDOR-ID>
+                    <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/VCUHVACT/VCUHVACT_InternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+            </ELEMENTS>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

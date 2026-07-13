@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="76a9c467-d3a8-47eb-ac44-006b8fe5cc6c">
+      <SHORT-NAME>COM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="b6ede00b-b6a5-4ab0-b9f3-35c5aa8664b9">
+          <SHORT-NAME>VECTOR</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="0a70596a-1d6c-4ff3-afae-94918f2848ab">
+              <SHORT-NAME>CFG</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="c63afa23-8617-4926-9a28-9f3f37ab99a8">
+                  <SHORT-NAME>WORKFLOW</SHORT-NAME>
+                  <AR-PACKAGES>
+                    <AR-PACKAGE UUID="64365042-84f5-4e60-b841-ec26425c46e5">
+                      <SHORT-NAME>SYSDESC</SHORT-NAME>
+                      <AR-PACKAGES>
+                        <AR-PACKAGE UUID="18eeed14-241f-4106-a180-c7aded489421">
+                          <SHORT-NAME>SYNC</SHORT-NAME>
+                          <ELEMENTS>
+                            <FLAT-MAP UUID="6090f47b-22ac-4e45-8807-2cfb3df63612">
+                              <SHORT-NAME>FLATMAP</SHORT-NAME>
+                              <ADMIN-DATA>
+                                <SDGS>
+                                  <SDG GID="DV:CfgNamedRefs">
+                                    <SDG GID="DV:CfgFlattener">
+                                      <SD GID="DV:CfgFlattenerVersion">1</SD>
+                                    </SDG>
+                                  </SDG>
+                                </SDGS>
+                              </ADMIN-DATA>
+                              <INSTANCES>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="58c20316-3e6a-4575-bd00-db20c0999313">
+                                  <SHORT-NAME>rawCurrentData</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:CfgNamedRefs">
+                                        <SDG GID="DV:CfgFlattener">
+                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
+                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/rawCurrentData</SDX-REF>
+                                          </SDG>
+                                        </SDG>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/rawCurrentData</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/rawCurrentData/rawCurrentData</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/rawCurrentData</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/rawCurrentData/rawCurrentData</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="4c53ae2e-6578-4012-a981-0a91dca3d1ec">
+                                  <SHORT-NAME>rawCurrentData_001</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/rawCurrentData</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/rawCurrentData</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="ee1e21d4-3810-47d8-b558-e2e4246ff4d7">
+                                  <SHORT-NAME>DoorStatus</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:CfgNamedRefs">
+                                        <SDG GID="DV:CfgFlattener">
+                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
+                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/DoorStatus</SDX-REF>
+                                          </SDG>
+                                        </SDG>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/DoorStatus</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/DoorStatus_1/DoorStatus</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DoorStatus</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/DoorStatus_1/DoorStatus</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="67b40344-4f6d-4f2d-af32-4d7792aae843">
+                                  <SHORT-NAME>DoorStatus_001</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/DoorStatus</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DoorStatus</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="595ffa14-7a6f-4edd-99f2-c35f8a3c102a">
+                                  <SHORT-NAME>CurrentProcess</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CurrentProcess</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CurrentProcess</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="fa038a74-86c8-434a-bc60-e36e66533b42">
+                                  <SHORT-NAME>CurrentProcess2</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CurrentProcess2</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CurrentProcess2</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                              </INSTANCES>
+                            </FLAT-MAP>
+                          </ELEMENTS>
+                        </AR-PACKAGE>
+                      </AR-PACKAGES>
+                    </AR-PACKAGE>
+                  </AR-PACKAGES>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

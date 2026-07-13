@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model VCUHVACT
+Model version                : 1.17
+Simulink Coder version       : Simulink Coder 24.2 (R2024b) 21-Jun-2024
+XML source code generated on : Mon Jul 13 12:48:30 2026
+Model Checksum               : 838557798 4265670849 1938803588 1388023815
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-1.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_Platform</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+                    <AR-PACKAGES>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>Units</SHORT-NAME>
+                            <ELEMENTS>
+                                <UNIT UUID="c8707859-efb2-5f49-a3ef-6137def55f97">
+                                    <SHORT-NAME>NoUnit</SHORT-NAME>
+                                    <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+                                    <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+                                </UNIT>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                    </AR-PACKAGES>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

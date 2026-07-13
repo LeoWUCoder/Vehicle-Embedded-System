@@ -1,0 +1,142 @@
+/* This file contains stub implementations of the AUTOSAR RTE functions.
+   The stub implementations can be used for testing the generated code in
+   Simulink, for example, in SIL/PIL simulations of the component under
+   test. Note that this file should be replaced with an appropriate RTE
+   file when deploying the generated code outside of Simulink.
+
+   This file is generated for:
+   Atomic software component:  "VCUHVACT"
+   ARXML schema: "4.3"
+   File generated on: "Mon Jul 13 12:48:27 2026"  */
+
+#ifndef Rte_VCUHVACT_h
+#define Rte_VCUHVACT_h
+#include "Rte_Type.h"
+#include "Compiler.h"
+
+/* Data access functions */
+#define Rte_Read_read_AcceleratorPedal_Opening_uint16_t Rte_Read_VCUHVACT_read_AcceleratorPedal_Opening_uint16_t
+
+Std_ReturnType Rte_Read_read_AcceleratorPedal_Opening_uint16_t(uint16* u);
+
+#define Rte_Read_read_ActualGear_Status_uint8_t Rte_Read_VCUHVACT_read_ActualGear_Status_uint8_t
+
+Std_ReturnType Rte_Read_read_ActualGear_Status_uint8_t(uint8* u);
+
+#define Rte_Read_read_BmsBattery_SocValue_float64 Rte_Read_VCUHVACT_read_BmsBattery_SocValue_float64
+
+Std_ReturnType Rte_Read_read_BmsBattery_SocValue_float64(float64* u);
+
+#define Rte_Read_read_BmsMainNegativeRelayClosed_Status_uint8_t Rte_Read_VCUHVACT_read_BmsMainNegativeRelayClosed_Status_uint8_t
+
+Std_ReturnType Rte_Read_read_BmsMainNegativeRelayClosed_Status_uint8_t(uint8* u);
+
+#define Rte_Read_read_BmsRelayOff_Request_uint8_t Rte_Read_VCUHVACT_read_BmsRelayOff_Request_uint8_t
+
+Std_ReturnType Rte_Read_read_BmsRelayOff_Request_uint8_t(uint8* u);
+
+#define Rte_Read_read_BrakePedal_Status_uint8_t Rte_Read_VCUHVACT_read_BrakePedal_Status_uint8_t
+
+Std_ReturnType Rte_Read_read_BrakePedal_Status_uint8_t(uint8* u);
+
+#define Rte_Read_read_DcdcWorking_Status_uint8_t Rte_Read_VCUHVACT_read_DcdcWorking_Status_uint8_t
+
+Std_ReturnType Rte_Read_read_DcdcWorking_Status_uint8_t(uint8* u);
+
+#define Rte_Read_read_FastChargePlug_Status_bool Rte_Read_VCUHVACT_read_FastChargePlug_Status_bool
+
+Std_ReturnType Rte_Read_read_FastChargePlug_Status_bool(boolean* u);
+
+#define Rte_Read_read_KeyOnSwitch_Signal_bool Rte_Read_VCUHVACT_read_KeyOnSwitch_Signal_bool
+
+Std_ReturnType Rte_Read_read_KeyOnSwitch_Signal_bool(boolean* u);
+
+#define Rte_Read_read_KeyStartSwitch_Signal_bool Rte_Read_VCUHVACT_read_KeyStartSwitch_Signal_bool
+
+Std_ReturnType Rte_Read_read_KeyStartSwitch_Signal_bool(boolean* u);
+
+#define Rte_Read_read_McuWorking_Status_uint8_t Rte_Read_VCUHVACT_read_McuWorking_Status_uint8_t
+
+Std_ReturnType Rte_Read_read_McuWorking_Status_uint8_t(uint8* u);
+
+#define Rte_Read_read_PduMainPrechargeRelay_Status_uint8_t Rte_Read_VCUHVACT_read_PduMainPrechargeRelay_Status_uint8_t
+
+Std_ReturnType Rte_Read_read_PduMainPrechargeRelay_Status_uint8_t(uint8* u);
+
+#define Rte_Read_read_PduMainRelay_Status_uint8_t Rte_Read_VCUHVACT_read_PduMainRelay_Status_uint8_t
+
+Std_ReturnType Rte_Read_read_PduMainRelay_Status_uint8_t(uint8* u);
+
+#define Rte_Read_read_SlowChargePlug_Status_bool Rte_Read_VCUHVACT_read_SlowChargePlug_Status_bool
+
+Std_ReturnType Rte_Read_read_SlowChargePlug_Status_bool(boolean* u);
+
+#define Rte_Read_read_VehicleFaultLevel_uint8_t Rte_Read_VCUHVACT_read_VehicleFaultLevel_uint8_t
+
+Std_ReturnType Rte_Read_read_VehicleFaultLevel_uint8_t(uint8* u);
+
+#define Rte_Read_read_VehicleSpeed_Kph_float64 Rte_Read_VCUHVACT_read_VehicleSpeed_Kph_float64
+
+Std_ReturnType Rte_Read_read_VehicleSpeed_Kph_float64(float64* u);
+
+#define Rte_Write_write_BmsFault_Status_unit8_t Rte_Write_VCUHVACT_write_BmsFault_Status_unit8_t
+
+Std_ReturnType Rte_Write_write_BmsFault_Status_unit8_t(uint8 u);
+
+#define Rte_Invalidate_write_BmsFault_Status_unit8_t Rte_Invalidate_VCUHVACT_write_BmsFault_Status_unit8_t
+
+Std_ReturnType Rte_Invalidate_write_BmsFault_Status_unit8_t(void);
+
+#define Rte_Write_write_Dcdc_Enable_uint8_t Rte_Write_VCUHVACT_write_Dcdc_Enable_uint8_t
+
+Std_ReturnType Rte_Write_write_Dcdc_Enable_uint8_t(uint8 u);
+
+#define Rte_Invalidate_write_Dcdc_Enable_uint8_t Rte_Invalidate_VCUHVACT_write_Dcdc_Enable_uint8_t
+
+Std_ReturnType Rte_Invalidate_write_Dcdc_Enable_uint8_t(void);
+
+#define Rte_Write_write_DcdcFault_Status_uint8_t Rte_Write_VCUHVACT_write_DcdcFault_Status_uint8_t
+
+Std_ReturnType Rte_Write_write_DcdcFault_Status_uint8_t(uint8 u);
+
+#define Rte_Invalidate_write_DcdcFault_Status_uint8_t Rte_Invalidate_VCUHVACT_write_DcdcFault_Status_uint8_t
+
+Std_ReturnType Rte_Invalidate_write_DcdcFault_Status_uint8_t(void);
+
+#define Rte_Write_write_MainNegativeRelay_Enable_unit8_t Rte_Write_VCUHVACT_write_MainNegativeRelay_Enable_unit8_t
+
+Std_ReturnType Rte_Write_write_MainNegativeRelay_Enable_unit8_t(uint8 u);
+
+#define Rte_Invalidate_write_MainNegativeRelay_Enable_unit8_t Rte_Invalidate_VCUHVACT_write_MainNegativeRelay_Enable_unit8_t
+
+Std_ReturnType Rte_Invalidate_write_MainNegativeRelay_Enable_unit8_t(void);
+
+#define Rte_Write_write_MainPrechargeRelay_Enable_uint8_t Rte_Write_VCUHVACT_write_MainPrechargeRelay_Enable_uint8_t
+
+Std_ReturnType Rte_Write_write_MainPrechargeRelay_Enable_uint8_t(uint8 u);
+
+#define Rte_Invalidate_write_MainPrechargeRelay_Enable_uint8_t Rte_Invalidate_VCUHVACT_write_MainPrechargeRelay_Enable_uint8_t
+
+Std_ReturnType Rte_Invalidate_write_MainPrechargeRelay_Enable_uint8_t(void);
+
+#define Rte_Write_write_MainRelay_Enable_uint8_t Rte_Write_VCUHVACT_write_MainRelay_Enable_uint8_t
+
+Std_ReturnType Rte_Write_write_MainRelay_Enable_uint8_t(uint8 u);
+
+#define Rte_Invalidate_write_MainRelay_Enable_uint8_t Rte_Invalidate_VCUHVACT_write_MainRelay_Enable_uint8_t
+
+Std_ReturnType Rte_Invalidate_write_MainRelay_Enable_uint8_t(void);
+
+#define Rte_Write_write_VehicleReady_Status_uint8_t Rte_Write_VCUHVACT_write_VehicleReady_Status_uint8_t
+
+Std_ReturnType Rte_Write_write_VehicleReady_Status_uint8_t(uint8 u);
+
+#define Rte_Invalidate_write_VehicleReady_Status_uint8_t Rte_Invalidate_VCUHVACT_write_VehicleReady_Status_uint8_t
+
+Std_ReturnType Rte_Invalidate_write_VehicleReady_Status_uint8_t(void);
+
+/* Entry point functions */
+extern FUNC(void, VCUHVACT_CODE) HVAct_100ms(void);
+extern FUNC(void, VCUHVACT_CODE) VCUHVACT_Init(void);
+
+#endif
