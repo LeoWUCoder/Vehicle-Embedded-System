@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Settings Name="com.vector.cfg.core.sip.ISIPService">
+    <Settings Name="ModuleList">
+      <Settings Name="Os">
+        <Settings Name="ATSAMV7x">
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE];TexasInstruments[B961F280-648C-45FF-A994-700EDE3B9F78]" />
+        </Settings>
+        <Settings Name="S32K14x">
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE];TexasInstruments[B961F280-648C-45FF-A994-700EDE3B9F78]" />
+        </Settings>
+        <Settings Name="Generic_CortexM">
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE];TexasInstruments[B961F280-648C-45FF-A994-700EDE3B9F78]" />
+        </Settings>
+        <Settings Name="Generic_CortexM_Mp">
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE];TexasInstruments[B961F280-648C-45FF-A994-700EDE3B9F78]" />
+        </Settings>
+        <Settings Name="TDA2x">
+          <Setting Name="Compiler" Value="TexasInstruments[B961F280-648C-45FF-A994-700EDE3B9F78]" />
+        </Settings>
+        <Settings Name="S32K148">
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE];TexasInstruments[B961F280-648C-45FF-A994-700EDE3B9F78]" />
+        </Settings>
+        <Settings Name="IMX8x">
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE]" />
+        </Settings>
+        <Settings Name="CYT2Bx">
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE]" />
+        </Settings>
+        <Settings Name="S32x">
+          <Setting Name="Compiler" Value="GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+        </Settings>
+      </Settings>
+    </Settings>
+  </Settings>
+</Settings>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Settings Name="com.vector.cfg.core.sip.ISIPService">
+    <Settings Name="ModuleList">
+      <Settings Name="Can">
+        <Settings Name="Can_Vybrid_Generic_xMB64A_xMB64A_xBT0_xPAR1_xFD0_xRAM0">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Vybrid_xMB64A_xMB64A_xBT0_xPAR1_xFD0_xRAM0">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Imx_Generic_xMB64A_xMB64A_xBT0_xPAR0_xFD0_xRAM0">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Imx_Imx6_xMB64A_xMB64A_xBT0_xPAR0_xFD0_xRAM0">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Imx_Imx8X_xMB64X_xMB64X_xMB64X_xBT2_xPAR0_xFD1_xRAM0">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Generic_xMB64X_xMB64X_xMB64X_xMB64X_xMB64X_xMB64X_xMB64X_xMB64X_xBT0_xPAR0_xFD0_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Calypso_xMB96C_xMB96C_xMB96C_xMB96C_xMB96C_xMB96C_xMB96C_xMB96C_xBT2_xPAR0_xFD1_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Quasar_xMB64D_xMB64D_xBT0_xPAR1_xFD0_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Quasar_xMB128D_xMB128D_xMB128D_xBT2_xPAR1_xFD1_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Quasar_xMB128D_xMB128D_xMB128D_xBT1_xPAR1_xFD1_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Panther_xMB64B_xMB64B_xMB64B_xBT0_xPAR1_xFD0_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Racerunner_xMB64B_xMB64B_xMB64B_xMB64B_xBT0_xPAR1_xFD0_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Rainier_xMB64E_xMB64E_xMB64E_xMB64E_xBT0_xPAR1_xFD0_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Rainier_xMB96F_xMB96F_xMB64E_xMB64E_xBT2_xPAR1_xFD0_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_RacerunnerUltra_xMB96B_xMB64B_xMB96B_xBT2_xPAR1_xFD1_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Castor4_xMB96C_xMB96C_xMB96C_xMB96C_xMB96C_xMB96C_xMB96C_xMB96C_xBT1_xPAR0_xFD1_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_Mpc5700_Cobra_xMB64D_xMB64D_xMB64D_xMB64D_xBT0_xPAR1_xFD0_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Diab[44266E21-0E8C-4DDA-B800-91CE20104931];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_S32_Generic_xMB32F_xMB32F_xMB32F_xBT2_xPAR0_xFD1_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_S32_xMB32F_xMB16F_xMB16F_xBT2_xPAR0_xFD1_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_S32_xMB32F_xMB32F_xMB16F_xBT2_xPAR0_xFD1_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_S32_xMB32F_xMB32F_xMB32F_xBT2_xPAR0_xFD1_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+        <Settings Name="Can_S32_xMB32F_xBT2_xPAR0_xFD1_xRAM1">
+          <Setting Name="PinLayout" Value="" />
+          <Setting Name="Compiler" Value="Arm[ACA8C365-6D1E-49FA-97F8-792D81C79C74];Gnu[0BC31EDC-4673-4734-8DCA-5E741868A5A4];GreenHills[BBC47DF5-C78B-4E8E-8F86-0EF503FD3198];Iar[FA51A718-3ADB-438D-98F3-245101681392];Linaro[E1B622DF-4206-462C-AB9F-BFA5625BABCE]" />
+          <Setting Name="NameForCpuDefine" Value="" />
+        </Settings>
+      </Settings>
+    </Settings>
+  </Settings>
+</Settings>

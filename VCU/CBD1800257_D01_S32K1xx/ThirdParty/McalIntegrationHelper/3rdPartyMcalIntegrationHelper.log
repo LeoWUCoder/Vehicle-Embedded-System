@@ -1,0 +1,174 @@
+Timestamp                          |  2025/4/7 21:09:08
+==========================================================================================
+Starting...
+==========================================================================================
+  Tool version                     |  2.4.1
+  Command line args                |  
+  Execution path                   |  F:\AutosarClass\S32K144环境调试\安装文件夹\AUTOSAR_TOOLsPart1\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\ThirdParty\McalIntegrationHelper\3rdPartyMcalIntegrationHelper.exe
+  Calling path                     |  F:\AutosarClass\S32K144环境调试\安装文件夹\AUTOSAR_TOOLsPart1\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\ThirdParty\McalIntegrationHelper
+  Config file                      |  F:\AutosarClass\S32K144环境调试\安装文件夹\AUTOSAR_TOOLsPart1\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\ThirdParty\Mcal_S32k\VectorIntegration\MIPconfig.xml
+==========================================================================================
+Parsing config...
+==========================================================================================
+  Schema version                   |  2.0.7
+  SipBase absolute path            |  F:\AutosarClass\S32K144环境调试\安装文件夹\AUTOSAR_TOOLsPart1\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx
+  McalSupply absolute path         |  F:\AutosarClass\S32K144环境调试\安装文件夹\AUTOSAR_TOOLsPart1\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\ThirdParty\Mcal_S32k\Supply
+------------------------------------------------------------------------------------------
+Configured packages                
+------------------------------------------------------------------------------------------
+  Summary                          |  
+  Summary                          |  MCAL Package
+  NameExpected                     |  S32K14X_MCAL4_0_RTM_HF2_1_0_1
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_MCAL4_0_RTM_HF2_1_0_1
+  Description                      |  S32K14X_MCAL4_0_RTM_HF2_1_0_1 - NXP's Mcal for S32K14x incl. HF2
+  Mandatory                        |  True
+  Id                               |  1
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  Tresos Tool
+  NameExpected                     |  Tresos
+  UsesStructureExpected            |  False
+  NameDescription                  |  Tresos
+  Description                      |  Contains the 3rd party configuration and generation tool chain.
+  Mandatory                        |  True
+  Id                               |  2
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  Sample Application
+  NameExpected                     |  S32K14X_MCAL4_0_RTM_1_0_1
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_MCAL4_0_RTM_1_0_1
+  Description                      |  S32K14X_MCAL4_0_RTM_1_0_1 - NXP's Mcal for S32K14x incl. Sample Application
+  Mandatory                        |  False
+  Id                               |  3
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  Eep Package
+  NameExpected                     |  S32K14X_MCAL4_0_RTM_P1_1_0_1_EEPonly
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_MCAL4_0_RTM_P1_1_0_1_EEPonly
+  Description                      |  S32K14X_MCAL4_0_RTM_P1_1_0_1_EEPonly - NXP's Eep driver package for S32K14x
+  Mandatory                        |  False
+  Id                               |  4
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  CSEC Package
+  NameExpected                     |  S32K14X_CSEC_MCAL4_0_RTM_P2_1_0_1
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_CSEC_MCAL4_0_RTM_P2_1_0_1
+  Description                      |  S32K14X_CSEC_MCAL4_0_RTM_P2_1_0_1 - NXP's AUTOSAR 4.0 Security package for S32K14x
+  Mandatory                        |  False
+  Id                               |  5
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------
+  Summary                          |  
+  Summary                          |  MCAL Package
+  NameExpected                     |  S32K14X_MCAL4_0_RTM_HF1_1_0_3
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_MCAL4_0_RTM_HF1_1_0_3
+  Description                      |  S32K14X_MCAL4_0_RTM_HF1_1_0_3 - NXP's Mcal for S32K14x
+  Mandatory                        |  True
+  Id                               |  1
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  Tresos Tool
+  NameExpected                     |  Tresos
+  UsesStructureExpected            |  False
+  NameDescription                  |  Tresos
+  Description                      |  Contains the 3rd party configuration and generation tool chain.
+  Mandatory                        |  True
+  Id                               |  2
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  CSEC Package
+  NameExpected                     |  S32K14X_CSEC_MCAL4_0_RTM_1_0_3
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_CSEC_MCAL4_0_RTM_1_0_3
+  Description                      |  S32K14X_CSEC_MCAL4_0_RTM_1_0_3 - NXP's AUTOSAR 4.0 Security package for S32K14x
+  Mandatory                        |  False
+  Id                               |  5
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------
+  Summary                          |  
+  Summary                          |  MCAL Package
+  NameExpected                     |  S32K14X_MCAL4_2_RTM_HF2_1_0_0
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_MCAL4_2_RTM_HF2_1_0_0
+  Description                      |  S32K14X_MCAL4_2_RTM_HF2_1_0_0 - NXP's AUTOSAR 4.2 Mcal for S32K14x
+  Mandatory                        |  True
+  Id                               |  1
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  Tresos Tool
+  NameExpected                     |  Tresos
+  UsesStructureExpected            |  False
+  NameDescription                  |  Tresos
+  Description                      |  Contains the 3rd party configuration and generation tool chain.
+  Mandatory                        |  True
+  Id                               |  2
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  Sample Application
+  NameExpected                     |  S32K14X_MCAL4_2_RTM_1_0_0
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_MCAL4_2_RTM_1_0_0
+  Description                      |  S32K14X_MCAL4_2_RTM_1_0_0 - NXP's Mcal for S32K14x incl. Sample Application
+  Mandatory                        |  False
+  Id                               |  3
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  CSEC Package
+  NameExpected                     |  S32K14X_CSEC_MCAL4_2_RTM_1_0_0
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_CSEC_MCAL4_2_RTM_1_0_0
+  Description                      |  S32K14X_CSEC_MCAL4_2_RTM_1_0_0 - NXP's AUTOSAR 4.2 Security package for S32K14x
+  Mandatory                        |  False
+  Id                               |  5
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------
+  Summary                          |  
+  Summary                          |  MCAL Package
+  NameExpected                     |  S32K14X_MCAL4_2_RTM_HF3_1_0_1
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_MCAL4_2_RTM_HF3_1_0_1
+  Description                      |  S32K14X_MCAL4_2_RTM_HF3_1_0_1 - NXP's AUTOSAR 4.2 Mcal for S32K14x
+  Mandatory                        |  True
+  Id                               |  1
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  Tresos Tool
+  NameExpected                     |  Tresos
+  UsesStructureExpected            |  False
+  NameDescription                  |  Tresos
+  Description                      |  Contains the 3rd party configuration and generation tool chain.
+  Mandatory                        |  True
+  Id                               |  2
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  Summary                          |  CSEC Package
+  NameExpected                     |  S32K14X_CSEC_MCAL4_2_RTM_1_0_1
+  UsesStructureExpected            |  False
+  NameDescription                  |  S32K14X_CSEC_MCAL4_2_RTM_1_0_1
+  Description                      |  S32K14X_CSEC_MCAL4_2_RTM_1_0_1 - NXP's AUTOSAR 4.2 Security package for S32K14x
+  Mandatory                        |  False
+  Id                               |  5
+  UsesRegex                        |  False
+  ----------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------
+==========================================================================================
+Packages found in SIP
+==========================================================================================
+  Name                             |  S32K14X_MCAL4_2_RTM_HF3_1_0_1
+  Path_Abs                         |  F:\AutosarClass\S32K144环境调试\安装文件夹\AUTOSAR_TOOLsPart1\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\ThirdParty\Mcal_S32k\Supply\S32K14X_MCAL4_2_RTM_HF3_1_0_1
+  PackageIdentified                |  False
+  ----------------------------------------------------------------------------------------
+  Name                             |  tresos
+  Path_Abs                         |  F:\AutosarClass\S32K144环境调试\安装文件夹\AUTOSAR_TOOLsPart1\S32K144_SIP\MICROSAR\CBD1800257_D01_S32K1xx\ThirdParty\Mcal_S32k\Supply\tresos
+  PackageIdentified                |  False
+  ----------------------------------------------------------------------------------------
+==========================================================================================
+Exit with code                     |  CANCEL

@@ -1238,15 +1238,37 @@ BmsFault_Status和DcdcFault_Status一直是0
 
 4. 软件和底层代码集成，先打开示例工程的developer，导入swc的arxml文件。
 
+​	需要加入集成的软件：
 
+加入：
 
+- `VCUHVACT.c`：核心应用算法代码，必须编译
+- `VCUHVACT.h`：公共声明，必须加入头文件搜索路径
+- `VCUHVACT_types.h`：模型类型定义，必须保留
+- `VCUHVACT_private.h`：建议一起保留；当前版本没有被实际引用，但后续重新生成代码时可能会用到
 
+不要把以下测试桩文件放进目标 ECU 工程：
 
+```
+stub/Rte_VCUHVACT.h
+stub/Rte_Type.h
+stub/VCUHVACT_MemMap.h
+stub/profileInfo.txt
+```
 
+这些是 Simulink 为 SIL/PIL 等测试生成的 Stub。正式集成时应使用 Configurator/RTE Generator 生成。
 
+<img src="./assets/image-20260713133609611.png" alt="image-20260713133609611" style="zoom: 50%;" />
 
+<img src="./assets/image-20260713135515958.png" alt="image-20260713135515958" style="zoom:33%;" />
 
+保存然后打开Configurator。
 
+<img src="./assets/image-20260713140210651.png" alt="image-20260713140210651" style="zoom:50%;" />
+
+分配OS：然后生成代码
+
+<img src="./assets/image-20260713140411773.png" alt="image-20260713140411773" style="zoom:50%;" />
 
 
 

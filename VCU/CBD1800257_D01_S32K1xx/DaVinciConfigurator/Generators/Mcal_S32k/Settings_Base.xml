@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+============================================================================
+
+Copyright (c) 2016 by Vector Informatik GmbH. All rights reserved.
+
+This software is copyright protected and proprietary to Vector Informatik GmbH.
+Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+All other rights remain with Vector Informatik GmbH.
+
+============================================================================
+
+This file is needed for internal use.
+Please do not modify this file, otherwise the software may behave in
+unexpected way.
+
+================================================================================
+                P R O J E C T
+================================================================================
+Module
+=======================
+S32K144Fsl02Asr4Sub
+================================================================================
+                A U T H O R   I D E N T I T Y
+================================================================================
+Initials		Name						Company
+======	===============	========================================================
+refer to Settings_Adc.xml
+================================================================================
+                R E V I S I O N   H I S T O R Y
+================================================================================
+Date				Version		Author		Description
+========	======	=======	=====================================================
+refer to Settings_Adc.xml
+========	======	=======	=====================================================
+********************************************************************************
+-->
+<Settings>
+	<Settings Name="com.vector.cfg.gen.Tresos_proxy.settings.TresosSettings">   <!-- Constant -->
+		<Settings Name="ModuleList">
+			<Settings Name=" Base_TS_T40D2M10I1R0">   							<!--ModuleName -->
+			    <Setting Name="ModuleDefRef" Value="/TS_T40D2M10I1R0/Base"/>		<!-- ModuleDefinition Path -->
+				<Setting Name="PluginName" Value="Base_TS_T40D2M10I1R0"/>   		<!-- Tresos Plugin name -->
+				<Setting Name="Target" Value="ARM"/>
+				<Setting Name="Derivate" Value="S32K14X"/>
+				<Setting Name="TransformationXsltFile" Value="$(SipRootPath)\DaVinciConfigurator\Generators\Mcal_S32k\prepare_output_S32K14x.xsl"/>	
+				<Settings Name="AdditionalModulesForGeneration">
+				    <Setting Name="Resource" Value="/TS_T40D2M10I1R0/Resource"/>	 <!-- DefRef ModuleDefinition of the Dependency -->
+				    <Setting Name="Dem" Value="/[ANY]/Dem"/>					
+				    <Setting Name="EcuM" Value="/[ANY]/EcuM"/>
+				    <Setting Name="Adc" Value="/TS_T40D2M10I1R0/Adc"/>
+<!--<Setting Name="Csec" Value="/TS_T40D2M10I1R0/Csec"/>-->
+				    <Setting Name="Dio" Value="/TS_T40D2M10I1R0/Dio"/>
+					<Setting Name="Eep" Value="/TS_T40D2M10I1R0/Eep"/>
+				    <Setting Name="Fls" Value="/TS_T40D2M10I1R0/Fls"/>
+				    <Setting Name="Gpt" Value="/TS_T40D2M10I1R0/Gpt"/>
+				 <!--   <Setting Name="I2c" Value="/TS_T40D2M10I1R0/I2c"/>	-->					
+				    <Setting Name="Icu" Value="/TS_T40D2M10I1R0/Icu"/>
+					<Setting Name="Mcem" Value="/TS_T40D2M10I1R0/Mcem"/>
+					<Setting Name="Mcl" Value="/TS_T40D2M10I1R0/Mcl"/>
+				    <Setting Name="Mcu" Value="/TS_T40D2M10I1R0/Mcu"/>
+					<Setting Name="Ocu" Value="/TS_T40D2M10I1R0/Ocu"/>
+				    <Setting Name="Port" Value="/TS_T40D2M10I1R0/Port"/>
+				    <Setting Name="Pwm" Value="/TS_T40D2M10I1R0/Pwm"/>
+				    <Setting Name="Spi" Value="/TS_T40D2M10I1R0/Spi"/>
+				    <Setting Name="Wdg" Value="/TS_T40D2M10I1R0/Wdg"/>
+			    </Settings>	  
+			</Settings>
+		</Settings>
+	</Settings>
+</Settings>

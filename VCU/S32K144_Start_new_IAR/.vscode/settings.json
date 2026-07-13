@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "rte_cddsbc.h": "c",
-        "rte_a.h": "c",
-        "rte_b.h": "c",
-        "memmap.h": "c"
-    }
-}

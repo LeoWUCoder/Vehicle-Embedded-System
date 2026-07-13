@@ -1,0 +1,70 @@
+!SESSION 2023-08-23 06:20:08.578 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en
+Framework arguments:  -application dreisoft.tresos.application.launcher2.plugin.ApplicationTresosCmd -Dtarget=ARM -Dderivate=S32K14X legacy generate C:\Users\Administrator\AppData\Local\Temp\DaVinci\Cfg-2686983\Generation\Cfg_Gen-1692742799529-0\Tresos-1692742802322-0\TRESOS_XSL_OUT_Tresos_ECUC_4.2.2_4126835293627671875.arxml_7424470359626215768.arxml@asc:4.2.2 -o C:\Users\Administrator\AppData\Local\Temp\DaVinci\Cfg-2686983\Generation\Cfg_Gen-1692742799529-0\Tresos-1692742802322-0\Tresos_Gen_-1692742807713-0 -g Base_TS_T40D2M10I1R0 -g Dio_TS_T40D2M10I1R0 -g Mcu_TS_T40D2M10I1R0 -g Spi_TS_T40D2M10I1R0 -g Port_TS_T40D2M10I1R0
+Command-line arguments:  -application dreisoft.tresos.application.launcher2.plugin.ApplicationTresosCmd -Dtarget=ARM -Dderivate=S32K14X legacy generate C:\Users\Administrator\AppData\Local\Temp\DaVinci\Cfg-2686983\Generation\Cfg_Gen-1692742799529-0\Tresos-1692742802322-0\TRESOS_XSL_OUT_Tresos_ECUC_4.2.2_4126835293627671875.arxml_7424470359626215768.arxml@asc:4.2.2 -o C:\Users\Administrator\AppData\Local\Temp\DaVinci\Cfg-2686983\Generation\Cfg_Gen-1692742799529-0\Tresos-1692742802322-0\Tresos_Gen_-1692742807713-0 -g Base_TS_T40D2M10I1R0 -g Dio_TS_T40D2M10I1R0 -g Mcu_TS_T40D2M10I1R0 -g Spi_TS_T40D2M10I1R0 -g Port_TS_T40D2M10I1R0
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.785
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Adc_TS_T40D2M10I1R0/   A bundle is already installed with the name "Adc_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.793
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Base_TS_T40D2M10I1R0/   A bundle is already installed with the name "Base_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.810
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/com.freescale.tools.tresos.xpath.jar   A bundle is already installed with the name "com.freescale.tools.tresos.xpath" and version "1.0.9"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.825
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Dem_TS_T40D2M10I1R0/   A bundle is already installed with the name "Dem_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.837
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Dio_TS_T40D2M10I1R0/   A bundle is already installed with the name "Dio_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.851
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/EcuM_TS_T40D2M10I1R0/   A bundle is already installed with the name "EcuM_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.861
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Eep_TS_T40D2M10I1R0/   A bundle is already installed with the name "Eep_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.899
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Fls_TS_T40D2M10I1R0/   A bundle is already installed with the name "Fls_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.905
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Gpt_TS_T40D2M10I1R0/   A bundle is already installed with the name "Gpt_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.910
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/I2c_TS_T40D2M10I1R0/   A bundle is already installed with the name "I2c_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.916
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Icu_TS_T40D2M10I1R0/   A bundle is already installed with the name "Icu_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.935
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Mcem_TS_T40D2M10I1R0/   A bundle is already installed with the name "Mcem_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.940
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Mcl_TS_T40D2M10I1R0/   A bundle is already installed with the name "Mcl_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.948
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Mcu_TS_T40D2M10I1R0/   A bundle is already installed with the name "Mcu_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.959
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Ocu_TS_T40D2M10I1R0/   A bundle is already installed with the name "Ocu_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.966
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Os_TS_T40D2M10I1R0/   A bundle is already installed with the name "Os_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.974
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Port_TS_T40D2M10I1R0/   A bundle is already installed with the name "Port_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.980
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Pwm_TS_T40D2M10I1R0/   A bundle is already installed with the name "Pwm_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.985
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Resource_TS_T40D2M10I1R0/   A bundle is already installed with the name "Resource_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:10.996
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Spi_TS_T40D2M10I1R0/   A bundle is already installed with the name "Spi_TS_T40D2M10I1R0" and version "3.0.0"
+
+!ENTRY org.eclipse.update.configurator 4 0 2023-08-23 06:20:11.008
+!MESSAGE Could not install bundle C:/NXP/AUTOSAR/S32K14X_MCAL4_2_RTM_HF3_1_0_1/eclipse/plugins/Wdg_TS_T40D2M10I1R0/   A bundle is already installed with the name "Wdg_TS_T40D2M10I1R0" and version "3.0.0"

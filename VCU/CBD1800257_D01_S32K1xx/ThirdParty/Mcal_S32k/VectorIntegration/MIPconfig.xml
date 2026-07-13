@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+============================================================================
+
+Copyright (c) 2018 by Vector Informatik GmbH. All rights reserved.
+
+This software is copyright protected and proprietary to Vector Informatik GmbH.
+Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+All other rights remain with Vector Informatik GmbH.
+
+============================================================================
+
+This file is needed for internal use.
+Please do not modify this file, otherwise the software may behave in
+unexpected way.
+
+============================================================================
+
+============================================================================
+                P R O J E C T
+============================================================================
+Module
+=======================
+Mcal_S32K144Fsl02Asr4Sub
+=============================================================================
+                A U T H O R   I D E N T I T Y
+=============================================================================
+Initials	Name						Company
+=====	===============	=====================================================
+virgaj		Andrej Gazvoda			Vector Informatik GmbH
+virrsu		Roland Suess			Vector Informatik GmbH
+virmzi		Marco Ziegler			Vector Informatik GmbH
+vircbl      Claudia Buhl            Vector Informatik GmbH
+virgki      Kishore Gunda           Vector Informatik GmbH
+=============================================================================
+                R E V I S I O N   H I S T O R Y
+=============================================================================
+Date				Version		Author		Description
+========= 	======	=======	=================================================
+2017-07-18	1.00.00		virgaj			Integration of S32K14X_MCAL4_0_RTM_1_0_1
+																		S32K14X_MCAL4_0_RTM_HF1_1_0_1
+																		S32K14X_MCAL4_0_RTM_P1_1_0_1_EEPonly
+																		S32K14X_CSEC_MCAL4_0_RTM_P2_1_0_1
+2017-09-15	1.01.00		virgaj			Integration of S32K14X_MCAL4_2_RTM_1_0_0
+2017-10-25	1.01.01		virgaj 		Added S32K14X_CSEC_MCAL4_2_RTM_1_0_0
+2017-11-15	1.01.02		virgaj			Changed CSEC package to "not mandatory"
+2017-11-22	1.01.03		virrsu 		Update with S32K14X_MCAL4_0_RTM_HF2_1_0_1
+2017-12-20	1.02.00		virrsu 		Update with S32K14X_MCAL4_0_RTM_HF1_1_0_2 / S32K14X_CSEC_MCAL4_0_RTM_1_0_2
+2018-02-09	1.02.01		virrsu 		Update with S32K14X_MCAL4_0_RTM_HF3_1_0_2
+									Update with S32K14X_MCAL4_2_RTM_HF2_1_0_0
+2018-05-29	1.03.00		virmzi		Update with S32K14X_MCAL4_0_RTM_1_0_3
+												S32K14X_MCAL4_0_RTM_HF1_1_0_3
+									Update with S32K14X_CSEC_MCAL4_0_RTM_1_0_3
+2018-06-29	1.03.01		virmzi		Changed coping mecanism of eep bswmd file to 
+									work with both Autosar 4.0.3 and 4.2.2			
+2018-07-10	1.03.02		virmzi		Fixed ESCAN00099942: External generators 
+									cannot be started by DaVinci Configurator 5
+2018-07-10	1.03.03		virmzi		Updated revision history of Mipconfig.xml
+2018-08-01	1.03.04		vircbl		Fixed ESCAN00100268: Generation of MCAL not
+                                    possible when CSEC component is missing	
+2018-08-06	1.04.00		virgki		Update with S32K14X_MCAL4_2_RTM_HF1_1_0_1 and S32K14X_CSEC_MCAL4_2_RTM_1_0_1
+                                     -Include OCU module if Autosar version is not 4.0. 3
+									 -Comment Dio_init in file InitFunctions_Settings.xml if ASR version is 4.2.2
+									 - Include the S32K14X_CSEC_MCAL4_2_RTM_1_0_1 package
+2018-08-29	1.04.01		virgki		CommentOut or UnComment Dio_init and Ocu_Init sections in file InitFunctions_Settings.xml based on the ASR version  
+
+2018-09-03	1.04.02		virgki		Update the copy action for EEP module 	
+
+2018-08-28	1.05.00		virgki		Include I2C module to MIP							
+**************************************************************************************************************************
+-->
+<MipConfig xmlns="http://www.vector.com/MIPv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vector.com/MIPv2 MIP2.0.7.xsd">
+	<!--
+  =====================================================================================================
+  Generic Informations
+  =====================================================================================================
+  This is the configuration file for the 3rdParty McalIntegartionHelper.
+  Please note: This file has been created and tested for a specific and agreed MCAL version.
+               As typically pattern based specificatons and actions are used this configuration
+               will be valid for other MCAL versions in most cases but this cannot be guaranteed.
+  All steps processed by the tool are logged during execution and can be retraced later on.
+  -->
+	<GeneralInformation>
+		<!-- Path to SIP base path relative to the location of this file 
+         ATTENTION: All other paths within this configuraton file are relative to the SIP Base path! -->
+		<SipBase_RelPath>..\\..\\..\\</SipBase_RelPath>
+		<!-- Path to the MCAL supply folder relative to the SIP Base path -->
+		<McalSupply_RelPath>ThirdParty\\Mcal_.*\\Supply</McalSupply_RelPath>
+	</GeneralInformation>
+	<!--
+  =====================================================================================================
+  Package definitions
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Attributes:
+    - Summary:      Freetext to describe the package content in short
+    - Id:           Unique number to identify the package
+  Elements:
+    - NameExpected: This is the folder name of the package as specified by MCAL supplier.
+                    Typically this folder name contains informations about version and supported 
+                    controllers or families
+    - Description:  Free text to describe the contents of this package in detail
+    - Mandatory:    'true' if this package is mandatory, 'false' otherwise
+  =====================================================================================================
+  -->
+	<Packages>
+		<Package Summary="MCAL Package" Id="1">
+			<NameExpected>S32K14X_MCAL4_0_RTM_HF2_1_0_1</NameExpected>
+			<NameDescription>S32K14X_MCAL4_0_RTM_HF2_1_0_1</NameDescription>
+			<Description>S32K14X_MCAL4_0_RTM_HF2_1_0_1 - NXP's Mcal for S32K14x incl. HF2</Description>
+			<Mandatory>true</Mandatory>
+		</Package>
+		<Package Summary="Tresos Tool" Id="2">
+			<NameExpected>Tresos</NameExpected>
+			<NameDescription>Tresos</NameDescription>
+			<Description>Contains the 3rd party configuration and generation tool chain.</Description>
+			<Mandatory>true</Mandatory>
+		</Package>
+		<Package Summary="Sample Application" Id="3">
+			<NameExpected>S32K14X_MCAL4_0_RTM_1_0_1</NameExpected>
+			<NameDescription>S32K14X_MCAL4_0_RTM_1_0_1</NameDescription>
+			<Description>S32K14X_MCAL4_0_RTM_1_0_1 - NXP's Mcal for S32K14x incl. Sample Application</Description>
+			<Mandatory>false</Mandatory>
+		</Package>
+		<Package Summary="Eep Package" Id="4">
+			<NameExpected>S32K14X_MCAL4_0_RTM_P1_1_0_1_EEPonly</NameExpected>
+			<NameDescription>S32K14X_MCAL4_0_RTM_P1_1_0_1_EEPonly</NameDescription>
+			<Description>S32K14X_MCAL4_0_RTM_P1_1_0_1_EEPonly - NXP's Eep driver package for S32K14x</Description>
+			<Mandatory>false</Mandatory>
+		</Package>
+		<Package Summary="CSEC Package" Id="5">
+			<NameExpected>S32K14X_CSEC_MCAL4_0_RTM_P2_1_0_1</NameExpected>
+			<NameDescription>S32K14X_CSEC_MCAL4_0_RTM_P2_1_0_1</NameDescription>
+			<Description>S32K14X_CSEC_MCAL4_0_RTM_P2_1_0_1 - NXP's AUTOSAR 4.0 Security package for S32K14x</Description>
+			<Mandatory>false</Mandatory>
+		</Package>						
+	</Packages>
+	<Packages>
+		<Package Summary="MCAL Package" Id="1">
+			<NameExpected>S32K14X_MCAL4_0_RTM_HF1_1_0_3</NameExpected>
+			<NameDescription>S32K14X_MCAL4_0_RTM_HF1_1_0_3</NameDescription>
+			<Description>S32K14X_MCAL4_0_RTM_HF1_1_0_3 - NXP's Mcal for S32K14x</Description>
+			<Mandatory>true</Mandatory>
+		</Package>
+		<Package Summary="Tresos Tool" Id="2">
+			<NameExpected>Tresos</NameExpected>
+			<NameDescription>Tresos</NameDescription>
+			<Description>Contains the 3rd party configuration and generation tool chain.</Description>
+			<Mandatory>true</Mandatory>
+		</Package>
+		<Package Summary="CSEC Package" Id="5">
+			<NameExpected>S32K14X_CSEC_MCAL4_0_RTM_1_0_3</NameExpected>
+			<NameDescription>S32K14X_CSEC_MCAL4_0_RTM_1_0_3</NameDescription>
+			<Description>S32K14X_CSEC_MCAL4_0_RTM_1_0_3 - NXP's AUTOSAR 4.0 Security package for S32K14x</Description>
+			<Mandatory>false</Mandatory>
+		</Package>						
+	</Packages>
+	<Packages>
+		<Package Summary="MCAL Package" Id="1">
+			<NameExpected>S32K14X_MCAL4_2_RTM_HF2_1_0_0</NameExpected>
+			<NameDescription>S32K14X_MCAL4_2_RTM_HF2_1_0_0</NameDescription>
+			<Description>S32K14X_MCAL4_2_RTM_HF2_1_0_0 - NXP's AUTOSAR 4.2 Mcal for S32K14x</Description>
+			<Mandatory>true</Mandatory>
+		</Package>	
+		<Package Summary="Tresos Tool" Id="2">
+			<NameExpected>Tresos</NameExpected>
+			<NameDescription>Tresos</NameDescription>
+			<Description>Contains the 3rd party configuration and generation tool chain.</Description>
+			<Mandatory>true</Mandatory>
+		</Package>
+		<Package Summary="Sample Application" Id="3">
+			<NameExpected>S32K14X_MCAL4_2_RTM_1_0_0</NameExpected>
+			<NameDescription>S32K14X_MCAL4_2_RTM_1_0_0</NameDescription>
+			<Description>S32K14X_MCAL4_2_RTM_1_0_0 - NXP's Mcal for S32K14x incl. Sample Application</Description>
+			<Mandatory>false</Mandatory>
+		</Package>
+		<Package Summary="CSEC Package" Id="5">
+			<NameExpected>S32K14X_CSEC_MCAL4_2_RTM_1_0_0</NameExpected>
+			<NameDescription>S32K14X_CSEC_MCAL4_2_RTM_1_0_0</NameDescription>
+			<Description>S32K14X_CSEC_MCAL4_2_RTM_1_0_0 - NXP's AUTOSAR 4.2 Security package for S32K14x</Description>
+			<Mandatory>false</Mandatory>
+		</Package>			
+	</Packages>
+	<Packages>
+		<Package Summary="MCAL Package" Id="1">
+			<NameExpected>S32K14X_MCAL4_2_RTM_HF3_1_0_1</NameExpected>
+			<NameDescription>S32K14X_MCAL4_2_RTM_HF3_1_0_1</NameDescription>
+			<Description>S32K14X_MCAL4_2_RTM_HF3_1_0_1 - NXP's AUTOSAR 4.2 Mcal for S32K14x</Description>
+			<Mandatory>true</Mandatory>
+		</Package>	
+		<Package Summary="Tresos Tool" Id="2">
+			<NameExpected>Tresos</NameExpected>
+			<NameDescription>Tresos</NameDescription>
+			<Description>Contains the 3rd party configuration and generation tool chain.</Description>
+			<Mandatory>true</Mandatory>
+		</Package>
+		<Package Summary="CSEC Package" Id="5">
+			<NameExpected>S32K14X_CSEC_MCAL4_2_RTM_1_0_1</NameExpected>
+			<NameDescription>S32K14X_CSEC_MCAL4_2_RTM_1_0_1</NameDescription>
+			<Description>S32K14X_CSEC_MCAL4_2_RTM_1_0_1 - NXP's AUTOSAR 4.2 Security package for S32K14x</Description>
+			<Mandatory>false</Mandatory>
+		</Package>				
+	</Packages>	
+	<!--
+  =====================================================================================================
+  Below all actions are described which are needed in order to install or remove the MCAL packages.
+  They are devided in the sections.
+  - Install:     With this step the MCAL is installed/copied into the SIP structure thus commonly only
+                 one action for each package is necessary namely copy the package.
+                 If package is already available in SIP (e.g. had been included in SIP) these steps will 
+                 be skipped.
+  - Prepare:     During this step some necessary operation within the MCAL packages and within the 
+                 Vector SIP are executed.
+  - UndoPrepare: With this actions the actions described within the Prepare section will be undone.
+  - Remove:      The actions described here will remove the MCAL packages!
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  For all 4 sections all available actions can be executed as often as needed.
+  Order of action in this file is equal to the order of execution.
+  =====================================================================================================
+  -->
+	<Install>
+		<ActionCopyPackage Summary="Copy package" RelatedPackage="1"/>
+		<ActionCopyPackage Summary="Copy package" RelatedPackage="2"/>
+		<ActionCopyPackage Summary="Copy package" RelatedPackage="3"/>
+		<ActionCopyPackage Summary="Copy package" RelatedPackage="4"/>
+		<ActionCopyPackage Summary="Copy package" RelatedPackage="5"/>
+	</Install>
+	<Prepare>
+		<ActionDefVar Summary="Define temporary variable 'Mcal_Mod_V'" RelatedPackage="1" ExecuteAlways="true">
+			<Name>Mcal_Mod_V</Name>
+			<LookForPathPattern>?CONST.Package_PathRel_Id1?\\eclipse\\plugins\\Adc_TS_(.*)</LookForPathPattern>
+			<ValueBOP>$1</ValueBOP>
+		</ActionDefVar>
+		<ActionDefVar Summary="Define temporary variable 'Derivative Name'" RelatedPackage="1" ExecuteAlways="true">
+			<Name>Mcal_Derivative_Name</Name>
+			<LookForPatternInFile><![CDATA[(.*<ecuType target="ARM" derivate=")(.*)("/>)]]></LookForPatternInFile>
+			<PathRel>?CONST.Package_PathRel_Id1?\\eclipse\\plugins\\Adc_TS_?VAR.Mcal_Mod_V?\\plugin.xml</PathRel>
+			<ValueBOP>$2</ValueBOP>
+		</ActionDefVar>
+		<ActionDefVar Summary="Define temporary variable 'ASR Version'" RelatedPackage="1" ExecuteAlways="true">
+			<Name>Mcal_ASR_Version</Name>
+			<LookForPatternInFile><![CDATA[(.*<parameter name="contentType" value="asc:)(.*)("/>)]]></LookForPatternInFile>
+			<PathRel>?CONST.Package_PathRel_Id1?\\eclipse\\plugins\\Adc_TS_?VAR.Mcal_Mod_V?\\plugin.xml</PathRel>
+			<ValueBOP>$2</ValueBOP>
+		</ActionDefVar>
+		<ActionPatchFile Summary="Write ASR Version into in make file" RelatedPackage="1" ExecuteAlways="true">
+			<PathRel>BSW\\Mcal_.*\\mak\\Mcal_.*_rules.mak</PathRel>
+			<Pattern>(ASR_VERSION.*=)(.*)</Pattern>
+			<ReplaceBOP>$1 ?VAR.Mcal_ASR_Version?</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>		
+		<ActionPatchFile Summary="Set path to MCAL package (variable 'MCAL_PATH') in make file" RelatedPackage="1" ExecuteAlways="true">
+			<PathRel>BSW\\Mcal_.*\\mak\\Mcal_.*_rules.mak</PathRel>
+			<Pattern>(MCAL_PATH.*=)(.*)</Pattern>
+			<ReplaceBOP>$1 ..\\?CONST.Package_PathRel_Id1?</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Set path to Eep package (variable 'EEP_PATH') in make file" RelatedPackage="4" ExecuteAlways="true">
+			<PathRel>BSW\\Mcal_.*\\mak\\Mcal_.*_rules.mak</PathRel>
+			<Pattern>(EEP_PATH.*=)(.*)</Pattern>
+			<ReplaceBOP>$1 ..\\?CONST.Package_PathRel_Id4?</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>		
+		<ActionPatchFile Summary="Set path to Csec package (variable 'CSEC_PATH') in make file" RelatedPackage="5" ExecuteAlways="true">
+			<PathRel>BSW\\Mcal_.*\\mak\\Mcal_.*_rules.mak</PathRel>
+			<Pattern>(CSEC_PATH.*=)(.*)</Pattern>
+			<ReplaceBOP>$1 ..\\?CONST.Package_PathRel_Id5?</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>		
+		<ActionPatchFile Summary="Set Tresos plugin version (variable 'MCAL_MOD_V') in make file" RelatedPackage="1" ExecuteAlways="true">
+			<PathRel>BSW\\Mcal_.*\\mak\\Mcal_.*_rules.mak</PathRel>
+			<Pattern>(MCAL_MOD_V.*=)(.*)</Pattern>
+			<ReplaceBOP>$1 ?VAR.Mcal_Mod_V?</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>
+<!--		<ActionPatchFile Summary="Set derivative in make file" RelatedPackage="1" ExecuteAlways="true">
+			<PathRel>BSW\\Mcal_.*\\mak\\Mcal_.*_rules.mak</PathRel>
+			<Pattern>(MCAL_DERIVATIVE.*=)(.*)</Pattern>
+			<ReplaceBOP>$1 ?VAR.Mcal_Derivative_Name?</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>-->
+		<ActionPatchFile Summary="Set path to 3rd party tool in DaVinciConfigurator configuration file" RelatedPackage="2" ExecuteAlways="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_Tresos.xml</PathRel>
+			<Pattern><![CDATA[(.*<Setting Name="TresosFolder" Value=")(.*)(".*/>)]]></Pattern>
+			<ReplaceBOP><![CDATA[$1$(SipRootPath)\\?CONST.Package_PathRel_Id2?$3]]></ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Set ASR version of MCAL in DaVinciConfigurator configuration file" RelatedPackage="2" ExecuteAlways="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_Tresos.xml</PathRel>
+			<Pattern><![CDATA[(.*<Setting Name="RequiredAsVersion" Value=)(.*)(".*/>)]]></Pattern>
+			<ReplaceBOP><![CDATA[$1"?VAR.Mcal_ASR_Version?$3]]></ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Patch settings xml files and xsl transformation file" RelatedPackage="2" ExecuteAlways="true" MultiFile="true" >
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\(Settings)|(prepare_output)|(InitFunctions)_.*|(GeneratorPackageInformation.xml)</PathRel>
+			<Pattern><![CDATA[(?<start>.*?(_|/|')TS_)(.*?)(?<rest>/|"|'.*?>)]]></Pattern>
+			<ReplaceBOP><![CDATA[${start}?VAR.Mcal_Mod_V?${rest}]]></ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>	
+		<ActionPatchFile Summary="Patch 'module'_bsmwd_rec.xml files" RelatedPackage="2" ExecuteAlways="true" MultiFile="true">
+			<PathRel>BSWMD\\Mcal_.*\\.*_bswmd_rec.arxml</PathRel>
+			<Pattern><![CDATA[(?<start>.*?(_|/|'|>)TS_)(.*?)(?<rest>/|"|'|<.*?>)]]></Pattern>
+			<ReplaceBOP><![CDATA[${start}?VAR.Mcal_Mod_V?${rest}]]></ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Write derivative into settings xml files" RelatedPackage="2" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_.*</PathRel>
+			<Pattern><![CDATA[(.*<Setting Name="Derivate" Value=")(.*)(".*/>)]]></Pattern>
+			<ReplaceBOP><![CDATA[$1?VAR.Mcal_Derivative_Name?$3]]></ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionCopyPattern Summary="Copy/Install MCAL plugins to Tresos" ExecuteAlways="true" RelatedPackage="1" ActionId="10">
+			<SourceRootRel>?CONST.Package_PathRel_Id1?\\eclipse\\plugins</SourceRootRel>
+			<TargetRootRel>?CONST.Package_PathRel_Id2?\\plugins</TargetRootRel>
+			<SourcePattern>(.*_TS_.*)</SourcePattern>
+			<TargetBOP>$1</TargetBOP>
+			<ExcludePattern>(Can|Crcu|Det|Eth|Fee|Ecuc|Lin|MemIf|Rte|WdgIf).*</ExcludePattern>
+		</ActionCopyPattern>
+		<ActionCopyPattern Summary="Copy/Install Eep plugin to Tresos" ExecuteAlways="true" RelatedPackage="4" ActionId="11">
+			<SourceRootRel>?CONST.Package_PathRel_Id4?\\eclipse\\plugins</SourceRootRel>
+			<TargetRootRel>?CONST.Package_PathRel_Id2?\\plugins</TargetRootRel>
+			<SourcePattern>(.*_TS_.*)</SourcePattern>
+			<TargetBOP>$1</TargetBOP>
+			<ExcludePattern></ExcludePattern>
+		</ActionCopyPattern>		
+		<ActionCopyPattern Summary="Copy/Install Csec plugin to Tresos" ExecuteAlways="true" RelatedPackage="5" ActionId="12">
+			<SourceRootRel>?CONST.Package_PathRel_Id5?\\eclipse\\plugins</SourceRootRel>
+			<TargetRootRel>?CONST.Package_PathRel_Id2?\\plugins</TargetRootRel>
+			<SourcePattern>(.*_TS_.*)</SourcePattern>
+			<TargetBOP>$1</TargetBOP>
+			<ExcludePattern></ExcludePattern>
+		</ActionCopyPattern>					
+		<ActionCopyPattern Summary="Copy necessary jar-file to Tresos" RelatedPackage="1" ExecuteAlways="true" ActionId="13">
+			<SourceRootRel>?CONST.Package_PathRel_Id1?\\eclipse\\plugins</SourceRootRel>
+			<TargetRootRel>?CONST.Package_PathRel_Id2?\\plugins</TargetRootRel>
+			<SourcePattern>(.*.jar)</SourcePattern>
+			<TargetBOP>$1</TargetBOP>
+			<ExcludePattern/>
+		</ActionCopyPattern>
+		<ActionPatchFile Summary="Patch module Rec config files. Define the required AUTOSAR version" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>BSWMD\\Mcal_.*\\(Adc|Csec|Dio|Eep|Fls|Gpt|Icu|Mcem|Mcl|Mcu|Port|Pwm|Spi|Wdg)_bswmd_rec.arxml</PathRel>
+			<Pattern><![CDATA[(?<start>.*xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_)(\d-\d-\d)(?<rest>.*)]]></Pattern>
+			<ReplaceBOP>${start}?VAR.Mcal_ASR_Version?${rest}</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>		
+		<ActionPatchFile Summary="Patch Ocu Rec config files. Define the required AUTOSAR version" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>BSWMD\\Mcal_.*\\Ocu_bswmd_rec.arxml</PathRel>
+			<Pattern><![CDATA[(?<start>.*xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_)(\d-\d-\d)(?<rest>.*)]]></Pattern>
+			<ReplaceBOP>${start}?VAR.Mcal_ASR_Version?${rest}</ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.2.2"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionRenameFile Summary="Rename files in folder 'include' of Base component to avoid redefinitions" ExecuteAlways="true" RelatedPackage="1" ActionId="20" MultiFile="true">
+			<PathRel><![CDATA[?CONST.Package_PathRel_Id1?\\eclipse\\plugins\\Base_TS_\w*\\include\\(?'name'[^_]\w*)(?'extension'\.\w*)]]></PathRel>
+			<NewName>_${name}${extension}</NewName>
+			<ExcludePattern>^_.*|CompilerDefinition.h|Mcal.h|Reg_eSys.h|RegLockMacros.h|SilRegMacros.h|Soc_Ips.h|StdRegMacros.h</ExcludePattern>
+		</ActionRenameFile>	
+
+		<ActionPatchFile Summary="Comment out CSEC in DaVinciConfigurator configuration file" RelatedPackage="1" ExecuteAlways="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_Base.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<Setting Name="Csec")(.*)(/>)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[<!--$2$3$4-->]]></ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>
+		
+		<ActionPatchFile Summary="Comment in CSEC in DaVinciConfigurator configuration file" RelatedPackage="5" ExecuteAlways="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_Base.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<Setting Name="Csec")(.*)(-->.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2$3]]></ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>		
+
+		<ActionPatchFile Summary="Comment out OCU in DaVinciConfigurator configuration file if AUTOSAR versionis 4.0.3" RelatedPackage="1" ExecuteAlways="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_Base.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<Setting Name="Ocu")(.*)(/>)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[<!--$2$3$4-->]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.0.3"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+
+		<ActionPatchFile Summary="Comment in OCU in DaVinciConfigurator configuration file if AUTOSAR versionis 4.2.2" RelatedPackage="1" ExecuteAlways="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_Base.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<Setting Name="Ocu")(.*)(-->.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2$3]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.2.2"/>
+			<SkipPattern/>
+		</ActionPatchFile>		
+
+		<ActionPatchFile Summary="Activate Dio_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.0 (Start)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--Dio_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.0.3"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Activate Dio_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.0 (End)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--End of Dio_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.0.3"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Deactivate Dio_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.2 (Start)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--Dio_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2 <!--]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.2.2"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Deactivate Dio_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.2 (End)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--End of Dio_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[--> $2]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.2.2"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Deactivate Dio_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.3 (Start)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--Dio_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2 <!--]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.3.0"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Deactivate Dio_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.3 (End)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--End of Dio_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[--> $2]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.3.0"/>
+			<SkipPattern/>
+		</ActionPatchFile>		
+
+		<ActionPatchFile Summary="Deactivate Ocu_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.0 (Start)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--Ocu_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2 <!--]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.0.3"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Deactivate Ocu_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.0 (End)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--End of Ocu_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[--> $2]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.0.3"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Activate Ocu_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.2 (Start)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--Ocu_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.2.2"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Activate Ocu_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.2 (End)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--End of Ocu_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.2.2"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Activate Ocu_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.3 (Start)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--Ocu_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.3.0"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Activate Ocu_Init from InitFunctions_Settings.xml for AUTOSAR version ASR4.3 (End)" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\InitFunctions_Settings.xml</PathRel>
+			<Pattern><![CDATA[(.*)(<!--End of Ocu_Init-->)(.*)]]></Pattern>
+			<ReplaceBOP><![CDATA[$2]]></ReplaceBOP>
+			<Condition Pattern="?VAR.Mcal_ASR_Version?" Match="4.3.0"/>
+			<SkipPattern/>
+		</ActionPatchFile>
+		
+	</Prepare>
+
+	<UndoPrepare>
+		<Undo ActionId="10" Summary="Remove MCAL plugins from Tresos"/>
+		<Undo ActionId="11" Summary="Remove Eep plugin from Tresos"/>
+		<Undo ActionId="12" Summary="Remove Csec plugin from Tresos"/>
+		<Undo ActionId="13" Summary="Rename jar files from Tresos"/>
+
+		<ActionRenameFile Summary="Undo the renaming actions in Base plugin" RelatedPackage="1" ActionId="24" MultiFile="true">
+			<PathRel><![CDATA[?CONST.Package_PathRel_Id1?\\eclipse\\plugins\\Base_TS_\w*\\include\\_(?'name'[^_]\w*)(?'extension'\.\w*)]]></PathRel>
+			<NewName>${name}${extension}</NewName>
+			<ExcludePattern/>
+		</ActionRenameFile>
+
+	</UndoPrepare>
+	<Remove>
+		<ActionRemovePackage Summary="Remove package" RelatedPackage="1"/>
+		<ActionRemovePackage Summary="Remove package" RelatedPackage="2"/>
+		<ActionRemovePackage Summary="Remove package" RelatedPackage="3"/>
+		<ActionRemovePackage Summary="Remove package" RelatedPackage="4"/>
+		<ActionRemovePackage Summary="Remove package" RelatedPackage="5"/>
+		<ActionRemove Summary="Remove internal process file" RelatedPackage="-1" MultiFile="true">
+			<!-- action removes all txt files in supply folder, but only if all installed packages are removed at once (RelatedPackage="-1") -->
+			<PathRel>?CONST.Supply_PathRel?</PathRel>
+		</ActionRemove>
+	</Remove>
+	<!--
+  =====================================================================================================
+  As the last step the BSWMD files have to be copied from the MCAL packages to a SIP internal location.
+  Therefore the supported derivatives must be determined and a derivative must be choosen by customer.
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  In order to specify the supported derivates there are two possibilties:
+  1. Specify them explicitly
+     <Derivatives>
+       <Derivative DisplayName="R7F701002" IdentifyingFileFragment="02" />
+       <Derivative DisplayName="R7F701003" IdentifyingFileFragment="03" />
+       ...
+     </Derivatives>
+     The Attribute DisplayName specifies the name of the derivative which shall be shown within the tool.
+     The Attribute IdentifyingFileFragment defines the fragment of the filename which signalizes the 
+     compatibility to the derivative.
+  
+  2. Using a pattern to look for supported derivatives within the MCAL packages
+     <Derivatives>
+       <Pattern><![CDATA[?CONST.Package_PathRel_Id1?\\TC2.*\\Aurix_.*\\tools\\tresosECU\\bmd\\(?<derivative>TC.*)]]></Pattern>
+       <DisplayNameBOP>Aurix ${derivative}</DisplayNameBOP>
+       <IdentifyingFileFragmentBOP>${derivative}</IdentifyingFileFragmentBOP>
+     </Derivatives>
+     
+     The <Pattern> element is used to scan for derivatives. 
+     The <DisplayNameBOP> defines the name of the derivative to be displayed.
+     The <IdentifyingFileFragmentBOP> defines the fragment of the filename which signalizes the 
+     compatibility to the derivative.
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  After defining the derivatives as a second step the copy actions for each MCAL package have to be 
+  defined.
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  The action ActionDefVar may be defined in advance in order to set variables which may be used within 
+  the copy actions.
+  =====================================================================================================
+  -->
+	<Bswmd>
+		<ActionDefVar Summary="Define temporary variable" RelatedPackage="1" ExecuteAlways="true">
+			<Name>BswmdMcalFolder</Name>
+			<LookForPathPattern>BSWMD\\(Mcal_\w*)</LookForPathPattern>
+			<ValueBOP>$1</ValueBOP>
+		</ActionDefVar>
+		<ActionDefVar Summary="Define temporary variable 'Mcal_Mod_V'" RelatedPackage="1" ExecuteAlways="true">
+			<Name>Mcal_Mod_V</Name>
+			<LookForPathPattern>?CONST.Package_PathRel_Id1?\\eclipse\\plugins\\Adc_TS_(.*)</LookForPathPattern>
+			<ValueBOP>$1</ValueBOP>
+		</ActionDefVar>
+		<ActionDefVar Summary="Define temporary variable 'ASR Version'" RelatedPackage="1" ExecuteAlways="true">
+			<Name>Mcal_ASR_Version</Name>
+			<LookForPatternInFile><![CDATA[(.*<parameter name="contentType" value="asc:)(.*)("/>)]]></LookForPatternInFile>
+			<PathRel>?CONST.Package_PathRel_Id1?\\eclipse\\plugins\\Mcu_TS_?VAR.Mcal_Mod_V?\\plugin.xml</PathRel>
+			<ValueBOP>$2</ValueBOP>
+		</ActionDefVar>
+		<DerivativeScan>
+			<Pattern><![CDATA[?CONST.Package_PathRel_Id2?\\plugins\\Adc_TS_\w*\\autosar\\Adc_(?<derivative>s32k.*)_(?<layout>.*)\..*]]></Pattern>
+			<DisplayNameBOP>${derivative} - ${layout}</DisplayNameBOP>
+			<!--results in e.g.: mpc58xc80_etqfp100 ...-->
+			<IdentifyingFileFragmentBOP>${derivative}_${layout}</IdentifyingFileFragmentBOP>
+			<!--results in e.g.: mpc58xc80_etqfp100, ...-->
+		</DerivativeScan>
+		<Copy RelatedPackage="2">
+			<Pattern><![CDATA[?CONST.Package_PathRel_Id2?\\plugins\\(?<module>.*)_TS_.*\\autosar\\(?<name>\w*_?USR.IdentifyingFileFragment?)\.\w*]]></Pattern>
+			<TargetBOP>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_${name}.arxml</TargetBOP>
+			<ExcludePattern>Eep.*</ExcludePattern>
+			<RemovePattern>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_</RemovePattern>
+		</Copy>
+		<Copy RelatedPackage="2">
+			<Pattern><![CDATA[?CONST.Package_PathRel_Id2?\\plugins\\(?<module>Base|Resource)_TS_.*\\autosar\\(?<name>\w*)\.\w*]]></Pattern>
+			<TargetBOP>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_${name}.arxml</TargetBOP>
+			<ExcludePattern/>
+			<RemovePattern>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_</RemovePattern>
+		</Copy>
+		<Copy RelatedPackage="2">			
+			<Pattern><![CDATA[?CONST.Package_PathRel_Id2?\\plugins\\(?<module>Eep)_TS_.*\\autosar\\Eep.epd]]></Pattern>
+			<TargetBOP>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_Eep.arxml</TargetBOP>
+			<ExcludePattern></ExcludePattern>
+			<RemovePattern>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_</RemovePattern>
+
+		</Copy> 
+		<Copy RelatedPackage="2">			
+			<Pattern><![CDATA[?CONST.Package_PathRel_Id2?\\plugins\\(?<module>Eep)_TS_.*\\autosar\\(?<name>\w*_?USR.IdentifyingFileFragment?)\.\w*]]></Pattern>
+			<TargetBOP>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_${name}.arxml</TargetBOP>
+			<ExcludePattern></ExcludePattern>
+			<RemovePattern>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_</RemovePattern>
+		</Copy> 
+		<Copy RelatedPackage="2">
+			<Pattern><![CDATA[?CONST.Package_PathRel_Id2?\\plugins\\(?<module>Csec)_TS_.*\\autosar\\(?<name>\w*)\.\w*]]></Pattern>
+			<TargetBOP>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_${name}.arxml</TargetBOP>
+			<ExcludePattern></ExcludePattern>
+			<RemovePattern>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_</RemovePattern>
+		</Copy>		
+	</Bswmd>
+</MipConfig>
