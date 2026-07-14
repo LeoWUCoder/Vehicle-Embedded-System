@@ -1274,11 +1274,157 @@ stub/profileInfo.txt
 
    <img src="./assets/image-20260714173252185.png" alt="image-20260714173252185" style="zoom:50%;" />
 
+### 7.2 代码解析
 
+#### 7.2.1 代码文件分类与功能阐述
 
+**1. Simulink 模型生成的核心文件**
 
+| 文件名                 | 功能描述                                                     |
+| ---------------------- | ------------------------------------------------------------ |
+| **VCUHVACT.c**         | 主算法实现文件，包含模型的计算逻辑和可运行实体(Runnable)的实现 |
+| **VCUHVACT.h**         | 主头文件，声明公共接口、数据类型和外部可见函数               |
+| **VCUHVACT_data.c**    | **如有**存储模型参数和常量数据（如查表数据、校准参数）       |
+| **VCUHVACT_private.h** | 私有头文件，包含内部使用的变量声明和宏定义（不应被外部访问） |
+| **VCUHVACT_types.h**   | 定义模型使用的自定义数据类型（如枚举、结构体）               |
+| **rtwtypes.h**         | Simulink 全局数据类型定义（如 real_T, int32_T 等）           |
 
+**2. AUTOSAR RTE 接口文件**
 
+| 文件名                  | 功能描述                                                  | 重要性 |
+| ----------------------- | --------------------------------------------------------- | ------ |
+| **Rte_VCUHVACT.h**      | RTE 接口头文件，定义 SW-C 与 RTE 的交互接口（读/写操作）  | ★★★★★  |
+| **Rte_VCUHVACT_Type.h** | RTE 数据类型定义，包含 AUTOSAR 应用数据类型(ADT)的实现    | ★★★★☆  |
+| **rte.c**               | RTE 实现文件，处理任务调度和数据传输（实际调用 COM 模块） | ★★★★☆  |
+
+像uint8这种的定义在：
+
+![image-20260714193356739](./assets/image-20260714193356739.png)
+
+**RTE調度运行阶段**：
+
+```c
+{
+    Rte_Read_Inputs();      // 从COM获取输入
+    VCUHVACT_step();        // 执行模型计算
+    Rte_Write_Outputs();    // 发送输出到COM
+}
+```
+
+#### 7.2.2 具体代码文件分析
+
+ **1. VCUHVACT.c - 算法核心**
+
+```C
+#include "VCUHVACT.h"
+#include "Rte_VCUHVACT.h"  // AUTOSAR接口
+
+/* 可运行实体实现 */
+void VCUHVACT_step(void)
+{
+    /* 1. 读取输入信号 */
+    float64 batterySoc;
+    Rte_Read_read_BmsBattery_SocValue_float(&batterySoc);
+    
+    /* 2. 算法逻辑处理 */
+    boolean isReady = (batterySoc > 20.0) ? TRUE : FALSE;
+    
+    /* 3. 写入输出信号 */
+    Rte_Write_write_VehicleReady_Status_uint8_t(isReady);
+}
+```
+
+**2. Rte_VCUHVACT.h - 接口定义**
+
+```C
+/* 读操作API声明 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_read_BmsBattery_SocValue_float(P2VAR(float64, AUTOMATIC, RTE_APPL_DATA) data);
+
+/* 写操作API声明 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_write_VehicleReady_Status_uint8_t(boolean data);
+```
+
+ **3. Rte_VCUHVACT_Type.h - 数据类型**
+
+```C
+/* AUTOSAR应用数据类型映射 */
+typedef float64 Rte_DtImpl_BmsBattery_SocValue_float;
+typedef uint8 Rte_DtImpl_VehicleReady_Status_uint8;
+```
+
+ **4. rte.c - RTE实现**
+
+```C
+/* 实际信号传输实现 */
+Std_ReturnType Rte_Write_write_VehicleReady_Status_uint8_t(boolean data)
+{
+    return Com_SendSignal(COM_ID_VehicleReady, &data); // 调用COM模块
+}
+```
+
+#### 7.2.3 Rte_VCUHVACT.h代码讲解
+
+这个头文件 `Rte_VCUHVACT.h` 是使用 Vector 的 MICROSAR RTE 工具为软件组件（SW-C）`VCUHVACT` 自动生成的接口文件。以下是关键部分的解析：
+
+1. 文件基本信息
+
+```C
+/* 版权信息 */
+File: Rte_VCUHVACT.h
+Config: S32K144_Start.dpa
+ECU-Project: MyECU
+Generator: MICROSAR RTE Generator Version 4.19.0
+```
+
+- 用于 NXP S32K144 微控制器的汽车电子项目
+- 由 Vector MICROSAR RTE 工具自动生成
+
+2. 核心功能结构
+
+ **初始化值定义**
+
+```C
+# define Rte_InitValue_read_AcceleratorPedal_Opening_uint16_t (0U)
+# define Rte_InitValue_read_BmsBatteryTotal_Current_float (0.0)
+# define Rte_InitValue_write_BmsFault_Status_uint8_t (0.0)
+```
+
+- 为所有在RTE里传输的信号定义初始默认值
+- 命名格式：`Rte_InitValue_[方向]_[信号名]_[类型]`
+- 类型包括：`uint8_t`, `uint16_t`, `float`, `bool`等
+
+**写操作API**
+
+```C
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_BmsFault_Status_uint8_t(float64 data);
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_Dcdc_Enable_uint8_t(boolean data);
+```
+
+- 提供向总线发送信号的接口——RTE.c会调用这个函数
+
+**读操作宏**
+
+```C
+# define Rte_Read_read_ActualGear_Status_uint8_t(data) \ 
+    (Com_ReceiveSignal(ComConf_ComSignal_read_ActualGear_Status_..._Rx, (data)))
+```
+
+- 使用 AUTOSAR COM 模块接收信号
+- 接收流程：
+  - 从指定 CAN 信号(如 `ComConf_ComSignal_read_ActualGear_Status_..._Rx`)
+  - 通过 `Com_ReceiveSignal()` 函数读取
+  - 存储到传入的变量指针
+
+可运行实体声明
+
+```C
+FUNC(void, VCUHVACT_CODE) HVAct_100ms(void);
+FUNC(void, VCUHVACT_CODE) VCUHVACT_Init(void);
+```
+
+- `HVAct_100ms`: 100ms周期任务
+- `VCUHVACT_Init`: 组件初始化函数
+- 这些函数需要在 `.c` 文件中实现
 
 ## 八、通信矩阵落地
 
@@ -1376,7 +1522,13 @@ stub/profileInfo.txt
 
 
 
+### 8.3 dbc传输问题解决
 
+1. 当你利用Tsmaster做测试的时候你发现，好多Enable信号显示0，原因：这些Enable信号都被配置为了float 64，这是一个有符号数，但是这个有符号数在dbc里却定义了一个bit位，那么第一个位置显示的是符号位（正数是0），所以全显示0.
+
+2. 修改——回到Configurator修改一下Com模块，然后自己手动修改一下rte.c和rte_HVACT.h
+
+   ![image-20260714212603339](./assets/image-20260714212603339.png)
 
 
 
