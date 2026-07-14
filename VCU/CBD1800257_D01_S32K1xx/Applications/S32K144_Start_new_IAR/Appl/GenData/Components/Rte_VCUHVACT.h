@@ -43,6 +43,13 @@ extern "C"
 # include "Rte_VCUHVACT_Type.h"
 # include "Rte_DataHandleType.h"
 
+# ifndef RTE_CORE
+
+#  include "Com.h"
+
+
+# endif /* !defined(RTE_CORE) */
+
 
 # ifndef RTE_CORE
 /**********************************************************************************************************************
@@ -78,68 +85,79 @@ extern "C"
 # endif
 
 
+# define RTE_START_SEC_CODE
+# include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
+
+/**********************************************************************************************************************
+ * API prototypes
+ *********************************************************************************************************************/
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_BmsFault_Status_unit8_t(uint8 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_DcdcFault_Status_uint8_t(uint8 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_Dcdc_Enable_uint8_t(uint8 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_MainNegativeRelay_Enable_unit8_t(uint8 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_MainPrechargeRelay_Enable_uint8_t(uint8 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_MainRelay_Enable_uint8_t(uint8 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_VehicleReady_Status_uint8_t(uint8 data); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+# define RTE_STOP_SEC_CODE
+# include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
+
+
 # ifndef RTE_CORE
 
 /**********************************************************************************************************************
  * Rte_Read_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
 #  define Rte_Read_read_AcceleratorPedal_Opening_uint16_t Rte_Read_VCUHVACT_read_AcceleratorPedal_Opening_uint16_t
-#  define Rte_Read_VCUHVACT_read_AcceleratorPedal_Opening_uint16_t(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_AcceleratorPedal_Opening_uint16_t(data) (Com_ReceiveSignal(ComConf_ComSignal_read_AcceleratorPedal_Opening_oVCUHV_Receive_oCAN00_487c0bf6_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_ActualGear_Status_uint8_t Rte_Read_VCUHVACT_read_ActualGear_Status_uint8_t
-#  define Rte_Read_VCUHVACT_read_ActualGear_Status_uint8_t(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_ActualGear_Status_uint8_t(data) (Com_ReceiveSignal(ComConf_ComSignal_read_ActualGear_Status_oVCUHV_Receive_oCAN00_7e6698b8_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_BmsBatteryTotal_Current_float64 Rte_Read_VCUHVACT_read_BmsBatteryTotal_Current_float64
-#  define Rte_Read_VCUHVACT_read_BmsBatteryTotal_Current_float64(data) (*(data) = 0.0, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_BmsBatteryTotal_Current_float64(data) (Com_ReceiveSignal(ComConf_ComSignal_read_BmsBatteryTotal_Current_oVCUHV_Receive_oCAN00_a76f589b_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_BmsBattery_SocValue_float64 Rte_Read_VCUHVACT_read_BmsBattery_SocValue_float64
-#  define Rte_Read_VCUHVACT_read_BmsBattery_SocValue_float64(data) (*(data) = 0.0, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_BmsBattery_SocValue_float64(data) (Com_ReceiveSignal(ComConf_ComSignal_read_BmsBattery_SocValue_oVCUHV_Receive_oCAN00_270f3267_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_BmsMainNegativeRelayClosed_Status_uint8_t Rte_Read_VCUHVACT_read_BmsMainNegativeRelayClosed_Status_uint8_t
-#  define Rte_Read_VCUHVACT_read_BmsMainNegativeRelayClosed_Status_uint8_t(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_BmsMainNegativeRelayClosed_Status_uint8_t(data) (Com_ReceiveSignal(ComConf_ComSignal_read_BmsMainNegativeRelayClosed_oVCUHV_Receive_oCAN00_753eb224_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_BmsMainNegativeRelay_Status_bool Rte_Read_VCUHVACT_read_BmsMainNegativeRelay_Status_bool
-#  define Rte_Read_VCUHVACT_read_BmsMainNegativeRelay_Status_bool(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_BmsMainNegativeRelay_Status_bool(data) (Com_ReceiveSignal(ComConf_ComSignal_read_BmsMainNegativeRelay_Status_oVCUHV_Receive_oCAN00_d2726e8d_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_BmsRelayOff_Request_uint8_t Rte_Read_VCUHVACT_read_BmsRelayOff_Request_uint8_t
-#  define Rte_Read_VCUHVACT_read_BmsRelayOff_Request_uint8_t(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_BmsRelayOff_Request_uint8_t(data) (Com_ReceiveSignal(ComConf_ComSignal_read_BmsRelayOff_Request_oVCUHV_Receive_oCAN00_80bc2290_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_BrakePedal_Status_uint8_t Rte_Read_VCUHVACT_read_BrakePedal_Status_uint8_t
-#  define Rte_Read_VCUHVACT_read_BrakePedal_Status_uint8_t(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_BrakePedal_Status_uint8_t(data) (Com_ReceiveSignal(ComConf_ComSignal_read_BrakePedal_Status_oVCUHV_Receive_oCAN00_ff534c6b_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_DcdcWorking_Status_uint8_t Rte_Read_VCUHVACT_read_DcdcWorking_Status_uint8_t
-#  define Rte_Read_VCUHVACT_read_DcdcWorking_Status_uint8_t(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_DcdcWorking_Status_uint8_t(data) (Com_ReceiveSignal(ComConf_ComSignal_read_DcdcWorking_Status_oVCUHV_Receive_oCAN00_47bf7105_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_FastChargePlug_Status_bool Rte_Read_VCUHVACT_read_FastChargePlug_Status_bool
-#  define Rte_Read_VCUHVACT_read_FastChargePlug_Status_bool(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_FastChargePlug_Status_bool(data) (Com_ReceiveSignal(ComConf_ComSignal_read_FastChargePlug_Status_oVCUHV_Receive_oCAN00_20825129_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_KeyOnSwitch_Signal_bool Rte_Read_VCUHVACT_read_KeyOnSwitch_Signal_bool
-#  define Rte_Read_VCUHVACT_read_KeyOnSwitch_Signal_bool(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_KeyOnSwitch_Signal_bool(data) (Com_ReceiveSignal(ComConf_ComSignal_read_KeyONSwitch_Signal_oVCUHV_Receive_oCAN00_cc707b37_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_KeyStartSwitch_Signal_bool Rte_Read_VCUHVACT_read_KeyStartSwitch_Signal_bool
-#  define Rte_Read_VCUHVACT_read_KeyStartSwitch_Signal_bool(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_KeyStartSwitch_Signal_bool(data) (Com_ReceiveSignal(ComConf_ComSignal_read_KeyStartSwitch_Signal_oVCUHV_Receive_oCAN00_12b91abc_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_McuWorking_Status_uint8_t Rte_Read_VCUHVACT_read_McuWorking_Status_uint8_t
-#  define Rte_Read_VCUHVACT_read_McuWorking_Status_uint8_t(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_McuWorking_Status_uint8_t(data) (Com_ReceiveSignal(ComConf_ComSignal_read_McuWorking_Status_oVCUHV_Receive_oCAN00_46e05410_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_PduMainPrechargeRelay_Status_uint8_t Rte_Read_VCUHVACT_read_PduMainPrechargeRelay_Status_uint8_t
-#  define Rte_Read_VCUHVACT_read_PduMainPrechargeRelay_Status_uint8_t(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_PduMainPrechargeRelay_Status_uint8_t(data) (Com_ReceiveSignal(ComConf_ComSignal_read_PduMainPrechargeRelay_oVCUHV_Receive_oCAN00_7a304762_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_PduMainRelay_Status_uint8_t Rte_Read_VCUHVACT_read_PduMainRelay_Status_uint8_t
-#  define Rte_Read_VCUHVACT_read_PduMainRelay_Status_uint8_t(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_PduMainRelay_Status_uint8_t(data) (Com_ReceiveSignal(ComConf_ComSignal_read_PduMainRelay_Status_oVCUHV_Receive_oCAN00_4bff4eb0_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_SelfCheck_Status_bool Rte_Read_VCUHVACT_read_SelfCheck_Status_bool
-#  define Rte_Read_VCUHVACT_read_SelfCheck_Status_bool(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_SelfCheck_Status_bool(data) (Com_ReceiveSignal(ComConf_ComSignal_read_SelfCheck_Status_oVCUHV_Receive_oCAN00_932015b8_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_SlowChargePlug_Status_bool Rte_Read_VCUHVACT_read_SlowChargePlug_Status_bool
-#  define Rte_Read_VCUHVACT_read_SlowChargePlug_Status_bool(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_SlowChargePlug_Status_bool(data) (Com_ReceiveSignal(ComConf_ComSignal_read_SlowChargePlug_Status_oVCUHV_Receive_oCAN00_00e8f3f1_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_VehicleFaultLevel_uint8_t Rte_Read_VCUHVACT_read_VehicleFaultLevel_uint8_t
-#  define Rte_Read_VCUHVACT_read_VehicleFaultLevel_uint8_t(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_VehicleFaultLevel_uint8_t(data) (Com_ReceiveSignal(ComConf_ComSignal_read_VehicleFaultLevel_oVCUHV_Receive_oCAN00_cf14497e_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Read_read_VehicleSpeed_Kph_float64 Rte_Read_VCUHVACT_read_VehicleSpeed_Kph_float64
-#  define Rte_Read_VCUHVACT_read_VehicleSpeed_Kph_float64(data) (*(data) = 0.0, ((Std_ReturnType)RTE_E_UNCONNECTED)) /* PRQA S 3453 */ /* MD_MSR_19.7 */
+#  define Rte_Read_VCUHVACT_read_VehicleSpeed_Kph_float64(data) (Com_ReceiveSignal(ComConf_ComSignal_read_VehicleSpeed_Kph_oVCUHV_Receive_oCAN00_55e74c51_Rx, (data))) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 
 
 /**********************************************************************************************************************
  * Rte_Write_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
 #  define Rte_Write_write_BmsFault_Status_unit8_t Rte_Write_VCUHVACT_write_BmsFault_Status_unit8_t
-#  define Rte_Write_VCUHVACT_write_BmsFault_Status_unit8_t(data) (RTE_E_OK) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Write_write_DcdcFault_Status_uint8_t Rte_Write_VCUHVACT_write_DcdcFault_Status_uint8_t
-#  define Rte_Write_VCUHVACT_write_DcdcFault_Status_uint8_t(data) (RTE_E_OK) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Write_write_Dcdc_Enable_uint8_t Rte_Write_VCUHVACT_write_Dcdc_Enable_uint8_t
-#  define Rte_Write_VCUHVACT_write_Dcdc_Enable_uint8_t(data) (RTE_E_OK) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Write_write_MainNegativeRelay_Enable_unit8_t Rte_Write_VCUHVACT_write_MainNegativeRelay_Enable_unit8_t
-#  define Rte_Write_VCUHVACT_write_MainNegativeRelay_Enable_unit8_t(data) (RTE_E_OK) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Write_write_MainPrechargeRelay_Enable_uint8_t Rte_Write_VCUHVACT_write_MainPrechargeRelay_Enable_uint8_t
-#  define Rte_Write_VCUHVACT_write_MainPrechargeRelay_Enable_uint8_t(data) (RTE_E_OK) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Write_write_MainRelay_Enable_uint8_t Rte_Write_VCUHVACT_write_MainRelay_Enable_uint8_t
-#  define Rte_Write_VCUHVACT_write_MainRelay_Enable_uint8_t(data) (RTE_E_OK) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 #  define Rte_Write_write_VehicleReady_Status_uint8_t Rte_Write_VCUHVACT_write_VehicleReady_Status_uint8_t
-#  define Rte_Write_VCUHVACT_write_VehicleReady_Status_uint8_t(data) (RTE_E_OK) /* PRQA S 3453 */ /* MD_MSR_19.7 */
 
 
 # endif /* !defined(RTE_CORE) */

@@ -1270,9 +1270,109 @@ stub/profileInfo.txt
 
 <img src="./assets/image-20260713140411773.png" alt="image-20260713140411773" style="zoom:50%;" />
 
+5. MBD生成代码要到Source文件：
+
+   <img src="./assets/image-20260714173252185.png" alt="image-20260714173252185" style="zoom:50%;" />
 
 
 
+
+
+
+
+## 八、通信矩阵落地
+
+### 8.1 构建dbc文件
+
+**Message**
+
+| Name                         | ID   | Trans   | Receive |
+| ---------------------------- | ---- | ------- | ------- |
+| VCUHV_Send（write是Send）    | 0x10 | MyECU   | RearECU |
+| VCUHV_Receive(Read是Receive) | 0x11 | RearECU | MyECU   |
+
+**节点VCUHV_Send信号——发的是VCU处理后的信号，也就是write信号**
+
+| 信号名                          | 信号类型 | 物理含义             | 数据变量类型                |
+| ------------------------------- | -------- | -------------------- | --------------------------- |
+| write_MainPrechargeRelay_Enable | 输出信号 | 主预充接触器控制指令 | uint8_t（0禁止，1使能）     |
+| write_MainRelay_Enable          | 输出信号 | 主正接触器控制指令   | uint8_t（0禁止，1使能）     |
+| write_VehicleReady_Status       | 输出信号 | 车辆Ready状态        | uint8_t（0未就绪，1就绪）   |
+| write_MainNegativeRelay_Enable  | 输出信号 | 主负接触器控制指令   | uint8_t（0禁止，1使能）     |
+| write_Dcdc_Enable               | 输出信号 | DCDC使能             | uint8_t（0禁止，1使能）     |
+| write_DcdcFault_Status          | 输出信号 | DCDC故障状态         | uint8_t（0无故障，1有故障） |
+| write_BmsFault_Status           | 输出信号 | BMS故障状态          | uint8_t（0无故障，1有故障） |
+
+**节点VCUHV_Receive信号——是VCU接受的信号，也就是read**
+
+| 信号名                           | 信号类型           | 物理含义           | 数据变量类型                          |
+| -------------------------------- | ------------------ | ------------------ | ------------------------------------- |
+| read_SelfCheck_Status            | 输入信号           | 自检状态           | boolean假设状态用0、1等简单数字表示） |
+| read_VehicleFaultLevel           | 输入信号           | 整车故障等级       | uint8_t（可表示不同等级）             |
+| read_BmsMainNegativeRelay_Status | 输入信号           | 主负接触器状态     | boolean（如0断开，1闭合）             |
+| read_KeyOnSwitch_Signal          | 输入信号           | 钥匙行车就绪档信号 | boolean（0未按下，1按下）             |
+| read_SlowChargePlug_Status       | 输入信号           | 慢充插枪信号状态   | boolean（0未插，1已插）               |
+| read_FastChargePlug_Status       | 输入信号           | 快充插枪信号状态   | boolean（0未插，1已插）               |
+| read_KeyStartSwitch_Signal       | 输入信号           | 钥匙动力激活档信号 | boolean（0未按下，1按下）             |
+| read_AcceleratorPedal_Opening    | 输入信号           | 加速踏板开度值     | uint16_t（开度值可能范围较广）        |
+| read_BrakePedal_Status           | 输入信号           | 制动踏板状态       | uint8_t（0未踩下，1踩下）             |
+| read_ActualGear_Status           | 输入信号           | 当前档位           | uint8_t（表示不同档位）               |
+| read_VehicleSpeed_Kph            | 输入信号           | 当前车速           | float64（更精确表示车速）             |
+| read_PduMainPrechargeRelay       | 输入信号           | 主预充接触器状态   | uint8_t（0断开，1闭合）               |
+| read_PduMainRelay_Status         | 输入信号           | 主正接触器状态     | uint8_t（0断开，1闭合）               |
+| read_McuWorking_Status           | 输入信号           | MCU工作状态        | uint8_t（表示不同工作状态）           |
+| read_KeyONSwitch_Signal          | 输入信号           | 钥匙行车就绪档信号 | uint8_t（0未按下，1按下）             |
+| read_BmsBattery_SocValue         | 输入信号（6个bit） | 电池SOC值          | float64（精确表示电量百分比）         |
+| read_BmsRelayOff_Request         | 输入信号           | BMS下高压请求      | uint8_t（0无请求，1有请求）           |
+| read_BmsMainNegativeRelayClosed  | 输入信号           | 主负接触器闭合状态 | uint8_t（0断开，1闭合）               |
+| read_DcdcWorking_Status          | 输入信号           | DCDC工作状态       | uint8_t（表示不同工作状态）           |
+| read_BmsBatteryTotal_Current     | 输入信号           | 电池总电流         | float64（精确表示电流值）             |
+
+**记得要调好layout布局！！！要保证没有signal重复落位**
+
+<img src="./assets/image-20260713215029149.png" alt="image-20260713215029149" style="zoom: 33%;" />
+
+### 8.2 dbc导入Configurator进行后续操作
+
+1. 导入dbc文件
+
+<img src="./assets/image-20260714163432859.png" alt="image-20260714163432859" style="zoom:33%;" />
+
+2. 有报错，解决报错
+
+   ![image-20260714163925155](./assets/image-20260714163925155.png)
+
+发现是Developer路径的问题：**根本原因**是：DaVinci Configurator 在尝试调用 **DaVinci Developer** 时，找不到指定路径下的可执行文件，导致工作流更新失败。
+
+<img src="./assets/image-20260714164603819.png" alt="image-20260714164603819" style="zoom:50%;" />
+
+<img src="./assets/image-20260714164637544.png" alt="image-20260714164637544" style="zoom:50%;" />
+
+
+
+3. 去做和CAN通信相关的底层配置
+
+   1. 先把发送模式改成周期发送：——只针对发送报文（send）
+
+      <img src="./assets/image-20260714165846850.png" alt="image-20260714165846850" style="zoom:50%;" />
+
+   2. PduR配置——主要是为了解决报错
+
+      <img src="./assets/image-20260714170759803.png" alt="image-20260714170759803" style="zoom: 67%;" />
+
+      <img src="./assets/image-20260714171123610.png" alt="image-20260714171123610" style="zoom: 50%;" />
+
+<img src="./assets/image-20260714171442618.png" alt="image-20260714171442618" style="zoom: 50%;" />
+
+3. 应用层信号和底层信号的集成
+
+   <img src="./assets/image-20260714171905592.png" alt="image-20260714171905592" style="zoom:50%;" />
+
+双击Mapping Signal一个个配置，然后做一下validate，发现com有问题。——各大signal要set user defined
+
+<img src="./assets/image-20260714172802895.png" alt="image-20260714172802895" style="zoom:50%;" />
+
+4. 没问题后输出代码
 
 
 
@@ -1285,3 +1385,7 @@ stub/profileInfo.txt
 1. ECU下电的故障信号没有处理！后续重点
 
 2. 有些信号没用到
+
+3. dbc信号构建不太符合逻辑，比如有些信号分明不需要8位
+
+4. 有些信息不清楚，比如故障等级有几级这样

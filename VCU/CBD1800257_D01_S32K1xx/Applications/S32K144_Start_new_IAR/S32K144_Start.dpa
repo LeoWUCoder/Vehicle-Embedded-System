@@ -35,7 +35,7 @@
         <AUTOSAR>.\Config\AUTOSAR</AUTOSAR>
     </Folders>
     <Tools>
-        <DEV>C:\Program Files (x86)\Vector DaVinci Developer 4.4 (SP2)\Bin\DaVinciDEV.exe</DEV>
+        <DEV>C:\Program Files (x86)\Vector DaVinci Developer 4.6\Bin\DaVinciDEV.exe</DEV>
         <LegacyConverter Version="1.8.24"/>
         <DDM Version="5.18.37 SP1"/>
     </Tools>
@@ -127,8 +127,8 @@
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
     </EcucSplitter>
     <Display LastVersion="5.18.37 SP1">
-        <FileSet Id="" CS="e1707a37">
-            <File Order="0" EcuInstance="MyECU" Hash="653b68a91da683311cb88bfa4f142c36" FileCategory="legacy_communication_data">$(DpaProjectFolder)\Inputfiles\CAN.dbc</File>
+        <FileSet Id="" CS="8c638cca">
+            <File Order="0" EcuInstance="MyECU" Hash="28e00a4f3e945a5dba8f5a2f8573445e" FileCategory="legacy_communication_data">$(DpaProjectFolder)\Inputfiles\CAN.dbc</File>
             <Diagnostic>
                 <Description Hash="e0ae908913d93caf691f8c3440b9d7bb">$(DpaProjectFolder)\Inputfiles\ForTraining.cdd</Description>
                 <Ecu>New_ECU_1</Ecu>

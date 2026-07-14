@@ -60,6 +60,13 @@
 
 #include "Rte_Hook.h"
 
+#include "Com.h"
+#if defined(IL_ASRCOM_VERSION)
+# define RTE_USE_COM_TXSIGNAL_RDACCESS
+#endif
+
+#include "Rte_Cbk.h"
+
 /* AUTOSAR 3.x compatibility */
 #if !defined (RTE_LOCAL)
 # define RTE_LOCAL static
@@ -245,6 +252,74 @@ FUNC(void, RTE_CODE) SchM_Deinit(void)
 FUNC(void, RTE_CODE) Rte_InitMemory(void) /* PRQA S 0850 */ /* MD_MSR_19.8 */
 {
 }
+
+
+/**********************************************************************************************************************
+ * Internal/External Tx connections
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_BmsFault_Status_unit8_t(uint8 data) /* PRQA S 0850, 1505 */ /* MD_MSR_19.8, MD_MSR_8.10 */
+{
+  Std_ReturnType ret = RTE_E_OK;
+
+  ret |= Com_SendSignal(ComConf_ComSignal_write_BmsFault_Status_oVCUHV_Send_oCAN00_3bb6edf6_Tx, (&data)); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_DcdcFault_Status_uint8_t(uint8 data) /* PRQA S 0850, 1505 */ /* MD_MSR_19.8, MD_MSR_8.10 */
+{
+  Std_ReturnType ret = RTE_E_OK;
+
+  ret |= Com_SendSignal(ComConf_ComSignal_write_DcdcFault_Status_oVCUHV_Send_oCAN00_1ff6e880_Tx, (&data)); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_Dcdc_Enable_uint8_t(uint8 data) /* PRQA S 0850, 1505 */ /* MD_MSR_19.8, MD_MSR_8.10 */
+{
+  Std_ReturnType ret = RTE_E_OK;
+
+  ret |= Com_SendSignal(ComConf_ComSignal_write_Dcdc_Enable_oVCUHV_Send_oCAN00_ff201339_Tx, (&data)); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_MainNegativeRelay_Enable_unit8_t(uint8 data) /* PRQA S 0850, 1505 */ /* MD_MSR_19.8, MD_MSR_8.10 */
+{
+  Std_ReturnType ret = RTE_E_OK;
+
+  ret |= Com_SendSignal(ComConf_ComSignal_write_MainNegativeRelay_Enable_oVCUHV_Send_oCAN00_47506650_Tx, (&data)); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_MainPrechargeRelay_Enable_uint8_t(uint8 data) /* PRQA S 0850, 1505 */ /* MD_MSR_19.8, MD_MSR_8.10 */
+{
+  Std_ReturnType ret = RTE_E_OK;
+
+  ret |= Com_SendSignal(ComConf_ComSignal_write_MainPrechargeRelay_Enable_oVCUHV_Send_oCAN00_b12b678a_Tx, (&data)); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_MainRelay_Enable_uint8_t(uint8 data) /* PRQA S 0850, 1505 */ /* MD_MSR_19.8, MD_MSR_8.10 */
+{
+  Std_ReturnType ret = RTE_E_OK;
+
+  ret |= Com_SendSignal(ComConf_ComSignal_write_MainRelay_Enable_oVCUHV_Send_oCAN00_10fd8b9a_Tx, (&data)); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_VCUHVACT_write_VehicleReady_Status_uint8_t(uint8 data) /* PRQA S 0850, 1505 */ /* MD_MSR_19.8, MD_MSR_8.10 */
+{
+  Std_ReturnType ret = RTE_E_OK;
+
+  ret |= Com_SendSignal(ComConf_ComSignal_write_VehicleReady_Status_oVCUHV_Send_oCAN00_8602d488_Tx, (&data)); /* PRQA S 0850 */ /* MD_MSR_19.8 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
 
 
 /**********************************************************************************************************************

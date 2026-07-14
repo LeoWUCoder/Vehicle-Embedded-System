@@ -36,6 +36,37 @@ BS_:
 BU_: Tester RearECU MyECU
 
 
+BO_ 17 VCUHV_Receive: 5 RearECU
+ SG_ read_BmsBatteryTotal_Current : 32|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_DcdcWorking_Status : 24|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_BmsMainNegativeRelayClosed : 23|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_BmsRelayOff_Request : 22|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_BmsBattery_SocValue : 16|6@1+ (1,0) [0|100] ""  MyECU
+ SG_ read_KeyONSwitch_Signal : 14|2@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_McuWorking_Status : 13|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_PduMainRelay_Status : 12|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_PduMainPrechargeRelay : 11|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_VehicleSpeed_Kph : 33|7@1+ (1,0) [0|100] ""  MyECU
+ SG_ read_BrakePedal_Status : 9|1@1+ (1,0) [0|100] ""  MyECU
+ SG_ read_ActualGear_Status : 8|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_AcceleratorPedal_Opening : 25|7@1+ (1,0) [0|100] ""  MyECU
+ SG_ read_KeyStartSwitch_Signal : 6|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_FastChargePlug_Status : 5|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_SlowChargePlug_Status : 4|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_KeyOnSwitch_Signal : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ read_BmsMainNegativeRelay_Status : 2|1@1+ (1,0) [0|1] ""  MyECU
+ SG_ read_VehicleFaultLevel : 1|1@1+ (1,0) [0|100] ""  MyECU
+ SG_ read_SelfCheck_Status : 0|1@1+ (1,0) [0|1] ""  MyECU
+
+BO_ 16 VCUHV_Send: 7 MyECU
+ SG_ write_BmsFault_Status : 48|1@1+ (1,0) [0|1] ""  RearECU
+ SG_ write_DcdcFault_Status : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ write_Dcdc_Enable : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ write_MainNegativeRelay_Enable : 24|1@1+ (1,0) [0|1] ""  RearECU
+ SG_ write_VehicleReady_Status : 16|1@1+ (1,0) [0|1] ""  RearECU
+ SG_ write_MainRelay_Enable : 8|1@1+ (1,0) [0|1] ""  RearECU
+ SG_ write_MainPrechargeRelay_Enable : 0|1@1+ (1,0) [0|1] ""  RearECU
+
 BO_ 1297 msg_MyECU_Lamp: 8 MyECU
  SG_ sig_LampCnt : 7|8@0+ (1,0) [0|255] ""  RearECU
 
@@ -158,6 +189,33 @@ BA_ "GenMsgCycleTime" BO_ 512 100;
 BA_ "GenMsgSendType" BO_ 512 0;
 BA_ "GenMsgCycleTime" BO_ 528 100;
 BA_ "GenMsgSendType" BO_ 528 0;
+BA_ "GenSigCycleTime" SG_ 17 read_BmsBatteryTotal_Current 10;
+BA_ "GenSigCycleTime" SG_ 17 read_DcdcWorking_Status 10;
+BA_ "GenSigCycleTime" SG_ 17 read_BmsMainNegativeRelayClosed 10;
+BA_ "GenSigCycleTime" SG_ 17 read_BmsRelayOff_Request 10;
+BA_ "GenSigCycleTime" SG_ 17 read_BmsBattery_SocValue 10;
+BA_ "GenSigCycleTime" SG_ 17 read_KeyONSwitch_Signal 10;
+BA_ "GenSigCycleTime" SG_ 17 read_McuWorking_Status 10;
+BA_ "GenSigCycleTime" SG_ 17 read_PduMainRelay_Status 10;
+BA_ "GenSigCycleTime" SG_ 17 read_PduMainPrechargeRelay 10;
+BA_ "GenSigCycleTime" SG_ 17 read_VehicleSpeed_Kph 10;
+BA_ "GenSigCycleTime" SG_ 17 read_BrakePedal_Status 10;
+BA_ "GenSigCycleTime" SG_ 17 read_ActualGear_Status 10;
+BA_ "GenSigCycleTime" SG_ 17 read_AcceleratorPedal_Opening 10;
+BA_ "GenSigCycleTime" SG_ 17 read_KeyStartSwitch_Signal 10;
+BA_ "GenSigCycleTime" SG_ 17 read_FastChargePlug_Status 10;
+BA_ "GenSigCycleTime" SG_ 17 read_SlowChargePlug_Status 10;
+BA_ "GenSigCycleTime" SG_ 17 read_KeyOnSwitch_Signal 10;
+BA_ "GenSigCycleTime" SG_ 17 read_BmsMainNegativeRelay_Status 10;
+BA_ "GenSigCycleTime" SG_ 17 read_VehicleFaultLevel 10;
+BA_ "GenSigCycleTime" SG_ 17 read_SelfCheck_Status 10;
+BA_ "GenSigCycleTime" SG_ 16 write_BmsFault_Status 10;
+BA_ "GenSigCycleTime" SG_ 16 write_DcdcFault_Status 10;
+BA_ "GenSigCycleTime" SG_ 16 write_Dcdc_Enable 10;
+BA_ "GenSigCycleTime" SG_ 16 write_MainNegativeRelay_Enable 10;
+BA_ "GenSigCycleTime" SG_ 16 write_VehicleReady_Status 10;
+BA_ "GenSigCycleTime" SG_ 16 write_MainRelay_Enable 10;
+BA_ "GenSigCycleTime" SG_ 16 write_MainPrechargeRelay_Enable 10;
 BA_ "GenSigCycleTimeActive" SG_ 1025 sig_nm_RearECU 100;
 BA_ "GenSigCycleTime" SG_ 1025 sig_nm_RearECU 100;
 BA_ "GenSigSendType" SG_ 1025 sig_nm_RearECU 0;

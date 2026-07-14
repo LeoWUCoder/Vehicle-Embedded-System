@@ -14,7 +14,7 @@
     "FileName": "",
     "WorkspacePath": "",
     "GeneratorBasePath": "D:\\SWC_Simulink_Learning\\app\\CBD1800257_D01_S32K1xx\\CBD1800257_D01_S32K1xx\\Generators\\Rte\\",
-    "OutputDirectory": "C:\\Users\\32032\\AppData\\Local\\Temp\\1783922679953-0\\"
+    "OutputDirectory": "C:\\Users\\32032\\AppData\\Local\\Temp\\1784021078194-0\\"
   },
   "ECUName": "MyECU",
   "EnableVFBTracing": false,
@@ -19951,13 +19951,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "write_VehicleReady_Status_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1454",
+            "SystemSignalName": "write_VehicleReady_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1454",
+          "$id": "1455",
           "IsInput": false,
           "QueueLength": 0,
           "IsComposite": false,
@@ -19969,13 +19975,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "write_MainRelay_Enable_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1456",
+            "SystemSignalName": "write_MainRelay_Enable",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1455",
+          "$id": "1457",
           "IsInput": false,
           "QueueLength": 0,
           "IsComposite": false,
@@ -19987,13 +19999,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "write_MainPrechargeRelay_Enable_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1458",
+            "SystemSignalName": "write_MainPrechargeRelay_Enable",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1456",
+          "$id": "1459",
           "IsInput": false,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20005,13 +20023,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "write_MainNegativeRelay_Enable_unit8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1460",
+            "SystemSignalName": "write_MainNegativeRelay_Enable",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1457",
+          "$id": "1461",
           "IsInput": false,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20023,13 +20047,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "write_Dcdc_Enable_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1462",
+            "SystemSignalName": "write_Dcdc_Enable",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1458",
+          "$id": "1463",
           "IsInput": false,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20041,13 +20071,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "write_DcdcFault_Status_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1464",
+            "SystemSignalName": "write_DcdcFault_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1459",
+          "$id": "1465",
           "IsInput": false,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20059,13 +20095,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "write_BmsFault_Status_unit8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1466",
+            "SystemSignalName": "write_BmsFault_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1460",
+          "$id": "1467",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20077,13 +20119,19 @@
             "$ref": "1419"
           },
           "SignalPortName": "read_VehicleSpeed_Kph_float64",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1468",
+            "SystemSignalName": "read_VehicleSpeed_Kph",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1461",
+          "$id": "1469",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20095,13 +20143,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "read_VehicleFaultLevel_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1470",
+            "SystemSignalName": "read_VehicleFaultLevel",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1462",
+          "$id": "1471",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20113,13 +20167,19 @@
             "$ref": "1424"
           },
           "SignalPortName": "read_SlowChargePlug_Status_bool",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1472",
+            "SystemSignalName": "read_SlowChargePlug_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1463",
+          "$id": "1473",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20131,13 +20191,19 @@
             "$ref": "1424"
           },
           "SignalPortName": "read_SelfCheck_Status_bool",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1474",
+            "SystemSignalName": "read_SelfCheck_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1464",
+          "$id": "1475",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20149,13 +20215,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "read_PduMainRelay_Status_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1476",
+            "SystemSignalName": "read_PduMainRelay_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1465",
+          "$id": "1477",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20167,13 +20239,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "read_PduMainPrechargeRelay_Status_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1478",
+            "SystemSignalName": "read_PduMainPrechargeRelay",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1466",
+          "$id": "1479",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20185,13 +20263,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "read_McuWorking_Status_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1480",
+            "SystemSignalName": "read_McuWorking_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1467",
+          "$id": "1481",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20203,13 +20287,19 @@
             "$ref": "1424"
           },
           "SignalPortName": "read_KeyStartSwitch_Signal_bool",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1482",
+            "SystemSignalName": "read_KeyStartSwitch_Signal",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1468",
+          "$id": "1483",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20221,13 +20311,19 @@
             "$ref": "1424"
           },
           "SignalPortName": "read_KeyOnSwitch_Signal_bool",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1484",
+            "SystemSignalName": "read_KeyONSwitch_Signal",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1469",
+          "$id": "1485",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20239,13 +20335,19 @@
             "$ref": "1424"
           },
           "SignalPortName": "read_FastChargePlug_Status_bool",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1486",
+            "SystemSignalName": "read_FastChargePlug_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1470",
+          "$id": "1487",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20257,13 +20359,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "read_DcdcWorking_Status_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1488",
+            "SystemSignalName": "read_DcdcWorking_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1471",
+          "$id": "1489",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20275,13 +20383,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "read_BrakePedal_Status_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1490",
+            "SystemSignalName": "read_BrakePedal_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1472",
+          "$id": "1491",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20293,13 +20407,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "read_BmsRelayOff_Request_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1492",
+            "SystemSignalName": "read_BmsRelayOff_Request",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1473",
+          "$id": "1493",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20311,13 +20431,19 @@
             "$ref": "1424"
           },
           "SignalPortName": "read_BmsMainNegativeRelay_Status_bool",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1494",
+            "SystemSignalName": "read_BmsMainNegativeRelay_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1474",
+          "$id": "1495",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20329,13 +20455,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "read_BmsMainNegativeRelayClosed_Status_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1496",
+            "SystemSignalName": "read_BmsMainNegativeRelayClosed",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1475",
+          "$id": "1497",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20347,13 +20479,19 @@
             "$ref": "1419"
           },
           "SignalPortName": "read_BmsBattery_SocValue_float64",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1498",
+            "SystemSignalName": "read_BmsBattery_SocValue",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1476",
+          "$id": "1499",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20365,13 +20503,19 @@
             "$ref": "1419"
           },
           "SignalPortName": "read_BmsBatteryTotal_Current_float64",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1500",
+            "SystemSignalName": "read_BmsBatteryTotal_Current",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1477",
+          "$id": "1501",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20383,13 +20527,19 @@
             "$ref": "1399"
           },
           "SignalPortName": "read_ActualGear_Status_uint8_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1502",
+            "SystemSignalName": "read_ActualGear_Status",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         },
         {
-          "$id": "1478",
+          "$id": "1503",
           "IsInput": true,
           "QueueLength": 0,
           "IsComposite": false,
@@ -20401,9 +20551,15 @@
             "$ref": "1414"
           },
           "SignalPortName": "read_AcceleratorPedal_Opening_uint16_t",
-          "PortConnectivity": 3,
+          "PortConnectivity": 1,
           "TxRxPortsHaveDifferentRecordLayout": false,
           "HasSubElementMapping": false,
+          "SystemSignalRef": {
+            "$id": "1504",
+            "SystemSignalName": "read_AcceleratorPedal_Opening",
+            "SignalConnectivity": 1,
+            "Length": 0
+          },
           "WasConnected": false
         }
       ],
@@ -20412,7 +20568,7 @@
     }
   ],
   "LdComPduTable": {
-    "$id": "1479"
+    "$id": "1505"
   },
   "IsAUTOSAR3Rte": false,
   "Type": 8,

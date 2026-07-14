@@ -113,10 +113,336 @@
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/sig_State_RearRightDoor_omsg_Receive_oCAN00</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCUHV_Send_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCUHV_Send_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_AcceleratorPedal_Opening_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_ActualGear_Status_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_BmsBattery_SocValue_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_BmsBatteryTotal_Current_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_BmsMainNegativeRelay_Status_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_BmsMainNegativeRelayClosed_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_BmsRelayOff_Request_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_BrakePedal_Status_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_DcdcWorking_Status_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_FastChargePlug_Status_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_KeyONSwitch_Signal_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_KeyStartSwitch_Signal_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_McuWorking_Status_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_PduMainPrechargeRelay_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_PduMainRelay_Status_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_SelfCheck_Status_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_SlowChargePlug_Status_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_VehicleFaultLevel_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/read_VehicleSpeed_Kph_oVCUHV_Receive_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/write_BmsFault_Status_oVCUHV_Send_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/write_Dcdc_Enable_oVCUHV_Send_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/write_DcdcFault_Status_oVCUHV_Send_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/write_MainNegativeRelay_Enable_oVCUHV_Send_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/write_MainPrechargeRelay_Enable_oVCUHV_Send_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/write_MainRelay_Enable_oVCUHV_Send_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/write_VehicleReady_Status_oVCUHV_Send_oCAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
                               </FIBEX-ELEMENTS>
                               <MAPPINGS>
                                 <SYSTEM-MAPPING UUID="826abef8-a50a-4f45-90ed-8f68d7f2f552">
                                   <SHORT-NAME>MAPPINGS</SHORT-NAME>
+                                  <DATA-MAPPINGS>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/write_BmsFault_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/write_BmsFault_Status/unit8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/write_BmsFault_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/write_Dcdc_Enable</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/write_Dcdc_Enable/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/write_Dcdc_Enable</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/write_DcdcFault_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/write_DcdcFault_Status/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/write_DcdcFault_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/write_MainNegativeRelay_Enable</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/write_MainNegativeRelay_Enable/unit8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/write_MainNegativeRelay_Enable</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/write_MainPrechargeRelay_Enable</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/write_MainPrechargeRelay_Enable/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/write_MainPrechargeRelay_Enable</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/write_MainRelay_Enable</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/write_MainRelay_Enable/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/write_MainRelay_Enable</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/write_VehicleReady_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/write_VehicleReady_Status/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/write_VehicleReady_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_AcceleratorPedal_Opening</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_AcceleratorPedal_Opening/uint16_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_AcceleratorPedal_Opening</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_ActualGear_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_ActualGear_Status/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_ActualGear_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_BmsBattery_SocValue</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_BmsBattery_SocValue/float64</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_BmsBattery_SocValue</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_BmsBatteryTotal_Current</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_BmsBatteryTotal_Current/float64</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_BmsBatteryTotal_Current</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_BmsMainNegativeRelay_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_BmsMainNegativeRelay_Status/bool</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_BmsMainNegativeRelay_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_BmsMainNegativeRelayClosed_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_BmsMainNegativeRelayClosed_Status/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_BmsMainNegativeRelayClosed</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_BmsRelayOff_Request</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_BmsRelayOff_Request/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_BmsRelayOff_Request</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_BrakePedal_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_BrakePedal_Status/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_BrakePedal_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_DcdcWorking_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_DcdcWorking_Status/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_DcdcWorking_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_FastChargePlug_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_FastChargePlug_Status/bool</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_FastChargePlug_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_KeyOnSwitch_Signal</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_KeyOnSwitch_Signal/bool</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_KeyONSwitch_Signal</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_KeyStartSwitch_Signal</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_KeyStartSwitch_Signal/bool</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_KeyStartSwitch_Signal</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_McuWorking_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_McuWorking_Status/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_McuWorking_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_PduMainPrechargeRelay_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_PduMainPrechargeRelay_Status/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_PduMainPrechargeRelay</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_PduMainRelay_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_PduMainRelay_Status/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_PduMainRelay_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_SelfCheck_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_SelfCheck_Status/bool</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_SelfCheck_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_SlowChargePlug_Status</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_SlowChargePlug_Status/bool</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_SlowChargePlug_Status</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_VehicleFaultLevel</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_VehicleFaultLevel/uint8_t</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_VehicleFaultLevel</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VCUHVACT</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/VCUHVACT/read_VehicleSpeed_Kph</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/read_VehicleSpeed_Kph/float64</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/read_VehicleSpeed_Kph</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                  </DATA-MAPPINGS>
                                 </SYSTEM-MAPPING>
                               </MAPPINGS>
                               <ROOT-SOFTWARE-COMPOSITIONS>
@@ -262,7 +588,6 @@
                                     <SD GID="00965f10-bcb0-42ec-9d93-a14d19fa8bcc">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/BswM</SD>
                                     <SD GID="6cd128d2-d8e8-4bf6-b225-9ee91090c0af">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_SBC_UJA1169</SD>
                                     <SD GID="3ea1e045-f9c3-479c-89f6-52cf0f001a07">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</SD>
-                                    <SD GID="6756878a-6f05-4789-9552-fc18dafa6e41">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_CAN00_06ecbb07_CpLedTask_UR_CN_CAN00_06ecbb07</SD>
                                     <SD GID="65d07982-b450-4fc8-97f7-fcf23ca69a48">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpLedTask</SD>
                                     <SD GID="4de37115-cc10-4e65-8c4b-261879a39d77">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</SD>
                                     <SD GID="9eaf53f7-3616-4d1b-b896-a10e18024eef">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</SD>
@@ -284,6 +609,32 @@
                                     <SD GID="2EB878D9-8957-4976-A7ED-B631951289EF">/ComponentTypes/CtLedTask_Implementation</SD>
                                     <SD GID="FFB63174-905F-455D-8218-8A375913CCB3">/ComponentTypes/VCUHVACT</SD>
                                     <SD GID="F2AEEA2B-30CD-4F7C-BA93-3E1E6ADC1B21">/ComponentTypes/VCUHVACT/VCUHVACT_InternalBehavior/TMT_HVAct_100ms</SD>
+                                    <SD GID="B43AEEA6-090D-440E-A8CB-2DF22B1D5B8C">/ComponentTypes/VCUHVACT/read_AcceleratorPedal_Opening</SD>
+                                    <SD GID="0E6F9D97-E621-4206-A7E1-3731B437154E">/ComponentTypes/VCUHVACT/read_ActualGear_Status</SD>
+                                    <SD GID="761010B0-B7E3-4FF4-8301-959535A1B8BB">/ComponentTypes/VCUHVACT/read_BmsBatteryTotal_Current</SD>
+                                    <SD GID="84A45147-7887-4D47-BC35-E4CA55DB82D7">/ComponentTypes/VCUHVACT/read_BmsBattery_SocValue</SD>
+                                    <SD GID="636AF84A-25E4-4C9D-9309-3D635A302810">/ComponentTypes/VCUHVACT/read_BmsMainNegativeRelayClosed_Status</SD>
+                                    <SD GID="53945BA3-DF31-495B-AE2E-D53B99FFC07F">/ComponentTypes/VCUHVACT/read_BmsMainNegativeRelay_Status</SD>
+                                    <SD GID="B725DB95-322A-40D7-9150-FB2C5A2557C0">/ComponentTypes/VCUHVACT/read_BmsRelayOff_Request</SD>
+                                    <SD GID="10018B3E-B617-450F-B060-91CD23D32DA3">/ComponentTypes/VCUHVACT/read_BrakePedal_Status</SD>
+                                    <SD GID="23468FE5-9257-48B9-A7A9-BB413B2BACEB">/ComponentTypes/VCUHVACT/read_DcdcWorking_Status</SD>
+                                    <SD GID="3C70DC8D-71C4-442C-BBC4-72D1114C3BF6">/ComponentTypes/VCUHVACT/read_FastChargePlug_Status</SD>
+                                    <SD GID="93524B80-6F06-4F10-8EDF-44DA567BC61C">/ComponentTypes/VCUHVACT/read_KeyOnSwitch_Signal</SD>
+                                    <SD GID="DD422FBC-9040-4E5A-B08D-C183B132614F">/ComponentTypes/VCUHVACT/read_KeyStartSwitch_Signal</SD>
+                                    <SD GID="FECB821D-F657-4BF1-AABA-D6901500408C">/ComponentTypes/VCUHVACT/read_McuWorking_Status</SD>
+                                    <SD GID="621768FC-DAA7-4BBE-A4B3-DB0FF6CA4783">/ComponentTypes/VCUHVACT/read_PduMainPrechargeRelay_Status</SD>
+                                    <SD GID="FC6C583C-D7A9-4AE1-AD04-7A37D69C32AD">/ComponentTypes/VCUHVACT/read_PduMainRelay_Status</SD>
+                                    <SD GID="B02C84C5-B594-4315-971E-7B3FA936A623">/ComponentTypes/VCUHVACT/read_SelfCheck_Status</SD>
+                                    <SD GID="5AEED7B3-AAF4-4B8C-A39C-40AEAB14587B">/ComponentTypes/VCUHVACT/read_SlowChargePlug_Status</SD>
+                                    <SD GID="AABED63B-9A76-45BF-8AF4-0D184B7BF339">/ComponentTypes/VCUHVACT/read_VehicleFaultLevel</SD>
+                                    <SD GID="3D905C13-6B70-4D7A-8564-9973C64DFAB6">/ComponentTypes/VCUHVACT/read_VehicleSpeed_Kph</SD>
+                                    <SD GID="78842136-290E-4B6B-8B9A-01B62CDEF913">/ComponentTypes/VCUHVACT/write_BmsFault_Status</SD>
+                                    <SD GID="46D1CBF7-5B19-4023-B58F-12E809660FC3">/ComponentTypes/VCUHVACT/write_DcdcFault_Status</SD>
+                                    <SD GID="4A860902-2D05-49D3-BB32-D83C1193B939">/ComponentTypes/VCUHVACT/write_Dcdc_Enable</SD>
+                                    <SD GID="1A71F198-1BBA-4564-9E09-D42102F6EAE4">/ComponentTypes/VCUHVACT/write_MainNegativeRelay_Enable</SD>
+                                    <SD GID="BD5C488C-2A72-4F64-9CDB-26E8145535CF">/ComponentTypes/VCUHVACT/write_MainPrechargeRelay_Enable</SD>
+                                    <SD GID="B04F5BE7-F5AD-4261-B955-90D8C1DFC543">/ComponentTypes/VCUHVACT/write_MainRelay_Enable</SD>
+                                    <SD GID="38AB0634-73D6-4238-9CCE-7B348E377BFF">/ComponentTypes/VCUHVACT/write_VehicleReady_Status</SD>
                                     <SD GID="BF8BF2A6-87B4-4BA7-A642-9BCC3A591119">/ComponentTypes/VCUHVACT_Implementation</SD>
                                     <SD GID="FA2722A8-DD7A-493E-ACE9-AA8189A6F547">/DataType/Constraint/DC_sig_LampCnt</SD>
                                     <SD GID="A09255C0-B996-42CD-9521-11F45444768B">/DataType/Constraint/DC_sig_RearInteriorLight</SD>
@@ -706,6 +1057,32 @@
                                     <SD GID="4aa6ce32-73aa-4583-b712-41915cb75b92">/MICROSAR/PduR_ib_bswmd/BswModuleDescriptions/PduR/PduRBehavior/PDUR_EXCLUSIVE_AREA_0</SD>
                                     <SD GID="e6883765-27bb-40c8-b767-748b9c7ee1a1">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte/RteBehavior</SD>
                                     <SD GID="b98f5eaa-a922-4fe9-8f50-29a6af23f979">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte_ComSendSignalProxyPeriodic</SD>
+                                    <SD GID="801C909D-D8FE-4E4A-B9FE-6AA2A09DE733">/PortInterfaces/read_AcceleratorPedal_Opening/uint16_t</SD>
+                                    <SD GID="8FA6358B-8C61-4330-99F5-45F5ECA7DAF2">/PortInterfaces/read_ActualGear_Status/uint8_t</SD>
+                                    <SD GID="C36FB776-EA4C-449F-A13A-9F58532D4F0E">/PortInterfaces/read_BmsBatteryTotal_Current/float64</SD>
+                                    <SD GID="7C99A39A-3DAA-49CD-A3D1-A20A5C5DDCBC">/PortInterfaces/read_BmsBattery_SocValue/float64</SD>
+                                    <SD GID="E61F4DD5-871B-46B6-B088-65A66E7664F9">/PortInterfaces/read_BmsMainNegativeRelayClosed_Status/uint8_t</SD>
+                                    <SD GID="B17C724A-6830-47E7-9D1C-8442BAE75A4D">/PortInterfaces/read_BmsMainNegativeRelay_Status/bool</SD>
+                                    <SD GID="BF7BBD16-89FD-4116-940C-80F9BEA514E8">/PortInterfaces/read_BmsRelayOff_Request/uint8_t</SD>
+                                    <SD GID="CFF448DA-6D57-494C-B096-60EBE136FB42">/PortInterfaces/read_BrakePedal_Status/uint8_t</SD>
+                                    <SD GID="ABE4AD12-DA42-4CAB-BE62-31E448934A9F">/PortInterfaces/read_DcdcWorking_Status/uint8_t</SD>
+                                    <SD GID="5D1E2EB2-1D35-4A8A-87F0-31C6FD52EF2C">/PortInterfaces/read_FastChargePlug_Status/bool</SD>
+                                    <SD GID="E53250BF-7602-4D15-B8AE-25243C29EB40">/PortInterfaces/read_KeyOnSwitch_Signal/bool</SD>
+                                    <SD GID="542383CC-8735-4E96-A2E5-C6C12FD33E94">/PortInterfaces/read_KeyStartSwitch_Signal/bool</SD>
+                                    <SD GID="0AE92C1F-408D-4C10-9129-B8FE641803A8">/PortInterfaces/read_McuWorking_Status/uint8_t</SD>
+                                    <SD GID="CEA503AA-54CC-4C0C-B934-F5A656CC9945">/PortInterfaces/read_PduMainPrechargeRelay_Status/uint8_t</SD>
+                                    <SD GID="2C665401-D229-4E62-98B5-AC8A20E53444">/PortInterfaces/read_PduMainRelay_Status/uint8_t</SD>
+                                    <SD GID="688FBEDA-496A-46FC-B972-F1B939AF2F47">/PortInterfaces/read_SelfCheck_Status/bool</SD>
+                                    <SD GID="1148B8EF-F9C0-43AE-BF62-7865B6C52143">/PortInterfaces/read_SlowChargePlug_Status/bool</SD>
+                                    <SD GID="F73E287C-957D-471B-B1FD-55624799F17A">/PortInterfaces/read_VehicleFaultLevel/uint8_t</SD>
+                                    <SD GID="314F479A-6A0D-454D-AEB6-7412040301C9">/PortInterfaces/read_VehicleSpeed_Kph/float64</SD>
+                                    <SD GID="144E582D-7B92-4A50-B813-EC68F888A502">/PortInterfaces/write_BmsFault_Status/unit8_t</SD>
+                                    <SD GID="B6E9B1AC-D379-46A5-821F-8E216AC5961F">/PortInterfaces/write_DcdcFault_Status/uint8_t</SD>
+                                    <SD GID="8F19F8E7-F972-4800-A566-B69062336FED">/PortInterfaces/write_Dcdc_Enable/uint8_t</SD>
+                                    <SD GID="5E1B4C66-AF8E-4639-BEFB-21852C483A9A">/PortInterfaces/write_MainNegativeRelay_Enable/unit8_t</SD>
+                                    <SD GID="877E9713-3975-45B0-AEA1-CB1E8D220BE3">/PortInterfaces/write_MainPrechargeRelay_Enable/uint8_t</SD>
+                                    <SD GID="77B1B4F5-9DBF-4B11-9F33-B68CB856AA16">/PortInterfaces/write_MainRelay_Enable/uint8_t</SD>
+                                    <SD GID="A8398AA7-1473-49E9-92D8-6412F4B4B8C8">/PortInterfaces/write_VehicleReady_Status/uint8_t</SD>
                                     <SD GID="{AF35D1D4-4362-4055-B014-780FA6F9E75B}">/Predefined_DEV/CompuMethods/Dem_UdsStatusByteType</SD>
                                     <SD GID="F2570AA0-D6E5-4217-80F7-5F60B8778133">/Predefined_DEV/CompuMethods/NvM_RequestResultType</SD>
                                     <SD GID="007B24D3-5C46-4986-B3CA-31D71FEDD510">/Predefined_DEV/CompuMethods/NvM_ServiceIdType</SD>
@@ -752,7 +1129,6 @@
                                     <SD GID="29D8C45D-AD65-4ADB-A8C0-9051D3BA8EB3">/Predefined_DEV/PortInterfaces/NvSWC_NvMService_AC3_SRBS_DS_Defs/E_NOT_OK</SD>
                                     <SD GID="B0DF499C-5446-40C9-BA84-69FE6BBA9AFA">/Predefined_DEV/PortInterfaces/NvSWC_NvMService_AC3_SRBS_Defs/E_NOT_OK</SD>
                                     <SD GID="6C11D3FD-1F97-4F18-9F28-AEBD06095420">/Predefined_DEV/PortInterfaces/NvSWC_NvMService_SRBS/E_NOT_OK</SD>
-                                    <SD GID="97e6e201-d3a3-4245-a5b1-ca600bf5a2f8">/Spi</SD>
                                     <SD GID="ed46821a-7b45-4226-88ba-d9ceb818a9ec">/TS_T40D2M10I1R0/Dio_ib_bswmd/BswModuleDescriptions/Dio/DioBehavior</SD>
                                     <SD GID="7f5ff0e9-1830-41ff-bf2d-e0bb0470aae8">/TS_T40D2M10I1R0/Dio_ib_bswmd/BswModuleDescriptions/Dio/DioBehavior/DIO_EXCLUSIVE_AREA_00</SD>
                                     <SD GID="d7e9b4a3-8f67-4b94-bfb9-c575aadbca7f">/TS_T40D2M10I1R0/Dio_ib_bswmd/BswModuleDescriptions/Dio/DioBehavior/DIO_EXCLUSIVE_AREA_01</SD>
@@ -849,8 +1225,6 @@
                                     <SD GID="95de89ce-e659-4403-8cf3-1ffa787fa6e7">/TS_T40D2M10I1R0/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_EXCLUSIVE_AREA_28</SD>
                                     <SD GID="20fcc88c-53d5-468f-bf68-5223336041a9">/TS_T40D2M10I1R0/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_EXCLUSIVE_AREA_29</SD>
                                     <SD GID="eabcf2a8-a246-4fda-a849-5c5892b74c50">/TS_T40D2M10I1R0/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_EXCLUSIVE_AREA_30</SD>
-                                    <SD GID="c0f925d1-7268-4373-9831-a79fcdb6fd05">/TS_T40D2M10I1R0/Spi_ib_bswmd</SD>
-                                    <SD GID="d280bab3-0634-4766-bf9c-25e54cdd77db">/TS_T40D2M10I1R0/Spi_ib_bswmd/BswModuleDescriptions</SD>
                                     <SD GID="7b8f0f6f-8ff7-4fce-ac21-53115e2de32d">/TS_T40D2M10I1R0/Spi_ib_bswmd/BswModuleDescriptions/Spi/SpiBehavior</SD>
                                     <SD GID="673feebe-a5f8-4465-9eef-312d2c8bf96d">/TS_T40D2M10I1R0/Spi_ib_bswmd/BswModuleDescriptions/Spi/SpiBehavior/SPI_EXCLUSIVE_AREA_00</SD>
                                     <SD GID="4480ff95-fcde-40d2-811b-48f4fc7e592c">/TS_T40D2M10I1R0/Spi_ib_bswmd/BswModuleDescriptions/Spi/SpiBehavior/SPI_EXCLUSIVE_AREA_01</SD>

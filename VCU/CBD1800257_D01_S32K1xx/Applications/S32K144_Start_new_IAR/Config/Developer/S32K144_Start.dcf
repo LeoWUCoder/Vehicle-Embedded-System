@@ -18,14 +18,14 @@
 		<DVG>ECUProjects\S32K144_Start.dvg</DVG>
 	</FILEREF>
 	<FILEREF>
-		<ARXML>ComponentTypes/CtLedTask.arxml</ARXML>
-		<DVG>ComponentTypes/CtLedTask.dvg</DVG>
+		<ARXML>ComponentTypes\CtLedTask.arxml</ARXML>
+		<DVG>ComponentTypes\CtLedTask.dvg</DVG>
 	</FILEREF>
 	<FILEREF>
-		<ARXML>ComponentTypes/CddSbc.arxml</ARXML>
-		<DVG>ComponentTypes/CddSbc.dvg</DVG>
+		<ARXML>ComponentTypes\CddSbc.arxml</ARXML>
+		<DVG>ComponentTypes\CddSbc.dvg</DVG>
 	</FILEREF>
 	<FILEREF>
-		<ARXML>ComponentTypes/VCUHVACT.arxml</ARXML>
+		<ARXML>ComponentTypes\VCUHVACT.arxml</ARXML>
 	</FILEREF>
 </DCF>
