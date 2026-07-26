@@ -141,7 +141,7 @@ void HVAct_100ms(void)                 /* Explicit Task: HVAct_100ms */
     VCUHVACT_ARID_DEF.counter2_p++;
     VCUHVACT_ARID_DEF.counter1_p = 0.0;
     if (VCUHVACT_ARID_DEF.counter2_p > 5.0) {
-      VCUHVACT_ARID_DEF.output_p = 0.0;
+      VCUHVACT_ARID_DEF.output_p = 1.0;
       VCUHVACT_ARID_DEF.counter2_p = 5.0;
     }
   } else {
@@ -190,7 +190,7 @@ void HVAct_100ms(void)                 /* Explicit Task: HVAct_100ms */
         if ((VCUHVACT_ARID_DEF.counter >= 30.0) ||
             (rtb_read_BmsBattery_SocValue_fl < 10.0)) {
           VCUHVACT_ARID_DEF.is_HV_OFFStandy = VCUHVACT_IN_HV_OFF2;
-          VCUHVACT_ARID_DEF.write_MainNegativeRelay_Enable = 1U;
+          VCUHVACT_ARID_DEF.write_MainNegativeRelay_Enable = 0U;
           VCUHVACT_ARID_DEF.counter = 0.0;
         } else {
           VCUHVACT_ARID_DEF.counter++;

@@ -2594,6 +2594,18 @@
             <file>
                 <name>$PROJ_DIR$\Appl\Source\OsAppTask.c</name>
             </file>
+            <file>
+                <name>$PROJ_DIR$\Appl\Source\VCUHVACT.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Appl\Source\VCUHVACT.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Appl\Source\VCUHVACT_private.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Appl\Source\VCUHVACT_types.h</name>
+            </file>
         </group>
         <file>
             <name>$PROJ_DIR$\Appl\BrsAsrMain.c</name>

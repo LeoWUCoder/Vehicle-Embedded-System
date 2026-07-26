@@ -459,14 +459,6 @@
             </AR-PACKAGE>
           </AR-PACKAGES>
         </AR-PACKAGE>
-        <AR-PACKAGE UUID="105406c1-ff80-4f0b-8b75-be7b8b12f1a0">
-          <SHORT-NAME>Nm_ib_bswmd</SHORT-NAME>
-          <AR-PACKAGES>
-            <AR-PACKAGE UUID="58555e8d-ab69-4476-ab92-ba7ca8ae1313">
-              <SHORT-NAME>XcpEvents</SHORT-NAME>
-            </AR-PACKAGE>
-          </AR-PACKAGES>
-        </AR-PACKAGE>
         <AR-PACKAGE UUID="c69fe56d-7d6c-4b80-8240-e3be346f1184">
           <SHORT-NAME>PduR_ib_bswmd</SHORT-NAME>
           <AR-PACKAGES>

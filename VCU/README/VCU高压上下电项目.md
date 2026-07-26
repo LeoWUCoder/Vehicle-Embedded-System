@@ -1520,9 +1520,45 @@ FUNC(void, VCUHVACT_CODE) VCUHVACT_Init(void);
 
 4. 没问题后输出代码
 
+### 8.3 代码集成
 
+![img](./assets/WEBcb332b1cca0ba3655aa8331e6bbc4931)
 
-### 8.3 dbc传输问题解决
+![img](./assets/WEB567bb84238321e8ff417f75fb2f3ddfb)
+
+![img](./assets/WEB3da1bb9ab9a3b23cd08cb1c402a2cb7d)
+
+![img](./assets/WEB194171059b8edc1e5d4ff52e1efba7fc)
+
+<img src="./assets/image-20260726111021806.png" alt="image-20260726111021806" style="zoom: 50%;" />
+
+然后再rebuild all即可。
+
+![image-20260726114411413](./assets/image-20260726114411413.png)
+
+![image-20260726114507965](./assets/image-20260726114507965.png)
+
+观察值的变化。
+
+![image-20260726115047211](./assets/image-20260726115047211.png)
+
+根据model测试的值做修改。
+
+![image-20260726115340975](./assets/image-20260726115340975.png)
+
+1.自检模块
+
+![image-20260726115604319](./assets/image-20260726115604319.png)
+
+搞成周期出发！！
+
+![image-20260726120207424](./assets/image-20260726120207424.png)
+
+最终结果无误！
+
+![image-20260726132023602](./assets/image-20260726132023602.png)
+
+### 8.4 dbc传输问题解决
 
 1. 当你利用Tsmaster做测试的时候你发现，好多Enable信号显示0，原因：这些Enable信号都被配置为了float 64，这是一个有符号数，但是这个有符号数在dbc里却定义了一个bit位，那么第一个位置显示的是符号位（正数是0），所以全显示0.
 
@@ -1531,6 +1567,22 @@ FUNC(void, VCUHVACT_CODE) VCUHVACT_Init(void);
    ![image-20260714212603339](./assets/image-20260714212603339.png)
 
 
+
+### 8.5 BUG解决
+
+没有输出
+
+![image-20260726125917927](./assets/image-20260726125917927.png)
+
+<img src="./assets/image-20260726125654982.png" alt="image-20260726125654982" style="zoom:50%;" />
+
+<img src="./assets/image-20260726125834593.png" alt="image-20260726125834593" style="zoom:67%;" />
+
+说明SIL测试的必要性！！！
+
+修改：一次性做判断改成一个个一层层做判断！！！
+
+发现是指Tsmater没信号，用示波器检查板子的连接和分析仪器都没问题——得出结论：CAN卡驱动失效，重新下载即可（关掉内存完整性）
 
 ## 九、后续优化思路
 
